@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#24a3f4</color>
+    <color name="color_blue">#24a3f4</color>
+
+    <color name="contents_text">#333333</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_frame">#ff88ae00</color>
+    <color name="tv_666">#666</color>
+    <!-- 二维码 结束-->
+    <color name="color333">#333</color>
+    <color name="colorcccccc">#e5e5e5</color>
+    <color name="color24a3f4">#24a3f4</color>
+    <color name="color23a3f3">#23a3f3</color>
+    <color name="colorfff">#fff</color>
+    <color name="color2292d7">#2292d7</color>
+    <color name="colore5e5e5">#e5e5e5</color>
+
+    <!-- 消防员-->
+    <color name="color_view_line">#ccc</color>
+    <color name="color_mobile">#333</color>
+    <color name="color_hqyzm">#24a3f4</color>
+    <color name="color_et_xfy">#b2b2b2</color>
+    <color name="deep_blue">#235e8b</color>
+    <color name="white">#ffffff</color>
+    <color name="text_gray">#999</color>
+
+    <color name="title_center_color">#fff</color>
+    <color name="view_title_color">#23a3f3</color>
+    <color name="touming">#00000000</color>
+    <color name="bg_fff">#fff</color>
+    <color name="tv_333">#333</color>
+    <color name="tv_999">#999999</color>
+    <color name="tv_24a3f4">#24a3f4</color>
+    <color name="view_fengexian">#e5e5e5</color>
+    <color name="view_e5e5e5">#e5e5e5</color>
+    <color name="txt_red">#f11</color>
+    <color name="view_bg">#f5f5f5</color>
+    <color name="tv_ccc">#ccc</color>
+    <color name="tv_b2b2b2">#b2b2b2</color>
+    <color name="tv_fff">#FFFFFF</color>
+    <color name="alert_lines">#ccc</color>
+
+    <color name="color_fffffff">#ffffff</color>
+    <color name="color_000">#000</color>
+    <color name="color_ks">#00214c</color>
+    <color name="color_yellow">#FE9501</color>
+    <color name="tv_yellow">#ff9402</color>
+    <color name="tv_9465a">#f9465a</color>
+    <color name="bg_f5f5f5">#f5f5f5</color>
+    <color name="bg_f6"> #F6F6F6</color>
+
+
+    <color name="color_f9465a">#f9465a</color>
+    <color name="color_3db259">#3db259</color>
+    <color name="color_00214c">#00214c</color>
+    <color name="color_999">#999</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_494949">#494949</color>
+</resources>
