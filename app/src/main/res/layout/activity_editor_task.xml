@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/color_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/ic_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            android:paddingBottom="3dp"
+            android:text="编辑任务"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_padding_15dp"
+        android:text="车辆信息"
+        android:textColor="@color/tv_333"
+        android:textSize="@dimen/font_16sp" />
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_nickanme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="所在地"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="20dp"
+            android:text="北京"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_vin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="V I N号"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@+id/tv_vin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="20dp"
+            android:text="LSDGUFTIFD201798065"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_cartype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="车型选择"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@+id/tv_cartype"
+            android:layout_width="@dimen/margin_padding_250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="雪豹2.8-MT柴油前驱4JB1T..."
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_first"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="首次上牌"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="20dp"
+            android:text="2017-10-03"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_km"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="行驶里程"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <EditText
+            android:id="@+id/tv_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="45dp"
+            android:background="@null"
+            android:text="5.00"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="万公里"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="成交价格"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <EditText
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="35dp"
+            android:background="@null"
+            android:text="2.00"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="万元"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_nature"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="使用性质"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="运营"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/font_14sp" />
+
+            <ch.ielse.view.SwitchView
+                android:id="@+id/switchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="非运营"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/font_14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_common" />
+
+    <RelativeLayout
+        android:id="@+id/ll_note"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_padding_48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_padding_8dp"
+        android:paddingRight="@dimen/margin_padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:text="备注信息"
+            android:textColor="@color/tv_666"
+            android:textSize="@dimen/font_14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_7dp"
+            android:layout_marginRight="20dp"
+            android:text="北京"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/font_16sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="@dimen/margin_padding_15dp"
+        android:background="@drawable/edt_bg"
+        android:gravity="top|left"
+        android:hint="请输入备注信息"
+        android:padding="10dp"
+        android:textColor="@color/tv_333"
+        android:textSize="14sp" />
+
+</LinearLayout>

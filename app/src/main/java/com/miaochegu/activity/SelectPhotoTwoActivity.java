@@ -35,6 +35,8 @@ import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.GettingStartedApp;
 import com.miaochegu.R;
+import com.miaochegu.util.FileCache;
+import com.miaochegu.util.ImageUtils;
 import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
@@ -373,12 +375,14 @@ public class SelectPhotoTwoActivity extends Activity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             if (requestCode == CHOICE_FROM_CAMERA) {
-                File imageFile = new File(imageFileStr);
+                long strTimeMillis = System.currentTimeMillis();
+                String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
+                File imageFile = new File(newPath);
                 if (imageFile.exists()) {
                     if (index == 0) {
-                        pathA = imageFileStr;
+                        pathA = newPath;
                         A = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivA.setImageBitmap(bitmap);
                         pbA.setVisibility(View.VISIBLE);
                         ivAa.setVisibility(View.VISIBLE);
@@ -387,9 +391,9 @@ public class SelectPhotoTwoActivity extends Activity {
                         setPhotoData(bitmap, "plfront45");
                     }
                     if (index == 1) {
-                        pathB = imageFileStr;
+                        pathB = newPath;
                         B = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivB.setImageBitmap(bitmap);
                         pbB.setVisibility(View.VISIBLE);
                         ivBb.setVisibility(View.VISIBLE);
@@ -398,9 +402,9 @@ public class SelectPhotoTwoActivity extends Activity {
                         setPhotoData(bitmap, "prfront45");
                     }
                     if (index == 2) {
-                        pathC = imageFileStr;
+                        pathC = newPath;
                         C = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivC.setImageBitmap(bitmap);
                         pbC.setVisibility(View.VISIBLE);
                         ivCc.setVisibility(View.VISIBLE);
@@ -409,9 +413,9 @@ public class SelectPhotoTwoActivity extends Activity {
                         setPhotoData(bitmap, "pfwindscreen");
                     }
                     if (index == 3) {
-                        pathD = imageFileStr;
+                        pathD = newPath;
                         D = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivD.setImageBitmap(bitmap);
                         pbD.setVisibility(View.VISIBLE);
                         ivDd.setVisibility(View.VISIBLE);
@@ -420,9 +424,9 @@ public class SelectPhotoTwoActivity extends Activity {
                         setPhotoData(bitmap, "pdwindscreen");
                     }
                     if (index == 4) {
-                        pathE = imageFileStr;
+                        pathE = newPath;
                         E = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivE.setImageBitmap(bitmap);
                         pbE.setVisibility(View.VISIBLE);
                         ivEe.setVisibility(View.VISIBLE);

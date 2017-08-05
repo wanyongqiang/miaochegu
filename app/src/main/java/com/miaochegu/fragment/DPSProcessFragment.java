@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -38,11 +39,13 @@ import butterknife.ButterKnife;
  * Created by roztop on 2017/7/29.
  */
 
-public class DPSProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, DPSWaiteAssessAdapter.OnItemClickListener,ListItemClickHelp{
+public class DPSProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, DPSWaiteAssessAdapter.OnItemClickListener, ListItemClickHelp {
 
     Context context;
     @BindView(R.id.rl_assess)
     XRecyclerView rlAssess;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
     private DPSWaiteAssessAdapter mDPSWaiteAssessAdapter;
     List<AVObject> mList = new ArrayList<>();
 
@@ -51,7 +54,7 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
         context = getActivity();
         ButterKnife.bind(this, view);
-
+        mProgess.setVisibility(View.VISIBLE);
         //注册EventBus
         EventBus.getDefault().register(this);
         setRecyclerView();
@@ -74,6 +77,7 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     mDPSWaiteAssessAdapter.upRes(list);
+                    mProgess.setVisibility(View.GONE);
                 } else {
                     e.printStackTrace();
                 }

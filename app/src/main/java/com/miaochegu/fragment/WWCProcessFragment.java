@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -22,6 +23,8 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.WWCWaiteAssessAdapter;
+import com.miaochegu.util.ListItemClickHelp;
+import com.miaochegu.util.ToastUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -37,11 +40,13 @@ import butterknife.ButterKnife;
  * Created by roztop on 2017/7/29.
  */
 
-public class WWCProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, WWCWaiteAssessAdapter.OnItemClickListener {
+public class WWCProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, WWCWaiteAssessAdapter.OnItemClickListener, ListItemClickHelp {
 
     Context context;
     @BindView(R.id.rl_assess)
     XRecyclerView rlAssess;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
     private WWCWaiteAssessAdapter mWWCWaiteAssessAdapter;
     List<AVObject> mList = new ArrayList<>();
 
@@ -50,7 +55,7 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
         context = getActivity();
         ButterKnife.bind(this, view);
-
+        mProgess.setVisibility(View.VISIBLE);
         //注册EventBus
         EventBus.getDefault().register(this);
         setRecyclerView();
@@ -73,6 +78,7 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     mWWCWaiteAssessAdapter.upRes(list);
+                    mProgess.setVisibility(View.GONE);
                 } else {
                     e.printStackTrace();
                 }
@@ -100,7 +106,7 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         rlAssess.setLoadingMoreEnabled(true);
         rlAssess.setLoadingListener(this);
 
-        mWWCWaiteAssessAdapter = new WWCWaiteAssessAdapter(context, null);
+        mWWCWaiteAssessAdapter = new WWCWaiteAssessAdapter(context, null, this);
         mWWCWaiteAssessAdapter.setmOnItemeClickListener(this);
         rlAssess.setAdapter(mWWCWaiteAssessAdapter);
     }
@@ -169,5 +175,14 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onLoadMore() {
         rlAssess.loadMoreComplete();
+    }
+
+    @Override
+    public void onClick(View item, int position, int which, String id) {
+        switch (which) {
+            case R.id.tv_fs:
+                ToastUtil.show("提交了！");
+                break;
+        }
     }
 }

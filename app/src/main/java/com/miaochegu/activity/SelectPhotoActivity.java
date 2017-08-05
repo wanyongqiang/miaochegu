@@ -28,6 +28,8 @@ import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.GettingStartedApp;
 import com.miaochegu.R;
+import com.miaochegu.util.FileCache;
+import com.miaochegu.util.ImageUtils;
 import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
@@ -40,11 +42,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.miaochegu.R.id.iv_a;
-import static com.miaochegu.R.id.iv_b;
-import static com.miaochegu.R.id.iv_c;
-import static com.miaochegu.R.id.iv_d;
-import static com.miaochegu.R.id.iv_e;
+import static com.miaochegu.R.id.ll_back;
+import static com.miaochegu.R.id.tv_ynamic;
 
 
 /**
@@ -56,62 +55,66 @@ public class SelectPhotoActivity extends Activity {
     private static final String TAG = "MCG";
     int index = 0;
     Context context;
-    TextView tv_ynamic;
-    LinearLayout ll_back;
+    @BindView(ll_back)
+    LinearLayout llBack;
+    @BindView(tv_ynamic)
+    TextView tvYnamic;
+    @BindView(R.id.relativeLayout)
+    RelativeLayout relativeLayout;
+    @BindView(R.id.iv_a)
+    ImageView ivA;
+    @BindView(R.id.iv_b)
+    ImageView ivB;
+    @BindView(R.id.iv_c)
+    ImageView ivC;
     @BindView(R.id.iv_aa)
     ImageView ivAa;
-    @BindView(R.id.iv_bb)
-    ImageView ivBb;
-    @BindView(R.id.iv_cc)
-    ImageView ivCc;
-    @BindView(R.id.iv_dd)
-    ImageView ivDd;
-    @BindView(R.id.iv_ee)
-    ImageView ivEe;
     @BindView(R.id.pb_a)
     ProgressBar pbA;
-    @BindView(R.id.pb_b)
-    ProgressBar pbB;
-    @BindView(R.id.pb_c)
-    ProgressBar pbC;
-    @BindView(R.id.pb_d)
-    ProgressBar pbD;
-    @BindView(R.id.pb_e)
-    ProgressBar pbE;
     @BindView(R.id.tv_a)
     TextView tvA;
-    @BindView(R.id.tv_b)
-    TextView tvB;
-    @BindView(R.id.tv_c)
-    TextView tvC;
-    @BindView(R.id.tv_d)
-    TextView tvD;
-    @BindView(R.id.tv_e)
-    TextView tvE;
-    @BindView(iv_a)
-    ImageView ivA;
-    @BindView(iv_b)
-    ImageView ivB;
-    @BindView(iv_c)
-    ImageView ivC;
-    @BindView(iv_d)
-    ImageView ivD;
-    @BindView(iv_e)
-    ImageView ivE;
-    @BindView(R.id.mProgess)
-    ProgressBar mProgess;
     @BindView(R.id.rl_a)
     RelativeLayout rlA;
+    @BindView(R.id.iv_bb)
+    ImageView ivBb;
+    @BindView(R.id.pb_b)
+    ProgressBar pbB;
+    @BindView(R.id.tv_b)
+    TextView tvB;
     @BindView(R.id.rl_b)
     RelativeLayout rlB;
+    @BindView(R.id.iv_cc)
+    ImageView ivCc;
+    @BindView(R.id.pb_c)
+    ProgressBar pbC;
+    @BindView(R.id.tv_c)
+    TextView tvC;
     @BindView(R.id.rl_c)
     RelativeLayout rlC;
+    @BindView(R.id.iv_d)
+    ImageView ivD;
+    @BindView(R.id.iv_e)
+    ImageView ivE;
+    @BindView(R.id.iv_dd)
+    ImageView ivDd;
+    @BindView(R.id.pb_d)
+    ProgressBar pbD;
+    @BindView(R.id.tv_d)
+    TextView tvD;
     @BindView(R.id.rl_d)
     RelativeLayout rlD;
+    @BindView(R.id.iv_ee)
+    ImageView ivEe;
+    @BindView(R.id.pb_e)
+    ProgressBar pbE;
+    @BindView(R.id.tv_e)
+    TextView tvE;
     @BindView(R.id.rl_e)
     RelativeLayout rlE;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
+
     private String imageFileStr = "";
-    private ProgressBar mProgerss;
     private static final int CHOICE_FROM_CAMERA = 0;
     private int tid;
     boolean A = false, B = false, C = false, D = false, E = false;
@@ -125,28 +128,9 @@ public class SelectPhotoActivity extends Activity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         context = this;
-        mProgerss = (ProgressBar) findViewById(R.id.mProgess);
 
         Intent intent = getIntent();
         tid = intent.getIntExtra("TID", 0);
-
-        tv_ynamic = (TextView) findViewById(R.id.tv_ynamic);
-        ll_back = (LinearLayout) findViewById(R.id.ll_back);
-        tv_ynamic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                if (verData()) return;
-                startActivity(new Intent(SelectPhotoActivity.this, SelectPhotoTwoActivity.class).putExtra("TID", tid));
-            }
-        });
-
-        ll_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
     }
 
     private boolean verData() {
@@ -173,9 +157,15 @@ public class SelectPhotoActivity extends Activity {
         return false;
     }
 
-    @OnClick({R.id.rl_a, R.id.rl_b, R.id.rl_c, R.id.rl_d, R.id.rl_e, R.id.iv_aa, R.id.iv_bb, R.id.iv_cc, R.id.iv_ee, R.id.iv_dd})
+    @OnClick({R.id.ll_back, R.id.tv_ynamic, R.id.rl_a, R.id.rl_b, R.id.rl_c, R.id.rl_d, R.id.rl_e, R.id.iv_aa, R.id.iv_bb, R.id.iv_cc, R.id.iv_ee, R.id.iv_dd})
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.ll_back:
+                finish();
+                break;
+            case R.id.tv_ynamic:
+                startActivity(new Intent(SelectPhotoActivity.this, SelectPhotoTwoActivity.class).putExtra("TID", tid));
+                break;
             case R.id.rl_a:
                 if (verProgress()) return;
                 index = 0;
@@ -311,12 +301,14 @@ public class SelectPhotoActivity extends Activity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             if (requestCode == CHOICE_FROM_CAMERA) {
-                File imageFile = new File(imageFileStr);
+                long strTimeMillis = System.currentTimeMillis();
+                String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
+                File imageFile = new File(newPath);
                 if (imageFile.exists()) {
                     if (index == 0) {
-                        pathA = imageFileStr;
+                        pathA = newPath;
                         A = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivA.setImageBitmap(bitmap);
                         pbA.setVisibility(View.VISIBLE);
                         ivAa.setVisibility(View.VISIBLE);
@@ -325,9 +317,9 @@ public class SelectPhotoActivity extends Activity {
                         setPhotoData(bitmap, "pocardregis");
                     }
                     if (index == 1) {
-                        pathB = imageFileStr;
+                        pathB = newPath;
                         B = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivB.setImageBitmap(bitmap);
                         pbB.setVisibility(View.VISIBLE);
                         ivBb.setVisibility(View.VISIBLE);
@@ -336,9 +328,9 @@ public class SelectPhotoActivity extends Activity {
                         setPhotoData(bitmap, "ptcardregis");
                     }
                     if (index == 2) {
-                        pathC = imageFileStr;
+                        pathC = newPath;
                         C = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivC.setImageBitmap(bitmap);
                         pbC.setVisibility(View.VISIBLE);
                         ivCc.setVisibility(View.VISIBLE);
@@ -347,9 +339,9 @@ public class SelectPhotoActivity extends Activity {
                         setPhotoData(bitmap, "drivingcard");
                     }
                     if (index == 3) {
-                        pathD = imageFileStr;
+                        pathD = newPath;
                         D = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivD.setImageBitmap(bitmap);
                         pbD.setVisibility(View.VISIBLE);
                         ivDd.setVisibility(View.VISIBLE);
@@ -358,9 +350,9 @@ public class SelectPhotoActivity extends Activity {
                         setPhotoData(bitmap, "pchit");
                     }
                     if (index == 4) {
-                        pathE = imageFileStr;
+                        pathE = newPath;
                         E = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivE.setImageBitmap(bitmap);
                         pbE.setVisibility(View.VISIBLE);
                         ivEe.setVisibility(View.VISIBLE);
@@ -452,9 +444,9 @@ public class SelectPhotoActivity extends Activity {
                     @Override
                     public void done(AVException e) {
                         if (e == null) {
-                            mProgerss.setVisibility(View.GONE);
+                            mProgess.setVisibility(View.GONE);
                         } else {
-                            mProgerss.setVisibility(View.GONE);
+                            mProgess.setVisibility(View.GONE);
                             Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }

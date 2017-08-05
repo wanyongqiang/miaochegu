@@ -28,7 +28,7 @@ import java.util.List;
  * @author liuteng
  *         created at  2016/5/12 15:31
  ****************************************/
-public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAdapter.MyViewHolder> {
+public class WaiteAssessAdapter extends RecyclerView.Adapter<WaiteAssessAdapter.MyViewHolder> {
     private final LayoutInflater mInflater;
     Context context;
     List<AVObject> entity;
@@ -36,7 +36,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
     private OnItemClickListener mOnItemeClickLstener;
     private View inflate;
 
-    public WWCWaiteAssessAdapter(Context context, List<AVObject> entity, ListItemClickHelp callback) {
+    public WaiteAssessAdapter(Context context, List<AVObject> entity, ListItemClickHelp callback) {
         this.context = context;
         this.callback = callback;
         this.entity = new ArrayList<>();
@@ -90,7 +90,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
                                 public void done(List<AVObject> list, AVException e) {
                                     if (e == null && list != null) {
                                         for (int i = 0; i < list.size(); i++) {
-                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 0) {
+                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 0 || (int) list.get(i).get("atype") == 2) {
                                                 holder.tvfs.setText(list.get(i).get("appraiser") == null ? "" : list.get(i).get("appraiser") + "正在处理");
                                             }
                                         }
@@ -172,7 +172,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
             } else if (string.contains("Z")) {
                 SimpleDateFormat sdf = new SimpleDateFormat(
                         "yyyy-MM-dd'T'hh:mm:ss'.'sss'Z'");
-                java.util.Date datetime;
+                Date datetime;
                 try {
                     datetime = sdf.parse(string);
                     return (Date) datetime;

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -32,6 +33,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by roztop on 2017/7/29.
@@ -42,6 +44,8 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     Context context;
     @BindView(R.id.rl_assess)
     XRecyclerView rlAssess;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
     private WTGWaiteAssessAdapter mWTGWaiteAssessAdapter;
     List<AVObject> mList = new ArrayList<>();
 
@@ -50,7 +54,7 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
         context = getActivity();
         ButterKnife.bind(this, view);
-
+        mProgess.setVisibility(View.VISIBLE);
         //注册EventBus
         EventBus.getDefault().register(this);
         setRecyclerView();
@@ -74,6 +78,7 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     mWTGWaiteAssessAdapter.upRes(list);
+                    mProgess.setVisibility(View.GONE);
                 } else {
                     e.printStackTrace();
                 }

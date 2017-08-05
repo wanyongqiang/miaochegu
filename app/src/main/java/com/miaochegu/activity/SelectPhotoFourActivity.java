@@ -35,6 +35,8 @@ import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.GettingStartedApp;
 import com.miaochegu.R;
+import com.miaochegu.util.FileCache;
+import com.miaochegu.util.ImageUtils;
 import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
@@ -49,7 +51,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static com.miaochegu.R.id.ll_back;
-import static com.miaochegu.R.id.tv_ynamic;
 
 
 /**
@@ -61,7 +62,7 @@ public class SelectPhotoFourActivity extends Activity {
     Context context;
     @BindView(ll_back)
     LinearLayout llBack;
-    @BindView(tv_ynamic)
+    @BindView(R.id.tv_ynamic)
     TextView tvYnamic;
     @BindView(R.id.iv_a)
     ImageView ivA;
@@ -117,6 +118,8 @@ public class SelectPhotoFourActivity extends Activity {
     TextView tvUp;
     @BindView(R.id.tv_next)
     TextView tvNext;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
 
     int index = 0;
     private int tid;
@@ -148,6 +151,10 @@ public class SelectPhotoFourActivity extends Activity {
                 finish();
                 break;
             case R.id.tv_ynamic:
+                if (!"".equals(pathA) && !"".equals(pathB) && !"".equals(pathC) && !"".equals(pathD) && !"".equals(pathE)) {
+                    ToastUtil.show("请上传完整再提交");
+                    return;
+                }
                 setData();
                 break;
             case R.id.rl_a:
@@ -240,6 +247,7 @@ public class SelectPhotoFourActivity extends Activity {
     }
 
     private void setData() {
+        mProgess.setVisibility(View.VISIBLE);
         AVQuery<AVObject> avQuery = new AVQuery<>("Task");
         avQuery.whereEqualTo("tid", tid);
         avQuery.findInBackground(new FindCallback<AVObject>() {
@@ -253,14 +261,12 @@ public class SelectPhotoFourActivity extends Activity {
                         @Override
                         public void done(List<AVObject> list, AVException e) {
                             if (list != null && list.size() > 0) {
-//                                        if(){}
                                 AVQuery<AVObject> avQuery = new AVQuery<>("Photo");
                                 avQuery.whereEqualTo("pid", list.get(0).get("pid"));
                                 avQuery.findInBackground(new FindCallback<AVObject>() {
                                     @Override
                                     public void done(List<AVObject> list, AVException e) {
                                         if (list != null && list.size() > 0) {
-                                            //if(){}
                                             AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
                                             avQuery.whereEqualTo("sid", sID);
                                             avQuery.findInBackground(new FindCallback<AVObject>() {
@@ -272,6 +278,7 @@ public class SelectPhotoFourActivity extends Activity {
                                                         avObject.saveInBackground(new SaveCallback() {
                                                             @Override
                                                             public void done(AVException e) {
+                                                                mProgess.setVisibility(View.GONE);
                                                                 showDialog();
                                                             }
                                                         });
@@ -373,12 +380,14 @@ public class SelectPhotoFourActivity extends Activity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             if (requestCode == CHOICE_FROM_CAMERA) {
-                File imageFile = new File(imageFileStr);
+                long strTimeMillis = System.currentTimeMillis();
+                String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
+                File imageFile = new File(newPath);
                 if (imageFile.exists()) {
                     if (index == 0) {
-                        pathA = imageFileStr;
+                        pathA = newPath;
                         A = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivA.setImageBitmap(bitmap);
                         pbA.setVisibility(View.VISIBLE);
                         ivAa.setVisibility(View.VISIBLE);
@@ -387,9 +396,9 @@ public class SelectPhotoFourActivity extends Activity {
                         setPhotoData(bitmap, "ptoproof");
                     }
                     if (index == 1) {
-                        pathB = imageFileStr;
+                        pathB = newPath;
                         B = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivB.setImageBitmap(bitmap);
                         pbB.setVisibility(View.VISIBLE);
                         ivBb.setVisibility(View.VISIBLE);
@@ -398,9 +407,9 @@ public class SelectPhotoFourActivity extends Activity {
                         setPhotoData(bitmap, "pwheelinstrute");
                     }
                     if (index == 2) {
-                        pathC = imageFileStr;
+                        pathC = newPath;
                         C = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivC.setImageBitmap(bitmap);
                         pbC.setVisibility(View.VISIBLE);
                         ivCc.setVisibility(View.VISIBLE);
@@ -409,9 +418,9 @@ public class SelectPhotoFourActivity extends Activity {
                         setPhotoData(bitmap, "pdeskgear");
                     }
                     if (index == 3) {
-                        pathD = imageFileStr;
+                        pathD = newPath;
                         D = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivD.setImageBitmap(bitmap);
                         pbD.setVisibility(View.VISIBLE);
                         ivDd.setVisibility(View.VISIBLE);
@@ -420,9 +429,9 @@ public class SelectPhotoFourActivity extends Activity {
                         setPhotoData(bitmap, "pldoortrim");
                     }
                     if (index == 4) {
-                        pathE = imageFileStr;
+                        pathE = newPath;
                         E = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivE.setImageBitmap(bitmap);
                         pbE.setVisibility(View.VISIBLE);
                         ivEe.setVisibility(View.VISIBLE);

@@ -8,77 +8,79 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
-import com.miaochegu.GettingStartedApp;
+import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.FindCallback;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
-import com.miaochegu.adapter.YTGWaiteAssessAdapter;
+import com.miaochegu.adapter.WaiteAssessAdapter;
 import com.miaochegu.util.ListItemClickHelp;
 import com.miaochegu.util.StatusbarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 
 /**
  * Created by toshiba on 2017/7/11.
  */
 
-public class WaiteAssessActivity extends Activity implements YTGWaiteAssessAdapter.OnItemClickListener, ListItemClickHelp {
+public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.OnItemClickListener, ListItemClickHelp {
 
     Context context;
+    @BindView(R.id.iv_back)
+    ImageView ivBack;
+    @BindView(R.id.tv_title)
     TextView tvTitle;
-    private ImageView iv_back;
-    private RecyclerView rlAssess;
-    private YTGWaiteAssessAdapter mYTGWaiteAssessAdapter;
+    @BindView(R.id.rl_assess)
+    XRecyclerView rlAssess;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
+    private WaiteAssessAdapter mWaiteAssessAdapter;
     private List<AVObject> data = new ArrayList<>();
     private String type;
+    List<AVObject> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_waite_assess);
+        ButterKnife.bind(this);
         context = this;
-        tvTitle = (TextView) findViewById(R.id.tv_title);
-        rlAssess = (RecyclerView) findViewById(R.id.rl_assess);
-        iv_back = (ImageView) findViewById(R.id.iv_back);
-
-        Intent intent = getIntent();
-        type = intent.getStringExtra("type");
-        if ("DPG".equals(type)) {
-            tvTitle.setText("待评审");
-            GettingStartedApp.getInstance().setTempStr("DPG");
-        } else if ("WTG".equals(type)) {
-            tvTitle.setText("未通过");
-            GettingStartedApp.getInstance().setTempStr("WTG");
-        } else if ("YTG".equals(type)) {
-            tvTitle.setText("已通过");
-            GettingStartedApp.getInstance().setTempStr("YTG");
-        } else if ("WWC".equals(type)) {
-            tvTitle.setText("未完成");
-            GettingStartedApp.getInstance().setTempStr("WWC");
-        } else if ("PSZ".equals(type)) {
-            tvTitle.setText("评审中");
-            GettingStartedApp.getInstance().setTempStr("PSZ");
-        }
-
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                WaiteAssessActivity.this.finish();
-            }
-        });
 
         setRecyclerView();
+    }
+
+    private void getData() {
+        mList.clear();
+        AVQuery<AVObject> avQuery = new AVQuery<>("Task");
+        avQuery.orderByDescending("createdAt");
+        avQuery.findInBackground(new FindCallback<AVObject>() {
+            @Override
+            public void done(List<AVObject> list, AVException e) {
+                if (e == null) {
+                    mWaiteAssessAdapter.upRes(list);
+                    mProgess.setVisibility(View.GONE);
+                } else {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     private void setRecyclerView() {
@@ -87,20 +89,31 @@ public class WaiteAssessActivity extends Activity implements YTGWaiteAssessAdapt
         rlAssess.setLayoutManager(layoutManager);
         //设置动画
         rlAssess.setItemAnimator(new DefaultItemAnimator());
-        mYTGWaiteAssessAdapter = new YTGWaiteAssessAdapter(context, data, this);
-        mYTGWaiteAssessAdapter.setmOnItemeClickListener(this);
-        rlAssess.setAdapter(mYTGWaiteAssessAdapter);
+        mWaiteAssessAdapter = new WaiteAssessAdapter(context, null, this);
+        mWaiteAssessAdapter.setmOnItemeClickListener(this);
+        rlAssess.setAdapter(mWaiteAssessAdapter);
+
+        getData();
     }
 
     @Override
     public void onItemeClick(View view, int position) {
+        startActivity(new Intent(this, EditorTaskActivity.class));
     }
 
     @Override
     public void onClick(View item, int position, int which, String id) {
         switch (which) {
             case R.id.tv_chakan:
-                showDialog();
+                break;
+        }
+    }
+
+    @OnClick({R.id.iv_back})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_back://返回
+                this.finish();
                 break;
         }
     }
@@ -131,7 +144,6 @@ public class WaiteAssessActivity extends Activity implements YTGWaiteAssessAdapt
         tvYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WaiteAssessActivity.this, LookBelogActivity.class));
                 bottomDialog.dismiss();
             }
         });

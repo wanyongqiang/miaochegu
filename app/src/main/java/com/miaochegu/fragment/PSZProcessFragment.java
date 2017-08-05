@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -42,6 +43,8 @@ public class PSZProcessFragment extends BaseFragment implements XRecyclerView.Lo
     Context context;
     @BindView(R.id.rl_assess)
     XRecyclerView rlAssess;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
     private PSZWaiteAssessAdapter mPSZWaiteAssessAdapter;
     List<AVObject> mList = new ArrayList<>();
 
@@ -50,7 +53,7 @@ public class PSZProcessFragment extends BaseFragment implements XRecyclerView.Lo
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
         context = getActivity();
         ButterKnife.bind(this, view);
-
+        mProgess.setVisibility(View.VISIBLE);
         //注册EventBus
         EventBus.getDefault().register(this);
         setRecyclerView();
@@ -73,6 +76,7 @@ public class PSZProcessFragment extends BaseFragment implements XRecyclerView.Lo
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     mPSZWaiteAssessAdapter.upRes(list);
+                    mProgess.setVisibility(View.GONE);
                 } else {
                     e.printStackTrace();
                 }

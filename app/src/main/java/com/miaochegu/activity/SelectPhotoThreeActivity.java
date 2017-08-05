@@ -35,6 +35,8 @@ import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.GettingStartedApp;
 import com.miaochegu.R;
+import com.miaochegu.util.FileCache;
+import com.miaochegu.util.ImageUtils;
 import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
@@ -586,13 +588,15 @@ import static com.miaochegu.R.id.tv_ynamic;
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             if (requestCode == CHOICE_FROM_CAMERA) {
-                File imageFile = new File(imageFileStr);
+                long strTimeMillis = System.currentTimeMillis();
+                String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
+                File imageFile = new File(newPath);
                 if (imageFile.exists()) {
                     switch (index) {
                         case 0:
-                            pathA = imageFileStr;
+                            pathA = newPath;
                             A = true;
-                            final Bitmap bitmap = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                             ivA.setImageBitmap(bitmap);
                             pbA.setVisibility(View.VISIBLE);
                             ivAa.setVisibility(View.VISIBLE);
@@ -601,9 +605,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap, "pfirewall");
                             break;
                         case 1:
-                            pathB = imageFileStr;
+                            pathB = newPath;
                             B = true;
-                            final Bitmap bitmap1 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap1 = BitmapFactory.decodeFile(newPath);
                             ivB.setImageBitmap(bitmap1);
                             pbB.setVisibility(View.VISIBLE);
                             ivBb.setVisibility(View.VISIBLE);
@@ -612,9 +616,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap1, "plwaterstents");
                             break;
                         case 2:
-                            pathC = imageFileStr;
+                            pathC = newPath;
                             C = true;
-                            final Bitmap bitmap2 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap2 = BitmapFactory.decodeFile(newPath);
                             ivC.setImageBitmap(bitmap2);
                             pbC.setVisibility(View.VISIBLE);
                             ivCc.setVisibility(View.VISIBLE);
@@ -623,9 +627,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap2, "prwaterstents");
                             break;
                         case 3:
-                            pathD = imageFileStr;
+                            pathD = newPath;
                             D = true;
-                            final Bitmap bitmap3 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap3 = BitmapFactory.decodeFile(newPath);
                             ivD.setImageBitmap(bitmap3);
                             pbD.setVisibility(View.VISIBLE);
                             ivDd.setVisibility(View.VISIBLE);
@@ -634,9 +638,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap3, "plfrontfender");
                             break;
                         case 4:
-                            pathE = imageFileStr;
+                            pathE = newPath;
                             E = true;
-                            final Bitmap bitmap4 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap4 = BitmapFactory.decodeFile(newPath);
                             ivE.setImageBitmap(bitmap4);
                             pbE.setVisibility(View.VISIBLE);
                             ivEe.setVisibility(View.VISIBLE);
@@ -645,9 +649,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap4, "prfrontfender");
                             break;
                         case 5:
-                            pathF = imageFileStr;
+                            pathF = newPath;
                             F = true;
-                            final Bitmap bitmap5 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap5 = BitmapFactory.decodeFile(newPath);
                             ivF.setImageBitmap(bitmap5);
                             pbF.setVisibility(View.VISIBLE);
                             ivFf.setVisibility(View.VISIBLE);
@@ -656,9 +660,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap5, "pldoora");
                             break;
                         case 6:
-                            pathG = imageFileStr;
+                            pathG = newPath;
                             G = true;
-                            final Bitmap bitmap6 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap6 = BitmapFactory.decodeFile(newPath);
                             ivG.setImageBitmap(bitmap6);
                             pbG.setVisibility(View.VISIBLE);
                             ivGg.setVisibility(View.VISIBLE);
@@ -667,9 +671,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap6, "pldoorbc");
                             break;
                         case 7:
-                            pathH = imageFileStr;
+                            pathH = newPath;
                             H = true;
-                            final Bitmap bitmap7 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap7 = BitmapFactory.decodeFile(newPath);
                             ivH.setImageBitmap(bitmap7);
                             pbH.setVisibility(View.VISIBLE);
                             ivHh.setVisibility(View.VISIBLE);
@@ -678,9 +682,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap7, "prdoora");
                             break;
                         case 8:
-                            pathI = imageFileStr;
+                            pathI = newPath;
                             I = true;
-                            final Bitmap bitmap8 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap8 = BitmapFactory.decodeFile(newPath);
                             ivI.setImageBitmap(bitmap8);
                             pbI.setVisibility(View.VISIBLE);
                             ivIi.setVisibility(View.VISIBLE);
@@ -689,9 +693,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap8, "prdoorc");
                             break;
                         case 9:
-                            pathJ = imageFileStr;
+                            pathJ = newPath;
                             J = true;
-                            final Bitmap bitmap9 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap9 = BitmapFactory.decodeFile(newPath);
                             ivJ.setImageBitmap(bitmap9);
                             pbJ.setVisibility(View.VISIBLE);
                             ivJj.setVisibility(View.VISIBLE);
@@ -700,9 +704,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap9, "ptrunkdandw");
                             break;
                         case 10:
-                            pathK = imageFileStr;
+                            pathK = newPath;
                             K = true;
-                            final Bitmap bitmap10 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap10 = BitmapFactory.decodeFile(newPath);
                             ivK.setImageBitmap(bitmap10);
                             pbK.setVisibility(View.VISIBLE);
                             ivKk.setVisibility(View.VISIBLE);
@@ -711,9 +715,9 @@ import static com.miaochegu.R.id.tv_ynamic;
                             setPhotoData(bitmap10, "plcoverrear");
                             break;
                         case 11:
-                            pathL = imageFileStr;
+                            pathL = newPath;
                             L = true;
-                            final Bitmap bitmap11 = BitmapFactory.decodeFile(imageFileStr);
+                            final Bitmap bitmap11 = BitmapFactory.decodeFile(newPath);
                             ivL.setImageBitmap(bitmap11);
                             pbL.setVisibility(View.VISIBLE);
                             ivLl.setVisibility(View.VISIBLE);

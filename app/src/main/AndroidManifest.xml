@@ -50,7 +50,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name="com.miaochegu.activity.DetailActivity"></activity>
         <activity
-            android:name="com.miaochegu.activity.CarInfoActivity"
+            android:name=".activity.CarInfoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateHidden"></activity>
         <activity
@@ -79,6 +79,9 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name="com.miaochegu.activity.UpdatePassWordActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name="com.miaochegu.activity.EditorTaskActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
         <meta-data

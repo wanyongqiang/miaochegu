@@ -30,9 +30,7 @@ import android.widget.Toast;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
-import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.esaysidebar.EasySideBarBuilder;
 import com.limxing.library.AlertView;
@@ -47,7 +45,6 @@ import com.miaochegu.util.GsonUtils;
 import com.miaochegu.util.JsonTools;
 import com.miaochegu.util.SharePCach;
 import com.miaochegu.util.StatusbarUtils;
-import com.miaochegu.util.ToastUtil;
 
 import org.json.JSONException;
 
@@ -72,8 +69,8 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
     SwitchView switchView;
     ImageView imageView, iv_car;
     private ProgressBar mProgerss;
-    private TextView tv_next, tv_gj, tv_mine, tv_dpg, tv_wtg, tv_ytg, tv_updatepwd,username,
-            tv_wwc, tv_psz, tv_title, tv_city, tv_loginout, tv_carinfo, tv_datatime;
+    private TextView tv_next, tv_gj, tv_mine, tv_dpg, tv_wtg, tv_ytg, tv_updatepwd, username,
+            tv_wwc, tv_psz, tv_title, tv_city, tv_loginout, tv_carinfo, tv_datatime, tv_editor;
     private EditText edt_vincode, edt_km, edt_money, edt_content;
     LinearLayout llMine, llMineCenter, llMineCenters, llCenMine, llMineBottom, ll_gj_head, ll_gj_center;
 
@@ -212,6 +209,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_carinfo = (TextView) findViewById(R.id.tv_carinfo);
         tv_datatime = (TextView) findViewById(R.id.tv_datatime);
         tv_next = (TextView) findViewById(R.id.tv_next);
+        tv_editor = (TextView) findViewById(R.id.tv_editor);
         tv_gj = (TextView) findViewById(R.id.tv_gj);
         tv_mine = (TextView) findViewById(R.id.tv_mine);
         tv_dpg = (TextView) findViewById(R.id.tv_dps);
@@ -252,6 +250,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_updatepwd.setOnClickListener(this);
         tv_datatime.setOnClickListener(this);
         imageView.setOnClickListener(this);
+        tv_editor.setOnClickListener(this);
         switchView.setOnStateChangedListener(new SwitchView.OnStateChangedListener() {
             @Override
             public void toggleToOn(SwitchView view) {
@@ -273,124 +272,128 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
             case R.id.tv_updatapwd:
                 startActivity(new Intent(this, UpdatePassWordActivity.class));
                 break;
+            case R.id.tv_editor:
+                startActivity(new Intent(this, WaiteAssessActivity.class));
+                break;
             case R.id.tv_next:
-                if ("".equals(edt_vincode.getText().toString().trim())) {
-                    ToastUtil.show("请输入17位VIN码");
-                    return;
-                }
-                if ("".equals(edt_vincode.getText().toString().trim()) && edt_vincode.getText().toString().trim().length() != 17) {
-                    ToastUtil.show("请输入正确的VIN码");
-                    return;
-                }
-                if ("".equals(tv_carinfo.getText().toString().trim())) {
-                    ToastUtil.show("请选择车辆型号");
-                    return;
-                }
-                if ("".equals(tv_city.getText().toString().trim())) {
-                    ToastUtil.show("请选择所在城市");
-                    return;
-                }
-                if ("".equals(tv_datatime.getText().toString().trim())) {
-                    ToastUtil.show("请选择上牌日期");
-                    return;
-                }
-                if ("".equals(edt_km.getText().toString().trim())) {
-                    ToastUtil.show("请输入行程里程");
-                    return;
-                }
-                if ("".equals(edt_money.getText().toString().trim())) {
-                    ToastUtil.show("请输入价格");
-                    return;
-                }
-                mProgerss.setVisibility(View.VISIBLE);
-                AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-                avQuery.addAscendingOrder("carid");
-                avQuery.findInBackground(new FindCallback<AVObject>() {
-                    private int cID = 0;
-                    private int tID = 0;
-
-                    @Override
-                    public void done(List<AVObject> list, AVException e) {
-                        if (list.size() == 0) {
-                            cID = 1;
-                        } else {
-                            cID = (Integer) list.get(list.size() - 1).get("carid") + 1;
-                            Log.e(TAG, list.get(list.size() - 1).get("carid") + "");
-                            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");//TODO 查询审核ID
-                            avQuery.addAscendingOrder("sid");
-                            avQuery.findInBackground(new FindCallback<AVObject>() {
-                                @Override
-                                public void done(List<AVObject> list, AVException e) {
-                                    final int sID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("sid") + 1;
-                                    Log.e(TAG, list.get(list.size() - 1).get("sid") + "");
-                                    AVObject product = new AVObject("Audit");//TODO 插入审核数据
-                                    product.put("cid", cID);
-                                    product.put("sid", sID);
-                                    product.put("atype", 0);
-                                    product.saveInBackground(new SaveCallback() {
-                                        @Override
-                                        public void done(AVException e) {
-                                            if (e == null) {
-                                                mProgerss.setVisibility(View.GONE);
-                                                AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询任务ID
-                                                avQuery.addAscendingOrder("tid");
-                                                avQuery.findInBackground(new FindCallback<AVObject>() {
-                                                    @Override
-                                                    public void done(List<AVObject> list, AVException e) {
-                                                        tID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("tid") + 1;
-                                                        AVObject product = new AVObject("Task");//TODO 插入审核数据
-                                                        product.put("tid", tID);
-                                                        product.put("sid", sID);
-                                                        product.put("uid", AVUser.getCurrentUser().get("uid"));
-                                                        product.put("cid", cID);
-                                                        product.put("tcreatetime", new Date());
-                                                        product.saveInBackground(new SaveCallback() {
-                                                            @Override
-                                                            public void done(AVException e) {
-                                                                if (e == null) {
-                                                                    mProgerss.setVisibility(View.GONE);
-                                                                    AVQuery<AVObject> avQuery = new AVQuery<>("Photo");//TODO 查询任务ID
-                                                                    avQuery.addAscendingOrder("pid");
-                                                                    avQuery.findInBackground(new FindCallback<AVObject>() {
-                                                                        @Override
-                                                                        public void done(List<AVObject> list, AVException e) {
-                                                                            final int pID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("pid") + 1;
-                                                                            AVObject product = new AVObject("Photo");//TODO
-                                                                            product.put("pid", pID);
-                                                                            product.saveInBackground(new SaveCallback() {
-                                                                                @Override
-                                                                                public void done(AVException e) {
-                                                                                    if (e == null) {
-                                                                                        mProgerss.setVisibility(View.GONE);
-                                                                                        setCar(cID, tID, pID);
-                                                                                    } else {
-                                                                                        mProgerss.setVisibility(View.GONE);
-                                                                                        Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                                    }
-                                                                                }
-                                                                            });
-                                                                        }
-                                                                    });
-
-                                                                } else {
-                                                                    mProgerss.setVisibility(View.GONE);
-                                                                    Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                }
-                                                            }
-                                                        });
-                                                    }
-                                                });
-                                            } else {
-                                                mProgerss.setVisibility(View.GONE);
-                                                Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    }
-                });
+//                if ("".equals(edt_vincode.getText().toString().trim())) {
+//                    ToastUtil.show("请输入17位VIN码");
+//                    return;
+//                }
+//                if ("".equals(edt_vincode.getText().toString().trim()) && edt_vincode.getText().toString().trim().length() != 17) {
+//                    ToastUtil.show("请输入正确的VIN码");
+//                    return;
+//                }
+//                if ("".equals(tv_carinfo.getText().toString().trim())) {
+//                    ToastUtil.show("请选择车辆型号");
+//                    return;
+//                }
+//                if ("".equals(tv_city.getText().toString().trim())) {
+//                    ToastUtil.show("请选择所在城市");
+//                    return;
+//                }
+//                if ("".equals(tv_datatime.getText().toString().trim())) {
+//                    ToastUtil.show("请选择上牌日期");
+//                    return;
+//                }
+//                if ("".equals(edt_km.getText().toString().trim())) {
+//                    ToastUtil.show("请输入行程里程");
+//                    return;
+//                }
+//                if ("".equals(edt_money.getText().toString().trim())) {
+//                    ToastUtil.show("请输入价格");
+//                    return;
+//                }
+//                mProgerss.setVisibility(View.VISIBLE);
+//                AVQuery<AVObject> avQuery = new AVQuery<>("Car");
+//                avQuery.addAscendingOrder("carid");
+//                avQuery.findInBackground(new FindCallback<AVObject>() {
+//                    private int cID = 0;
+//                    private int tID = 0;
+//
+//                    @Override
+//                    public void done(List<AVObject> list, AVException e) {
+//                        if (list.size() == 0) {
+//                            cID = 1;
+//                        } else {
+//                            cID = (Integer) list.get(list.size() - 1).get("carid") + 1;
+//                            Log.e(TAG, list.get(list.size() - 1).get("carid") + "");
+//                            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");//TODO 查询审核ID
+//                            avQuery.addAscendingOrder("sid");
+//                            avQuery.findInBackground(new FindCallback<AVObject>() {
+//                                @Override
+//                                public void done(List<AVObject> list, AVException e) {
+//                                    final int sID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("sid") + 1;
+//                                    Log.e(TAG, list.get(list.size() - 1).get("sid") + "");
+//                                    AVObject product = new AVObject("Audit");//TODO 插入审核数据
+//                                    product.put("cid", cID);
+//                                    product.put("sid", sID);
+//                                    product.put("atype", 0);
+//                                    product.saveInBackground(new SaveCallback() {
+//                                        @Override
+//                                        public void done(AVException e) {
+//                                            if (e == null) {
+//                                                mProgerss.setVisibility(View.GONE);
+//                                                AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询任务ID
+//                                                avQuery.addAscendingOrder("tid");
+//                                                avQuery.findInBackground(new FindCallback<AVObject>() {
+//                                                    @Override
+//                                                    public void done(List<AVObject> list, AVException e) {
+//                                                        tID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("tid") + 1;
+//                                                        AVObject product = new AVObject("Task");//TODO 插入审核数据
+//                                                        product.put("tid", tID);
+//                                                        product.put("sid", sID);
+//                                                        product.put("uid", AVUser.getCurrentUser().get("uid"));
+//                                                        product.put("cid", cID);
+//                                                        product.put("tcreatetime", new Date());
+//                                                        product.saveInBackground(new SaveCallback() {
+//                                                            @Override
+//                                                            public void done(AVException e) {
+//                                                                if (e == null) {
+//                                                                    mProgerss.setVisibility(View.GONE);
+//                                                                    AVQuery<AVObject> avQuery = new AVQuery<>("Photo");//TODO 查询任务ID
+//                                                                    avQuery.addAscendingOrder("pid");
+//                                                                    avQuery.findInBackground(new FindCallback<AVObject>() {
+//                                                                        @Override
+//                                                                        public void done(List<AVObject> list, AVException e) {
+//                                                                            final int pID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("pid") + 1;
+//                                                                            AVObject product = new AVObject("Photo");//TODO
+//                                                                            product.put("pid", pID);
+//                                                                            product.saveInBackground(new SaveCallback() {
+//                                                                                @Override
+//                                                                                public void done(AVException e) {
+//                                                                                    if (e == null) {
+//                                                                                        mProgerss.setVisibility(View.GONE);
+//                                                                                        setCar(cID, tID, pID);
+//                                                                                    } else {
+//                                                                                        mProgerss.setVisibility(View.GONE);
+//                                                                                        Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                                                                                    }
+//                                                                                }
+//                                                                            });
+//                                                                        }
+//                                                                    });
+//
+//                                                                } else {
+//                                                                    mProgerss.setVisibility(View.GONE);
+//                                                                    Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                                                                }
+//                                                            }
+//                                                        });
+//                                                    }
+//                                                });
+//                                            } else {
+//                                                mProgerss.setVisibility(View.GONE);
+//                                                Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                                            }
+//                                        }
+//                                    });
+//                                }
+//                            });
+//                        }
+//                    }
+//                });
+                startActivity(new Intent(CarInfoActivity.this, SelectPhotoActivity.class).putExtra("TID", 1034));
                 break;
             case R.id.tv_gj:
                 tv_title.setText("妙车估");
@@ -601,6 +604,8 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_list_cartype, null);
         bottomDialoga.setContentView(contentView);
         loopView = (RecyclerView) contentView.findViewById(R.id.rv_list);
+        TextView tvTitle = (TextView) contentView.findViewById(R.id.tv_title);
+        tvTitle.setText("选择车系名称");
         LinearLayout llTop = (LinearLayout) contentView.findViewById(R.id.ll_top);
         llTop.setVisibility(View.GONE);
         ViewGroup.LayoutParams layoutParams = contentView.getLayoutParams();
@@ -635,6 +640,8 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_list_cartype, null);
         bottomDialogb.setContentView(contentView);
         loopView = (RecyclerView) contentView.findViewById(R.id.rv_list);
+        TextView tvTitle = (TextView) contentView.findViewById(R.id.tv_title);
+        tvTitle.setText("选择车型名称");
         LinearLayout llTop = (LinearLayout) contentView.findViewById(R.id.ll_top);
         llTop.setVisibility(View.GONE);
         ViewGroup.LayoutParams layoutParams = contentView.getLayoutParams();
