@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -24,6 +25,8 @@ import android.widget.Toast;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.GettingStartedApp;
@@ -37,6 +40,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -120,6 +124,8 @@ public class SelectPhotoActivity extends Activity {
     boolean A = false, B = false, C = false, D = false, E = false;
     String pathA = "", pathB = "", pathC = "", pathD = "", pathE = "";
     private AVFile file;
+    private int mPid = -1;
+    private Bitmap bitmap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -304,11 +310,15 @@ public class SelectPhotoActivity extends Activity {
                 long strTimeMillis = System.currentTimeMillis();
                 String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
                 File imageFile = new File(newPath);
+                if (bitmap != null) {
+                    bitmap.recycle();
+                    bitmap = null;
+                }
+                bitmap = BitmapFactory.decodeFile(newPath);
                 if (imageFile.exists()) {
                     if (index == 0) {
                         pathA = newPath;
                         A = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivA.setImageBitmap(bitmap);
                         pbA.setVisibility(View.VISIBLE);
                         ivAa.setVisibility(View.VISIBLE);
@@ -319,7 +329,6 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 1) {
                         pathB = newPath;
                         B = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivB.setImageBitmap(bitmap);
                         pbB.setVisibility(View.VISIBLE);
                         ivBb.setVisibility(View.VISIBLE);
@@ -330,7 +339,6 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 2) {
                         pathC = newPath;
                         C = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivC.setImageBitmap(bitmap);
                         pbC.setVisibility(View.VISIBLE);
                         ivCc.setVisibility(View.VISIBLE);
@@ -341,7 +349,6 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 3) {
                         pathD = newPath;
                         D = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivD.setImageBitmap(bitmap);
                         pbD.setVisibility(View.VISIBLE);
                         ivDd.setVisibility(View.VISIBLE);
@@ -352,7 +359,6 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 4) {
                         pathE = newPath;
                         E = true;
-                        final Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivE.setImageBitmap(bitmap);
                         pbE.setVisibility(View.VISIBLE);
                         ivEe.setVisibility(View.VISIBLE);
@@ -368,7 +374,7 @@ public class SelectPhotoActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void setPhotoData(final Bitmap bitmap, final String keyName) {
+    private void setPhotoData(final Bitmap bitmaps, final String keyName) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -378,7 +384,7 @@ public class SelectPhotoActivity extends Activity {
                 }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    bitmaps.compress(Bitmap.CompressFormat.PNG, 50, out);
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");
@@ -395,62 +401,122 @@ public class SelectPhotoActivity extends Activity {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                AVObject product = new AVObject("Photo");
                 try {
                     file = AVFile.withAbsoluteLocalPath("productPic.jpg", Environment.getExternalStorageDirectory() + "/productPic.jpg");
                     file.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(AVException e) {
-                            // 成功或失败处理...
-                            if ("pocardregis".equals(keyName)) {
-                                A = false;
-                                pbA.setVisibility(View.GONE);
-                            } else if ("ptcardregis".equals(keyName)) {
-                                B = false;
-                                pbB.setVisibility(View.GONE);
-                            } else if ("drivingcard".equals(keyName)) {
-                                C = false;
-                                pbC.setVisibility(View.GONE);
-                            } else if ("pchit".equals(keyName)) {
-                                D = false;
-                                pbD.setVisibility(View.GONE);
-                            } else if ("pnameplate".equals(keyName)) {
-                                E = false;
-                                pbE.setVisibility(View.GONE);
+                            if (e == null) {
+                                AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询审核ID
+                                avQuery.whereEqualTo("tid", tid);
+                                avQuery.findInBackground(new FindCallback<AVObject>() {
+                                    @Override
+                                    public void done(List<AVObject> list, AVException e) {
+                                        int cID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("cid");
+                                        if (cID != -1) {
+                                            final AVQuery<AVObject> avQuery = new AVQuery<>("Car");//TODO 查询审核ID
+                                            avQuery.whereEqualTo("carid", cID);
+                                            avQuery.findInBackground(new FindCallback<AVObject>() {
+                                                @Override
+                                                public void done(List<AVObject> list, AVException e) {
+                                                    int pID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("pid");
+                                                    if (pID != -1) {
+                                                        mPid = pID;
+                                                        AVQuery<AVObject> avQuery1 = new AVQuery<>("Photo");
+                                                        avQuery1.whereEqualTo("pid", pID);
+                                                        avQuery1.findInBackground(new FindCallback<AVObject>() {
+                                                            @Override
+                                                            public void done(List<AVObject> list, AVException e) {
+                                                                Log.e("avQuery1", list.size() + (e != null ? e.getMessage() : "null"));
+                                                                AVObject avObject = list == null || list.size() == 0 ? null : list.get(0);
+                                                                avObject.put(keyName, file);
+                                                                avObject.saveInBackground(new SaveCallback() {
+                                                                    @Override
+                                                                    public void done(final AVException e) {
+                                                                        new Handler().post(new Runnable() {
+                                                                            @Override
+                                                                            public void run() {
+                                                                                if (e == null) {
+//                                                                                    Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+                                                    } else {
+                                                        AVObject avObject = new AVObject("Photo");
+                                                        avObject.put(keyName, file);
+                                                        avObject.put("pid", pID + 1);
+                                                        avObject.saveInBackground(new SaveCallback() {
+                                                            @Override
+                                                            public void done(final AVException e) {
+                                                                new Handler().post(new Runnable() {
+                                                                    @Override
+                                                                    public void run() {
+                                                                        if (e == null) {
+//                                                                            Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    }
+                                });
+                                new Handler().post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        // 成功或失败处理...
+                                        if ("pocardregis".equals(keyName)) {
+                                            A = false;
+                                            pbA.setVisibility(View.GONE);
+                                        } else if ("ptcardregis".equals(keyName)) {
+                                            B = false;
+                                            pbB.setVisibility(View.GONE);
+                                        } else if ("drivingcard".equals(keyName)) {
+                                            C = false;
+                                            pbC.setVisibility(View.GONE);
+                                        } else if ("pchit".equals(keyName)) {
+                                            D = false;
+                                            pbD.setVisibility(View.GONE);
+                                        } else if ("pnameplate".equals(keyName)) {
+                                            E = false;
+                                            pbE.setVisibility(View.GONE);
+                                        }
+                                    }
+                                });
                             }
                         }
                     }, new ProgressCallback() {
                         @Override
-                        public void done(Integer integer) {
-                            // 上传进度数据，integer 介于 0 和 100。
-                            if ("pocardregis".equals(keyName)) {
-                                pbA.setProgress(integer);
-                            } else if ("ptcardregis".equals(keyName)) {
-                                pbB.setProgress(integer);
-                            } else if ("drivingcard".equals(keyName)) {
-                                pbC.setProgress(integer);
-                            } else if ("pchit".equals(keyName)) {
-                                pbD.setProgress(integer);
-                            } else if ("pnameplate".equals(keyName)) {
-                                pbE.setProgress(integer);
-                            }
+                        public void done(final Integer integer) {
+                            new Handler().post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // 上传进度数据，integer 介于 0 和 100。
+                                    if ("pocardregis".equals(keyName)) {
+                                        pbA.setProgress(integer);
+                                    } else if ("ptcardregis".equals(keyName)) {
+                                        pbB.setProgress(integer);
+                                    } else if ("drivingcard".equals(keyName)) {
+                                        pbC.setProgress(integer);
+                                    } else if ("pchit".equals(keyName)) {
+                                        pbD.setProgress(integer);
+                                    } else if ("pnameplate".equals(keyName)) {
+                                        pbE.setProgress(integer);
+                                    }
+                                }
+                            });
                         }
                     });
-                    product.put(keyName, file);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                product.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(AVException e) {
-                        if (e == null) {
-                            mProgess.setVisibility(View.GONE);
-                        } else {
-                            mProgess.setVisibility(View.GONE);
-                            Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
             }
         }.execute();
     }

@@ -54,10 +54,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateHidden"></activity>
         <activity
-            android:name="com.miaochegu.activity.SelectPhotoActivity"
+            android:name=".activity.SelectPhotoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
-            android:name="com.miaochegu.activity.SelectPhotoTwoActivity"
+            android:name=".activity.SelectPhotoTwoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".activity.SelectPhotoThreeActivity"

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
-import com.avos.avoscloud.UpdatePasswordCallback;
+import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.R;
 import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
@@ -64,18 +64,15 @@ public class UpdatePassWordActivity extends Activity {
                     ToastUtil.show("两次密码不一致");
                     return;
                 }
-                String strPhone = AVUser.getCurrentUser().get("phone").toString();
-                Log.e("MCG", strPhone);
-                AVUser.resetPasswordBySmsCodeInBackground("365783", pwdb, new UpdatePasswordCallback() {
+                AVUser avuser = AVUser.getCurrentUser();
+                avuser.put("password", pwdb);
+                avuser.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(AVException e) {
-                        if (e == null) {
-                            ToastUtil.show("修改成功");
-                        } else {
-                            e.printStackTrace();
-                        }
+                        ToastUtil.show("修改成功");
                     }
                 });
+                Log.e("MCG", pwdb);
                 break;
         }
     }

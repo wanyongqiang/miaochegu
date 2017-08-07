@@ -52,7 +52,7 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
 
     @Override
     public View initView() {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess_two, null);
         context = getActivity();
         ButterKnife.bind(this, view);
         mProgess.setVisibility(View.VISIBLE);
@@ -181,7 +181,6 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     public void onClick(View item, int position, int which, String id) {
         switch (which) {
             case R.id.tv_fs:
-                ToastUtil.show("提交了！");
                 break;
         }
     }

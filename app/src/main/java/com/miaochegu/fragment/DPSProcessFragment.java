@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -51,7 +52,7 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
 
     @Override
     public View initView() {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess_two, null);
         context = getActivity();
         ButterKnife.bind(this, view);
         mProgess.setVisibility(View.VISIBLE);
@@ -77,7 +78,12 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     mDPSWaiteAssessAdapter.upRes(list);
-                    mProgess.setVisibility(View.GONE);
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgess.setVisibility(View.GONE);
+                        }
+                    });
                 } else {
                     e.printStackTrace();
                 }

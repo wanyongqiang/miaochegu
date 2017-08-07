@@ -90,7 +90,7 @@ public class WaiteAssessAdapter extends RecyclerView.Adapter<WaiteAssessAdapter.
                                 public void done(List<AVObject> list, AVException e) {
                                     if (e == null && list != null) {
                                         for (int i = 0; i < list.size(); i++) {
-                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 0 || (int) list.get(i).get("atype") == 2) {
+                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 0 || (int) list.get(i).get("atype") == 4) {
                                                 holder.tvfs.setText(list.get(i).get("appraiser") == null ? "" : list.get(i).get("appraiser") + "正在处理");
                                             }
                                         }
