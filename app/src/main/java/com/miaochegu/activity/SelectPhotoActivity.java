@@ -125,7 +125,8 @@ public class SelectPhotoActivity extends Activity {
     String pathA = "", pathB = "", pathC = "", pathD = "", pathE = "";
     private AVFile file;
     private int mPid = -1;
-    private Bitmap bitmap;
+
+    private static Handler handler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -139,30 +140,6 @@ public class SelectPhotoActivity extends Activity {
         tid = intent.getIntExtra("TID", 0);
     }
 
-    private boolean verData() {
-        if ("".equals(pathA)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
-        if ("".equals(pathB)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
-        if ("".equals(pathC)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
-        if ("".equals(pathD)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
-        if ("".equals(pathE)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
-        return false;
-    }
-
     @OnClick({R.id.ll_back, R.id.tv_ynamic, R.id.rl_a, R.id.rl_b, R.id.rl_c, R.id.rl_d, R.id.rl_e, R.id.iv_aa, R.id.iv_bb, R.id.iv_cc, R.id.iv_ee, R.id.iv_dd})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -170,6 +147,7 @@ public class SelectPhotoActivity extends Activity {
                 finish();
                 break;
             case R.id.tv_ynamic:
+                if (isVerData()) return;
                 startActivity(new Intent(SelectPhotoActivity.this, SelectPhotoTwoActivity.class).putExtra("TID", tid));
                 break;
             case R.id.rl_a:
@@ -255,6 +233,30 @@ public class SelectPhotoActivity extends Activity {
         }
     }
 
+    private boolean isVerData() {
+        if ("".equals(pathA)) {
+            ToastUtil.show("请上传完整再进行下一步");
+            return true;
+        }
+        if ("".equals(pathB)) {
+            ToastUtil.show("请上传完整再进行下一步");
+            return true;
+        }
+        if ("".equals(pathC)) {
+            ToastUtil.show("请上传完整再进行下一步");
+            return true;
+        }
+        if ("".equals(pathD)) {
+            ToastUtil.show("请上传完整再进行下一步");
+            return true;
+        }
+        if ("".equals(pathE)) {
+            ToastUtil.show("请上传完整再进行下一步");
+            return true;
+        }
+        return false;
+    }
+
     /**
      * 验证当前上传进度是否上传完毕
      *
@@ -310,15 +312,11 @@ public class SelectPhotoActivity extends Activity {
                 long strTimeMillis = System.currentTimeMillis();
                 String newPath = ImageUtils.compressImage(imageFileStr, FileCache.setRootDirectory() + strTimeMillis + ".jpg", 50);
                 File imageFile = new File(newPath);
-                if (bitmap != null) {
-                    bitmap.recycle();
-                    bitmap = null;
-                }
-                bitmap = BitmapFactory.decodeFile(newPath);
                 if (imageFile.exists()) {
                     if (index == 0) {
                         pathA = newPath;
                         A = true;
+                        Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivA.setImageBitmap(bitmap);
                         pbA.setVisibility(View.VISIBLE);
                         ivAa.setVisibility(View.VISIBLE);
@@ -327,8 +325,10 @@ public class SelectPhotoActivity extends Activity {
                         setPhotoData(bitmap, "pocardregis");
                     }
                     if (index == 1) {
+
                         pathB = newPath;
                         B = true;
+                        Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivB.setImageBitmap(bitmap);
                         pbB.setVisibility(View.VISIBLE);
                         ivBb.setVisibility(View.VISIBLE);
@@ -339,6 +339,7 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 2) {
                         pathC = newPath;
                         C = true;
+                        Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivC.setImageBitmap(bitmap);
                         pbC.setVisibility(View.VISIBLE);
                         ivCc.setVisibility(View.VISIBLE);
@@ -349,6 +350,7 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 3) {
                         pathD = newPath;
                         D = true;
+                        Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivD.setImageBitmap(bitmap);
                         pbD.setVisibility(View.VISIBLE);
                         ivDd.setVisibility(View.VISIBLE);
@@ -359,6 +361,7 @@ public class SelectPhotoActivity extends Activity {
                     if (index == 4) {
                         pathE = newPath;
                         E = true;
+                        Bitmap bitmap = BitmapFactory.decodeFile(newPath);
                         ivE.setImageBitmap(bitmap);
                         pbE.setVisibility(View.VISIBLE);
                         ivEe.setVisibility(View.VISIBLE);
@@ -374,17 +377,15 @@ public class SelectPhotoActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void setPhotoData(final Bitmap bitmaps, final String keyName) {
+    private void setPhotoData(final Bitmap bitmap, final String keyName) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 File f = new File(Environment.getExternalStorageDirectory(), "productPic.jpg");
-                if (f.exists()) {
-                    f.delete();
-                }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    bitmaps.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    String str = f.getPath();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");
@@ -433,14 +434,8 @@ public class SelectPhotoActivity extends Activity {
                                                                 avObject.saveInBackground(new SaveCallback() {
                                                                     @Override
                                                                     public void done(final AVException e) {
-                                                                        new Handler().post(new Runnable() {
-                                                                            @Override
-                                                                            public void run() {
-                                                                                if (e == null) {
-//                                                                                    Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                                }
-                                                                            }
-                                                                        });
+                                                                        if (e == null) {
+                                                                        }
                                                                     }
                                                                 });
                                                             }
@@ -452,14 +447,8 @@ public class SelectPhotoActivity extends Activity {
                                                         avObject.saveInBackground(new SaveCallback() {
                                                             @Override
                                                             public void done(final AVException e) {
-                                                                new Handler().post(new Runnable() {
-                                                                    @Override
-                                                                    public void run() {
-                                                                        if (e == null) {
-//                                                                            Toast.makeText(SelectPhotoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                        }
-                                                                    }
-                                                                });
+                                                                if (e == null) {
+                                                                }
                                                             }
                                                         });
                                                     }
@@ -468,7 +457,7 @@ public class SelectPhotoActivity extends Activity {
                                         }
                                     }
                                 });
-                                new Handler().post(new Runnable() {
+                                handler.post(new Runnable() {
                                     @Override
                                     public void run() {
                                         // 成功或失败处理...
@@ -495,7 +484,7 @@ public class SelectPhotoActivity extends Activity {
                     }, new ProgressCallback() {
                         @Override
                         public void done(final Integer integer) {
-                            new Handler().post(new Runnable() {
+                            handler.post(new Runnable() {
                                 @Override
                                 public void run() {
                                     // 上传进度数据，integer 介于 0 和 100。

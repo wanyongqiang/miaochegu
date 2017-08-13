@@ -3,6 +3,7 @@ package com.miaochegu.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +16,8 @@ import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
 import com.miaochegu.util.StatusbarUtils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -56,6 +59,9 @@ public class LookBelogActivity extends Activity {
     TextView tvA;
     private String cid;
 
+    private static Handler handler = new Handler();
+    private String tid;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +71,7 @@ public class LookBelogActivity extends Activity {
 
         Intent intent = getIntent();
         cid = intent.getStringExtra("CID");
+        tid = intent.getStringExtra("TID");
 
         iv_back = (ImageView) findViewById(R.id.iv_back);
         iv_back.setOnClickListener(new View.OnClickListener() {
@@ -75,30 +82,52 @@ public class LookBelogActivity extends Activity {
         });
 
         initview();
-        initData();
     }
 
     private void initview() {
+        tvNumber.setText("评估单号：" + tid);
         AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-        avQuery.whereEqualTo("carid", cid);
+        avQuery.orderByDescending("createdAt");
         avQuery.findInBackground(new FindCallback<AVObject>() {
             @Override
-            public void done(List<AVObject> list, AVException e) {
+            public void done(final List<AVObject> list, AVException e) {
                 if (list != null && list.size() > 0) {
-                    tvContent.setText("[" + list.get(0).get("caddress").toString() + "]" + list.get(0).get("cmodels"));
-                    tvTime.setText("");
-                    tvPrice.setText("￥" + list.get(0).get("cprice").toString() + "万元");
-                    tvVincode.setText(list.get(0).get("vin").toString());
-                    tvDate.setText(list.get(0).get("cyear") + "");
-                    tvAddress.setText(list.get(0).get("caddress") + "");
-                    tvKm.setText(list.get(0).get("ckm") + "");
-                    tvPrice.setText(list.get(0).get("clinchprice") + "");
+                    for (int i = 0; i < list.size(); i++) {
+                        if (cid.equals(list.get(i).get("carid").toString())) {
+                            final int p = i;
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    tvContent.setText("[" + list.get(p).get("caddress").toString() + "]" + list.get(p).get("cmodels"));
+                                    if (list.get(p).get("createdAt") != null) {
+                                        String string = list.get(p).get("createdAt").toString();
+                                        tvTime.setText(string != null ? getDateString(string) : "");
+                                    } else {
+                                        tvTime.setText("");
+                                    }
+                                    tvFs.setText("￥" + list.get(p).get("cprice").toString() + "万元");
+                                    tvVincode.setText(list.get(p).get("vin").toString());
+                                    if (list.get(p).get("cyear") != null) {
+                                        tvDate.setText(getDateString(list.get(p).get("cyear").toString()));
+                                    } else {
+                                        tvDate.setText("");
+                                    }
+                                    tvAddress.setText(list.get(p).get("caddress") + "");
+                                    tvKm.setText(list.get(p).get("ckm") + "");
+                                    tvPrice.setText(list.get(p).get("clinchprice") + "");
+                                }
+                            });
+                        }
+                    }
                 }
             }
         });
     }
 
-    private void initData() {
-
+    private String getDateString(String strOld) {
+        Date date = new Date();
+        date.parse(strOld);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(date);
     }
 }

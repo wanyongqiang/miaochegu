@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,6 +24,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.FindCallback;
+import com.avos.avoscloud.SaveCallback;
 import com.esaysidebar.EasySideBarBuilder;
 import com.limxing.library.AlertView;
 import com.limxing.library.OnConfirmeListener;
@@ -32,14 +39,18 @@ import com.miaochegu.adapter.CarNameAdapter;
 import com.miaochegu.adapter.CarTypeAdapter;
 import com.miaochegu.model.CountryModel;
 import com.miaochegu.util.StatusbarUtils;
+import com.miaochegu.util.ToastUtil;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ch.ielse.view.SwitchView;
+
+import static com.miaochegu.R.id.edt_content;
 
 /**
  * Created by roztop on 2017/8/5.
@@ -84,6 +95,10 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
     RelativeLayout llNote;
 
     Context context;
+    @BindView(edt_content)
+    EditText edtContent;
+    @BindView(R.id.tv_ynamic)
+    TextView tvYnamic;
     private String strOperate = " 营运车辆";
     private final String[] mIndexItems = {"定位", "热门"};//头部额外的索引
     private List<CountryModel> models = new ArrayList<>();
@@ -100,6 +115,7 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
     private Dialog bottomDialog;
     private Dialog bottomDialoga;
     private Dialog bottomDialogb;
+    private static Handler handler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -108,6 +124,36 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
         setContentView(R.layout.activity_editor_task);
         ButterKnife.bind(this);
         context = this;
+
+        Intent intent = getIntent();
+        String a = intent.getStringExtra("A");
+        tvName.setText(a != null ? a : "");
+
+        String b = intent.getStringExtra("B");
+        tvVin.setText(b != null ? b : "");
+
+        String c = intent.getStringExtra("C");
+        tvCartype.setText(c != null ? c : "");
+
+        String d = intent.getStringExtra("D");
+        tvFirst.setText(d != null ? d.substring(0, 10) : "");
+
+        String e = intent.getStringExtra("E");
+        tvKm.setText(e != null ? e : "");
+
+        String f = intent.getStringExtra("F");
+        tvPrice.setText(f != null ? f : "");
+
+        String g = intent.getStringExtra("G");
+        if ("运营车辆".equals(g)) {
+            switchView.setOpened(false);
+        } else {
+            switchView.setOpened(true);
+        }
+
+        String h = intent.getStringExtra("H");
+        edtContent.setText(h != null ? h : "");
+
         initData();
     }
 
@@ -127,7 +173,7 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
         });
     }
 
-    @OnClick({R.id.ll_back, R.id.ll_nickanme, R.id.ll_cartype, R.id.ll_first})
+    @OnClick({R.id.ll_back, R.id.ll_nickanme, R.id.ll_cartype, R.id.ll_first, R.id.tv_ynamic})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_back://返回
@@ -161,7 +207,149 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
                 }
                 new AlertView("请选择日期", context, 1966, 2017, this).show();
                 break;
+            case R.id.tv_ynamic:
+                if ("".equals(tvCartype.getText().toString().trim())) {
+                    ToastUtil.show("请选择车辆型号");
+                    return;
+                }
+                if ("".equals(tvName.getText().toString().trim())) {
+                    ToastUtil.show("请选择所在城市");
+                    return;
+                }
+                if ("".equals(tvFirst.getText().toString().trim())) {
+                    ToastUtil.show("请选择上牌日期");
+                    return;
+                }
+                if ("".equals(tvKm.getText().toString().trim())) {
+                    ToastUtil.show("请输入行程里程");
+                    return;
+                }
+                if ("".equals(tvPrice.getText().toString().trim())) {
+                    ToastUtil.show("请输入价格");
+                    return;
+                }
+                AVQuery<AVObject> avQuery = new AVQuery<>("Car");
+                avQuery.addAscendingOrder("carid");
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    private int tID = 0;
+
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+//                                mProgerss.setVisibility(View.GONE);
+                            }
+                        });
+                        final int cID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("carid") + 1;
+//                        Log.e(TAG, list.get(list.size() - 1).get("carid") + "");
+                        AVQuery<AVObject> avQuery = new AVQuery<>("Audit");//TODO 查询审核ID
+                        avQuery.addAscendingOrder("sid");
+                        avQuery.findInBackground(new FindCallback<AVObject>() {
+                            @Override
+                            public void done(List<AVObject> list, AVException e) {
+                                final int sID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("sid") + 1;
+//                                Log.e(TAG, list.get(list.size() - 1).get("sid") + "");
+                                AVObject product = new AVObject("Audit");//TODO 插入审核数据
+                                product.put("cid", cID);
+                                product.put("sid", sID);
+                                product.put("atype", 0);
+                                product.saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(AVException e) {
+                                        if (e == null) {
+                                            AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询任务ID
+                                            avQuery.addAscendingOrder("tid");
+                                            avQuery.findInBackground(new FindCallback<AVObject>() {
+                                                @Override
+                                                public void done(List<AVObject> list, AVException e) {
+                                                    tID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("tid") + 1;
+                                                    AVObject product = new AVObject("Task");//TODO 插入审核数据
+                                                    product.put("tid", tID);
+                                                    product.put("sid", sID);
+                                                    product.put("uid", AVUser.getCurrentUser().get("uid"));
+                                                    product.put("cid", cID);
+                                                    product.put("tcreatetime", new Date());
+                                                    product.saveInBackground(new SaveCallback() {
+                                                        @Override
+                                                        public void done(AVException e) {
+                                                            if (e == null) {
+                                                                AVQuery<AVObject> avQuery = new AVQuery<>("Photo");//TODO 查询任务ID
+                                                                avQuery.addAscendingOrder("pid");
+                                                                avQuery.findInBackground(new FindCallback<AVObject>() {
+                                                                    @Override
+                                                                    public void done(List<AVObject> list, AVException e) {
+                                                                        final int pID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("pid") + 1;
+                                                                        AVObject product = new AVObject("Photo");//TODO
+                                                                        product.put("pid", pID);
+                                                                        product.saveInBackground(new SaveCallback() {
+                                                                            @Override
+                                                                            public void done(AVException e) {
+                                                                                if (e == null) {
+                                                                                    setCar(cID, pID);
+                                                                                } else {
+//                                                                                    Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                });
+
+                                                            } else {
+//                                                                Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        } else {
+//                                            Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+                break;
         }
+    }
+
+    /**
+     * @param cid 车辆ID
+     * @param pid 照片ID
+     */
+    private void setCar(final int cid, final int pid) {
+        AVObject product = new AVObject("Car");
+        product.put("carid", cid);
+        product.put("pid", pid);
+        product.put("cseries", strCarType);
+        product.put("cinfo", AVUser.getCurrentUser().getUsername());
+        product.put("vin", tvVin.getText().toString().trim());
+        product.put("cbrand", strCarName);
+        product.put("caddress", tvName.getText().toString().trim());
+        product.put("cyear", tvFirst.getText().toString().trim());
+        product.put("ckm", Integer.parseInt(tvKm.getText().toString().trim()));
+        product.put("cmodels", strCarModel);
+        product.put("cprice", Integer.parseInt(tvPrice.getText().toString().trim()));
+        product.put("sceneinfo", edtContent.getText().toString().trim());
+        product.put("usenature", strOperate);
+        product.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(final AVException e) {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (e == null) {
+                            ToastUtil.show("修改成功");
+                            EditorTaskActivity.this.finish();
+                        } else {
+                            ToastUtil.show("修改失败");
+                        }
+                    }
+                });
+            }
+        });
     }
 
     @Override

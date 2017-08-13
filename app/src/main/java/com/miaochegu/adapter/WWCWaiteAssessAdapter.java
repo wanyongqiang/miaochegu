@@ -15,7 +15,6 @@ import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
 import com.miaochegu.util.ListItemClickHelp;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -69,9 +68,10 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final AVObject rowsEntity = entity.get(position);
-        holder.tv_name.setText("任务单号：" + entity.get(position).get("tid"));
+        final String tid = entity.get(position).get("tid") + "";
+        holder.tv_name.setText("任务单号：" + tid);
         String tcreatetime = entity.get(position).get("tcreatetime").toString();
-        holder.tv_time.setText(tcreatetime);
+        holder.tv_time.setText(getDateString(tcreatetime));
         final String cid = entity.get(position).get("cid").toString();
         final String sid = entity.get(position).get("sid").toString();
         AVQuery<AVObject> avQuery = new AVQuery<>("Car");
@@ -113,7 +113,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
                     holder.itemView.setTag(rowsEntity);
-                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition);
+                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition, cid, tid,sid);
                 }
             });
         }
@@ -124,7 +124,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
         holder.tvfs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.onClick(inflate, p, viewId, cid);
+                callback.onClick(inflate, p, viewId, cid,tid);
             }
         });
     }
@@ -139,7 +139,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
     }
 
     public interface OnItemClickListener {
-        void onItemeClick(View view, int position);
+        void onItemeClick(View view, int position, String cID, String tID,String sID);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
@@ -159,53 +159,11 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
         }
     }
 
-    private Date formatDate(String string) {
-        SimpleDateFormat resultSdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        SimpleDateFormat resultSdfdate = new SimpleDateFormat("yyyy-MM-dd");
-        if (string != null) {
-            if (string.contains("CST")) {
-                long d2 = Date.parse(string);
-                Date datetime = new Date(d2);
-
-                return datetime;
-
-            } else if (string.contains("Z")) {
-                SimpleDateFormat sdf = new SimpleDateFormat(
-                        "yyyy-MM-dd'T'hh:mm:ss'.'sss'Z'");
-                java.util.Date datetime;
-                try {
-                    datetime = sdf.parse(string);
-                    return (Date) datetime;
-                } catch (ParseException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-
-            } else if (string.contains("-") && string.contains(":")) {
-                Date newDate;
-                try {
-                    newDate = resultSdf.parse(string);
-                    return newDate;
-                } catch (ParseException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            } else if (string.contains("-") && !string.contains(":")) {
-                Date newDate;
-                try {
-                    newDate = resultSdfdate.parse(string);
-                    return newDate;
-                } catch (ParseException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            } else {
-                Date longDate = new Date(Long.parseLong(string));
-
-                return longDate;
-            }
-        }
-        return null;
+    private String getDateString(String strOld) {
+        Date date = new Date();
+        date.parse(strOld);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(date);
     }
 
 }

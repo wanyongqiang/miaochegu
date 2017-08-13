@@ -8,6 +8,6 @@ import android.view.View;
  * @author Alan
  */
 public interface ListItemClickHelp {
-    void onClick(View item, int position, int which,String id);
+    void onClick(View item, int position, int which,String id,String tID);
 
 }

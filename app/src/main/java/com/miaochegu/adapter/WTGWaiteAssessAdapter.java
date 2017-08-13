@@ -15,7 +15,9 @@ import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
 import com.miaochegu.util.ListItemClickHelp;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -67,9 +69,10 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
         final AVObject rowsEntity = entity.get(position);
         holder.v_line.setVisibility(View.VISIBLE);
         holder.ll_ll_wtg.setVisibility(View.VISIBLE);
-        holder.tv_name.setText("任务单号：" + entity.get(position).get("tid"));
+        final String tid = entity.get(position).get("tid") + "";
+        holder.tv_name.setText("任务单号：" + tid);
         String tcreatetime = entity.get(position).get("tcreatetime").toString();
-        holder.tv_time.setText(tcreatetime);
+        holder.tv_time.setText(getDateString(tcreatetime));
         final String cid = entity.get(position).get("cid").toString();
         final String sid = entity.get(position).get("sid").toString();
         AVQuery<AVObject> avQuery = new AVQuery<>("Car");
@@ -112,7 +115,7 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
                     holder.itemView.setTag(rowsEntity);
-                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition);
+                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition, cid, tid,sid);
                 }
             });
         }
@@ -123,7 +126,7 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
         holder.tv_chakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.onClick(inflate, p, viewId,cid);
+                callback.onClick(inflate, p, viewId,cid,tid);
             }
         });
     }
@@ -138,7 +141,7 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
     }
 
     public interface OnItemClickListener {
-        void onItemeClick(View view, int position);
+        void onItemeClick(View view, int position, String cID, String tID,String sID);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
@@ -157,5 +160,12 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
             v_line = view.findViewById(R.id.v_line);
             ll_ll_wtg = (LinearLayout) view.findViewById(R.id.ll_wtg);
         }
+    }
+
+    private String getDateString(String strOld) {
+        Date date = new Date();
+        date.parse(strOld);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(date);
     }
 }

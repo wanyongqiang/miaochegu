@@ -83,6 +83,9 @@
         <activity
             android:name="com.miaochegu.activity.EditorTaskActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name="com.miaochegu.activity.CarListDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
         <meta-data
             android:name="leancloud"

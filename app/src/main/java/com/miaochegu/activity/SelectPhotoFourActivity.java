@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -130,6 +131,7 @@ public class SelectPhotoFourActivity extends Activity {
     boolean A = false, B = false, C = false, D = false, E = false;
     String pathA = "", pathB = "", pathC = "", pathD = "", pathE = "";
 
+    private static Handler handler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -151,7 +153,7 @@ public class SelectPhotoFourActivity extends Activity {
                 finish();
                 break;
             case R.id.tv_ynamic:
-                if (!"".equals(pathA) && !"".equals(pathB) && !"".equals(pathC) && !"".equals(pathD) && !"".equals(pathE)) {
+                if ("".equals(pathA) && "".equals(pathB) && "".equals(pathC) && "".equals(pathD) && "".equals(pathE)) {
                     ToastUtil.show("请上传完整再提交");
                     return;
                 }
@@ -474,60 +476,109 @@ public class SelectPhotoFourActivity extends Activity {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                AVObject product = new AVObject("Photo");
                 try {
                     file = AVFile.withAbsoluteLocalPath("productPic.jpg", Environment.getExternalStorageDirectory() + "/productPic.jpg");
                     file.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(AVException e) {
-                            // 成功或失败处理...
-                            if ("pocardregis".equals(keyName)) {
-                                A = false;
-                                pbA.setVisibility(View.GONE);
-                            } else if ("ptcardregis".equals(keyName)) {
-                                B = false;
-                                pbB.setVisibility(View.GONE);
-                            } else if ("drivingcard".equals(keyName)) {
-                                C = false;
-                                pbC.setVisibility(View.GONE);
-                            } else if ("pchit".equals(keyName)) {
-                                D = false;
-                                pbD.setVisibility(View.GONE);
-                            } else if ("pnameplate".equals(keyName)) {
-                                E = false;
-                                pbE.setVisibility(View.GONE);
+                            if (e == null) {
+                                AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询审核ID
+                                avQuery.whereEqualTo("tid", tid);
+                                avQuery.findInBackground(new FindCallback<AVObject>() {
+                                    @Override
+                                    public void done(List<AVObject> list, AVException e) {
+                                        int cID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("cid");
+                                        if (cID != -1) {
+                                            final AVQuery<AVObject> avQuery = new AVQuery<>("Car");//TODO 查询审核ID
+                                            avQuery.whereEqualTo("carid", cID);
+                                            avQuery.findInBackground(new FindCallback<AVObject>() {
+                                                @Override
+                                                public void done(List<AVObject> list, AVException e) {
+                                                    int pID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("pid");
+                                                    if (pID != -1) {
+                                                        AVQuery<AVObject> avQuery1 = new AVQuery<>("Photo");
+                                                        avQuery1.whereEqualTo("pid", pID);
+                                                        avQuery1.findInBackground(new FindCallback<AVObject>() {
+                                                            @Override
+                                                            public void done(List<AVObject> list, AVException e) {
+                                                                Log.e("avQuery1", list.size() + (e != null ? e.getMessage() : "null"));
+                                                                AVObject avObject = list == null || list.size() == 0 ? null : list.get(0);
+                                                                avObject.put(keyName, file);
+                                                                avObject.saveInBackground(new SaveCallback() {
+                                                                    @Override
+                                                                    public void done(final AVException e) {
+                                                                        if (e == null) {
+                                                                        }
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+                                                    } else {
+                                                        AVObject avObject = new AVObject("Photo");
+                                                        avObject.put(keyName, file);
+                                                        avObject.put("pid", pID + 1);
+                                                        avObject.saveInBackground(new SaveCallback() {
+                                                            @Override
+                                                            public void done(final AVException e) {
+                                                                if (e == null) {
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    }
+                                });
+                                handler.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        // 成功或失败处理...
+                                        if ("pocardregis".equals(keyName)) {
+                                            A = false;
+                                            pbA.setVisibility(View.GONE);
+                                        } else if ("ptcardregis".equals(keyName)) {
+                                            B = false;
+                                            pbB.setVisibility(View.GONE);
+                                        } else if ("drivingcard".equals(keyName)) {
+                                            C = false;
+                                            pbC.setVisibility(View.GONE);
+                                        } else if ("pchit".equals(keyName)) {
+                                            D = false;
+                                            pbD.setVisibility(View.GONE);
+                                        } else if ("pnameplate".equals(keyName)) {
+                                            E = false;
+                                            pbE.setVisibility(View.GONE);
+                                        }
+                                    }
+                                });
                             }
                         }
                     }, new ProgressCallback() {
                         @Override
-                        public void done(Integer integer) {
-                            // 上传进度数据，integer 介于 0 和 100。
-                            if ("pocardregis".equals(keyName)) {
-                                pbA.setProgress(integer);
-                            } else if ("ptcardregis".equals(keyName)) {
-                                pbB.setProgress(integer);
-                            } else if ("drivingcard".equals(keyName)) {
-                                pbC.setProgress(integer);
-                            } else if ("pchit".equals(keyName)) {
-                                pbD.setProgress(integer);
-                            } else if ("pnameplate".equals(keyName)) {
-                                pbE.setProgress(integer);
-                            }
+                        public void done(final Integer integer) {
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // 上传进度数据，integer 介于 0 和 100。
+                                    if ("pocardregis".equals(keyName)) {
+                                        pbA.setProgress(integer);
+                                    } else if ("ptcardregis".equals(keyName)) {
+                                        pbB.setProgress(integer);
+                                    } else if ("drivingcard".equals(keyName)) {
+                                        pbC.setProgress(integer);
+                                    } else if ("pchit".equals(keyName)) {
+                                        pbD.setProgress(integer);
+                                    } else if ("pnameplate".equals(keyName)) {
+                                        pbE.setProgress(integer);
+                                    }
+                                }
+                            });
                         }
                     });
-                    product.put(keyName, file);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                product.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(AVException e) {
-                        if (e == null) {
-                        } else {
-                            Toast.makeText(SelectPhotoFourActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
             }
         }.execute();
     }

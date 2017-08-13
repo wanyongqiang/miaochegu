@@ -37,6 +37,19 @@
             android:text="编辑任务"
             android:textColor="#ffffff"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_ynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <TextView

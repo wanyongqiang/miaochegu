@@ -1,17 +1,14 @@
 package com.miaochegu.fragment;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.avos.avoscloud.AVException;
@@ -21,10 +18,9 @@ import com.avos.avoscloud.FindCallback;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
-import com.miaochegu.activity.LookBelogActivity;
+import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.adapter.WWCWaiteAssessAdapter;
 import com.miaochegu.util.ListItemClickHelp;
-import com.miaochegu.util.ToastUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -111,39 +107,6 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         rlAssess.setAdapter(mWWCWaiteAssessAdapter);
     }
 
-
-    /**
-     * 网络断开弹窗
-     */
-    private void showDialog() {
-        final Dialog bottomDialog = new Dialog(context, R.style.BottomDialog);
-        View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_submit_infos, null);
-        bottomDialog.setContentView(contentView);
-        Button tvNo = (Button) contentView.findViewById(R.id.alert_exit_no);
-        Button tvYes = (Button) contentView.findViewById(R.id.alert_exit_yes);
-        ViewGroup.LayoutParams layoutParams = contentView.getLayoutParams();
-        layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-        contentView.setLayoutParams(layoutParams);
-        bottomDialog.getWindow().setGravity(Gravity.CENTER);
-        bottomDialog.setCanceledOnTouchOutside(false);
-        bottomDialog.getWindow().setWindowAnimations(R.style.BottomDialog_Animation);
-        bottomDialog.show();
-
-        tvNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomDialog.dismiss();
-            }
-        });
-        tvYes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LookBelogActivity.class));
-                bottomDialog.dismiss();
-            }
-        });
-    }
-
     @Override
     public void initData(String str) {
         getData(str);
@@ -163,11 +126,6 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onItemeClick(View view, int position) {
-
-    }
-
-    @Override
     public void onRefresh() {
         rlAssess.refreshComplete();
     }
@@ -178,10 +136,16 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id) {
+    public void onClick(View item, int position, int which, String id,String tID) {
         switch (which) {
             case R.id.tv_fs:
                 break;
         }
+    }
+
+    @Override
+    public void onItemeClick(View view, int position, String cID, String tID, String sID) {
+        startActivity(new Intent(getActivity(), CarListDetailActivity.class)
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
     }
 }

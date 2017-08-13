@@ -103,7 +103,7 @@
                     android:ellipsize="end"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
-                    android:text="￥37.8万元"
+                    android:text="￥0万元"
                     android:textColor="@color/txt_red"
                     android:textSize="14sp"
                     android:layout_alignParentTop="true"
@@ -366,16 +366,6 @@
                     android:textSize="14sp" />
             </RelativeLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_margin="15dp"
-                android:background="@drawable/edt_bg"
-                android:gravity="top|left"
-                android:padding="10dp"
-                android:textColor="@color/tv_333"
-                android:textCursorDrawable="@drawable/editview_cursor_blue"
-                android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

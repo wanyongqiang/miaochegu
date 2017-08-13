@@ -21,6 +21,7 @@ import com.avos.avoscloud.FindCallback;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
+import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.WTGWaiteAssessAdapter;
 
@@ -162,8 +163,9 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onItemeClick(View view, int position) {
-
+    public void onItemeClick(View view, int position, String cID, String tID,String sID) {
+        startActivity(new Intent(getActivity(), CarListDetailActivity.class)
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
     }
 
     @Override

@@ -428,19 +428,19 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
                 llMineBottom.setVisibility(View.GONE);
                 break;
             case R.id.tv_dps://待评审
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "DPG"));
+                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "DPG").putExtra("NUM", 1));
                 break;
             case R.id.tv_wtg://未通过
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WTG"));//TODO  跳转可编辑
+                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WTG").putExtra("NUM", 3));//TODO  跳转可编辑
                 break;
             case R.id.tv_ytg://已通过
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "YTG"));
+                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "YTG").putExtra("NUM", 4));
                 break;
             case R.id.tv_wwc://未完成
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WWC"));//TODO  跳转可编辑
+                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WWC").putExtra("NUM", 0));//TODO  跳转可编辑
                 break;
             case R.id.tv_psz://评审中
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "PSZ"));
+                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "PSZ").putExtra("NUM", 2));
                 break;
             case R.id.tv_loginout://退出登录
                 if (GettingStartedApp.getInstance().isLogin == true) {

@@ -60,24 +60,20 @@ public class ReviewProcessActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         type = intent.getStringExtra("type");
+
         if ("DPG".equals(type)) {
-            vpFindFragmentPager.setCurrentItem(1);
             tvTitle.setText("待评审");
             GettingStartedApp.getInstance().setTempStr("DPG");
         } else if ("WTG".equals(type)) {
-            vpFindFragmentPager.setCurrentItem(3);
             tvTitle.setText("未通过");
             GettingStartedApp.getInstance().setTempStr("WTG");
         } else if ("YTG".equals(type)) {
-            vpFindFragmentPager.setCurrentItem(4);
             tvTitle.setText("已通过");
             GettingStartedApp.getInstance().setTempStr("YTG");
         } else if ("WWC".equals(type)) {
-            vpFindFragmentPager.setCurrentItem(0);
             tvTitle.setText("未完成");
             GettingStartedApp.getInstance().setTempStr("WWC");
         } else if ("PSZ".equals(type)) {
-            vpFindFragmentPager.setCurrentItem(2);
             tvTitle.setText("评审中");
             GettingStartedApp.getInstance().setTempStr("PSZ");
         }

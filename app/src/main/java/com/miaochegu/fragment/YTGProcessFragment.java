@@ -21,6 +21,7 @@ import com.avos.avoscloud.FindCallback;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
+import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.YTGWaiteAssessAdapter;
 import com.miaochegu.util.ListItemClickHelp;
@@ -115,7 +116,7 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     /**
      * 网络断开弹窗
      */
-    private void showDialog(final String cid) {
+    private void showDialog(final String cid,final String tid) {
         final Dialog bottomDialog = new Dialog(context, R.style.BottomDialog);
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_submit_infos, null);
         bottomDialog.setContentView(contentView);
@@ -138,7 +139,8 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
         tvYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LookBelogActivity.class).putExtra("CID", cid));
+                startActivity(new Intent(getActivity(), LookBelogActivity.class)
+                        .putExtra("CID", cid).putExtra("TID", tid));
                 bottomDialog.dismiss();
             }
         });
@@ -163,8 +165,9 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onItemeClick(View view, int position) {
-
+    public void onItemeClick(View view, int position, String cID, String tID,String sID) {
+        startActivity(new Intent(getActivity(), CarListDetailActivity.class)
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
     }
 
     @Override
@@ -178,10 +181,10 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id) {
+    public void onClick(View item, int position, int which, String id,String tID) {
         switch (which) {
             case R.id.tv_chakan:
-                showDialog(id);
+                showDialog(id,tID);
                 break;
         }
     }

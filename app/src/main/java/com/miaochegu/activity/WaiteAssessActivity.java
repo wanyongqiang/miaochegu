@@ -96,13 +96,15 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
         getData();
     }
 
+
     @Override
-    public void onItemeClick(View view, int position) {
-        startActivity(new Intent(this, EditorTaskActivity.class));
+    public void onItemeClick(View view, int position, String cID, String tID, String sID) {
+        startActivity(new Intent(this, CarListDetailActivity.class)
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 111));
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id) {
+    public void onClick(View item, int position, int which, String id,String tID) {
         switch (which) {
             case R.id.tv_chakan:
                 break;
@@ -148,4 +150,5 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
             }
         });
     }
+
 }

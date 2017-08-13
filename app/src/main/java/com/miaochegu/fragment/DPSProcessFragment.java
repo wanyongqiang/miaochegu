@@ -22,6 +22,7 @@ import com.avos.avoscloud.FindCallback;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
+import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.DPSWaiteAssessAdapter;
 import com.miaochegu.util.ListItemClickHelp;
@@ -168,8 +169,9 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onItemeClick(View view, int position) {
-
+    public void onItemeClick(View itemView, int layoutPosition, String cid, String tid, String sid) {
+        startActivity(new Intent(getActivity(), CarListDetailActivity.class)
+                .putExtra("CARID", cid).putExtra("TASKID", tid).putExtra("AUDITID", sid).putExtra("TYPE", 0));
     }
 
     @Override
@@ -183,10 +185,11 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id) {
+    public void onClick(View item, int position, int which, String id,String tID) {
         switch (which) {
             case R.id.tv_fs:
                 break;
         }
     }
+
 }
