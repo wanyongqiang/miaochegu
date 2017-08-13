@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_btn_press.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_btn_press.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edit_background.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\drawable\\edit_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shape_city.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\drawable\\shape_city.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\select_btn_white_gray.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\drawable\\select_btn_white_gray.xml"
+    }
+]

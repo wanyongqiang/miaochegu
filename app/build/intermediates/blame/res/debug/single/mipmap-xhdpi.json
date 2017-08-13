@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\miaochegu.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\miaochegu.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\theme_bg.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\theme_bg.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\chakanxiangq.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\chakanxiangq.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\tuisongkuang.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\tuisongkuang.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\moren.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\moren.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\qiyexuncha.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\qiyexuncha.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_back.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_back.png"
+    }
+]

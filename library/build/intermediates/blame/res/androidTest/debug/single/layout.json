@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alertview_data.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\alertview_data.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_alertview_alert.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_alertview_alert.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_alertview_alert_horizontal.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_alertview_alert_horizontal.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_alertview_alert_vertical.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_alertview_alert_vertical.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_alertbutton.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\item_alertbutton.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_alertview_actionsheet.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_alertview_actionsheet.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\include_alertheader.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\include_alertheader.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\layout_alertview.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\layout_alertview.xml"
+    }
+]

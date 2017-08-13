@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_bottom.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\fade_in_center.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\fade_in_center.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\alertview_bgin.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\alertview_bgin.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\alertview_bgout.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\alertview_bgout.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\fade_out_center.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\fade_out_center.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_bottom.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_bottom.xml"
+    }
+]

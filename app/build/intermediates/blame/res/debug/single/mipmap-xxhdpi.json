@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_photo.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_photo.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\icon_right.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_right.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\jiantou1.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\jiantou1.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\btn_xx.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\btn_xx.png"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\tiaozhuan.png",
+        "source": "E:\\Android\\app\\src\\main\\res\\mipmap-xxhdpi\\tiaozhuan.png"
+    }
+]

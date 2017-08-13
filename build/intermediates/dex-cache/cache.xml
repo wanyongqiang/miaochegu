@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\Android\easysidebar\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4603a60db34bc0175df6e2eb659476dbdcc241cb">
+        <dex dex="E:\Android\app\build\intermediates\pre-dexed\debug\classes_eec6ef1e630cc007c06818fbd77823fa01461359.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\library\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ab6dce4327401989f39c861c84d92b5d42e67ac2">
+        <dex dex="E:\Android\app\build\intermediates\pre-dexed\debug\classes_25b9450476a0c91b94fc01bb7b3d6ccb4b38cc33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\app\libs\jxl.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a5447936214d5116a4ad8d90764ed72c2974b2dc">
+        <dex dex="E:\Android\app\build\intermediates\pre-dexed\debug\jxl_0cd0cb983e7fb6836d92cd7a1dfe2b2512e10620.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\easysidebar\build\intermediates\bundles\default\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e05ca43c4c2716db3e5d2dd7ef14d2a6d370e29">
+        <dex dex="E:\Android\app\build\intermediates\pre-dexed\debug\pinyin4j-2.5.0_25d38c64c0826a4303c98a1c6a0dea8fcb63839d.jar" />
+    </item>
+
+</items>

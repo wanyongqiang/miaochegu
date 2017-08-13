@@ -1,0 +1,199 @@
+[
+    {
+        "outputFile": "E:\\Android\\easysidebar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 340,
+                    "endColumn": 19,
+                    "endOffset": 8655
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 340,
+                        "endColumn": 19,
+                        "endOffset": 8655
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 341,
+                    "startColumn": 4,
+                    "startOffset": 8660,
+                    "endColumn": 50,
+                    "endOffset": 8706
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 341,
+                        "startColumn": 4,
+                        "startOffset": 8660,
+                        "endColumn": 50,
+                        "endOffset": 8706
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 342,
+                    "startColumn": 4,
+                    "startOffset": 8711,
+                    "endColumn": 55,
+                    "endOffset": 8762
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 342,
+                        "startColumn": 4,
+                        "startOffset": 8711,
+                        "endColumn": 55,
+                        "endOffset": 8762
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 343,
+                    "startColumn": 4,
+                    "startOffset": 8767,
+                    "endColumn": 58,
+                    "endOffset": 8821
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 343,
+                        "startColumn": 4,
+                        "startOffset": 8767,
+                        "endColumn": 58,
+                        "endOffset": 8821
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 344,
+                    "startColumn": 4,
+                    "startOffset": 8826,
+                    "endColumn": 53,
+                    "endOffset": 8875
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 344,
+                        "startColumn": 4,
+                        "startOffset": 8826,
+                        "endColumn": 53,
+                        "endOffset": 8875
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 345,
+                    "startColumn": 4,
+                    "startOffset": 8880,
+                    "endColumn": 39,
+                    "endOffset": 8915
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 345,
+                        "startColumn": 4,
+                        "startOffset": 8880,
+                        "endColumn": 39,
+                        "endOffset": 8915
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 346,
+                    "startColumn": 4,
+                    "startOffset": 8920,
+                    "endColumn": 93,
+                    "endOffset": 9009
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 346,
+                        "startColumn": 4,
+                        "startOffset": 8920,
+                        "endColumn": 93,
+                        "endOffset": 9009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 347,
+                    "startColumn": 4,
+                    "startOffset": 9014,
+                    "endColumn": 83,
+                    "endOffset": 9093
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 347,
+                        "startColumn": 4,
+                        "startOffset": 9014,
+                        "endColumn": 83,
+                        "endOffset": 9093
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 348,
+                    "startColumn": 4,
+                    "startOffset": 9098,
+                    "endColumn": 76,
+                    "endOffset": 9170
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 348,
+                        "startColumn": 4,
+                        "startOffset": 9098,
+                        "endColumn": 76,
+                        "endOffset": 9170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 349,
+                    "startColumn": 4,
+                    "startOffset": 9175,
+                    "endColumn": 55,
+                    "endOffset": 9226
+                },
+                "from": {
+                    "file": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 349,
+                        "startColumn": 4,
+                        "startOffset": 9175,
+                        "endColumn": 55,
+                        "endOffset": 9226
+                    }
+                }
+            }
+        ]
+    }
+]

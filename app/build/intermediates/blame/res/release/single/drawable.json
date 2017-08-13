@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_alertbutton_bottom.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_alertbutton_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_top_corner_no_bottom_line.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_top_corner_no_bottom_line.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\progressloading.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\e40d059408dc9055aefd2721d29ecd8600edf4bb\\output\\res\\drawable\\progressloading.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_bg_gray_small.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_bg_gray_small.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_bg_small.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_bg_small.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\btn_gray_bottm_border.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\btn_gray_bottm_border.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_actionsheet_header.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_actionsheet_header.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_gray_corner_zhi_bg.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_gray_corner_zhi_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\progressbar_vote.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\progressbar_vote.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_gray_corner_zhi.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_gray_corner_zhi.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_actionsheet_cancel.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_actionsheet_cancel.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_city.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\default\\res\\drawable\\shape_city.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_blue_bg.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_blue_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\d3314478f7675fa6de19649a92a94a33f1c154c5\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_no_corner_without_bottom.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_no_corner_without_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\editview_cursor.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\editview_cursor.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_btn_press.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\default\\res\\drawable\\selector_btn_press.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_no_corner_zhi.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_no_corner_zhi.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_bg_blue_small.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_bg_blue_small.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_alertbutton_left.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_alertbutton_left.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_bottom_corner_no_top_line.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_bottom_corner_no_top_line.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\d3314478f7675fa6de19649a92a94a33f1c154c5\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_alertbutton_right.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_alertbutton_right.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\select_btn_white_gray.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\default\\res\\drawable\\select_btn_white_gray.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_bg_white_small.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_bg_white_small.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edt_bg.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\edt_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\shape_no_corner.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\shape_no_corner.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\progress_bar_ct.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\progress_bar_ct.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\scale_black_cir_bg.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\scale_black_cir_bg.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\ddbf7d972e87c847a71f970fa020a7dc64b659c0\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\edit_background.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\default\\res\\drawable\\edit_background.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_alertview_alert.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_alertview_alert.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\bg_alertbutton_none.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\bg_alertbutton_none.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\editview_cursor_blue.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\drawable\\editview_cursor_blue.xml"
+    },
+    {
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\release\\drawable\\selector_pickerview_btn.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\default\\res\\drawable\\selector_pickerview_btn.xml"
+    }
+]

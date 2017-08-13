@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/color_blue"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:paddingTop="10dp"
+                android:src="@mipmap/ic_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="28dp"
+            android:text="查勘信息提交"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功！"
+            android:textColor="#333333"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:id="@+id/tv_chakan"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/edt_bg"
+            android:gravity="center"
+            android:text="查看评估结果"
+            android:textColor="@color/color_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edt_bg"
+            android:gravity="center"
+            android:text="继续查堪"
+            android:textColor="@color/color_blue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

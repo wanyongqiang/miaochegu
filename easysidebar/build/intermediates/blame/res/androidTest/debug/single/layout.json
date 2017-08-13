@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\headview_hotcity.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\layout\\headview_hotcity.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\headview_loaction.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\layout\\headview_loaction.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_sort_city.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_sort_city.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\item_select_city.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\layout\\item_select_city.xml"
+    },
+    {
+        "merged": "E:\\Android\\easysidebar\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\gridview_item.xml",
+        "source": "E:\\Android\\easysidebar\\build\\intermediates\\bundles\\debug\\res\\layout\\gridview_item.xml"
+    }
+]

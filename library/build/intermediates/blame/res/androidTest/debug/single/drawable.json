@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_actionsheet_cancel.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_actionsheet_cancel.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_alertview_alert.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_alertview_alert.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_alertbutton_none.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_alertbutton_none.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_alertbutton_left.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_alertbutton_left.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_alertbutton_bottom.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_alertbutton_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_pickerview_btn.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_pickerview_btn.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_actionsheet_header.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_actionsheet_header.xml"
+    },
+    {
+        "merged": "E:\\Android\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_alertbutton_right.xml",
+        "source": "E:\\Android\\library\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_alertbutton_right.xml"
+    }
+]
