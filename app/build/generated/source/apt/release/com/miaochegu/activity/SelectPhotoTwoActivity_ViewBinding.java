@@ -19,33 +19,33 @@ import java.lang.Override;
 public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558577;
+  private View view2131558579;
 
-  private View view2131558578;
+  private View view2131558580;
 
-  private View view2131558600;
+  private View view2131558602;
 
-  private View view2131558599;
+  private View view2131558601;
 
-  private View view2131558604;
+  private View view2131558606;
 
-  private View view2131558603;
+  private View view2131558605;
 
-  private View view2131558608;
+  private View view2131558610;
 
-  private View view2131558607;
+  private View view2131558609;
 
-  private View view2131558614;
+  private View view2131558616;
 
-  private View view2131558613;
+  private View view2131558615;
 
-  private View view2131558618;
+  private View view2131558620;
 
-  private View view2131558617;
+  private View view2131558619;
 
-  private View view2131558621;
+  private View view2131558623;
 
-  private View view2131558554;
+  private View view2131558555;
 
   @UiThread
   public SelectPhotoTwoActivity_ViewBinding(final T target, View source) {
@@ -54,7 +54,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     View view;
     view = Utils.findRequiredView(source, R.id.ll_back, "field 'llBack' and method 'onClick'");
     target.llBack = Utils.castView(view, R.id.ll_back, "field 'llBack'", LinearLayout.class);
-    view2131558577 = view;
+    view2131558579 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -63,7 +63,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.tv_ynamic, "field 'tvYnamic' and method 'onClick'");
     target.tvYnamic = Utils.castView(view, R.id.tv_ynamic, "field 'tvYnamic'", TextView.class);
-    view2131558578 = view;
+    view2131558580 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -75,7 +75,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.ivC = Utils.findRequiredViewAsType(source, R.id.iv_c, "field 'ivC'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.iv_aa, "field 'ivAa' and method 'onClick'");
     target.ivAa = Utils.castView(view, R.id.iv_aa, "field 'ivAa'", ImageView.class);
-    view2131558600 = view;
+    view2131558602 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -86,7 +86,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvA = Utils.findRequiredViewAsType(source, R.id.tv_a, "field 'tvA'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_a, "field 'rlA' and method 'onClick'");
     target.rlA = Utils.castView(view, R.id.rl_a, "field 'rlA'", RelativeLayout.class);
-    view2131558599 = view;
+    view2131558601 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -95,7 +95,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.iv_bb, "field 'ivBb' and method 'onClick'");
     target.ivBb = Utils.castView(view, R.id.iv_bb, "field 'ivBb'", ImageView.class);
-    view2131558604 = view;
+    view2131558606 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -106,7 +106,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvB = Utils.findRequiredViewAsType(source, R.id.tv_b, "field 'tvB'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_b, "field 'rlB' and method 'onClick'");
     target.rlB = Utils.castView(view, R.id.rl_b, "field 'rlB'", RelativeLayout.class);
-    view2131558603 = view;
+    view2131558605 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -115,7 +115,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.iv_cc, "field 'ivCc' and method 'onClick'");
     target.ivCc = Utils.castView(view, R.id.iv_cc, "field 'ivCc'", ImageView.class);
-    view2131558608 = view;
+    view2131558610 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -126,7 +126,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvC = Utils.findRequiredViewAsType(source, R.id.tv_c, "field 'tvC'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_c, "field 'rlC' and method 'onClick'");
     target.rlC = Utils.castView(view, R.id.rl_c, "field 'rlC'", RelativeLayout.class);
-    view2131558607 = view;
+    view2131558609 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -137,7 +137,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.ivE = Utils.findRequiredViewAsType(source, R.id.iv_e, "field 'ivE'", ImageView.class);
     view = Utils.findRequiredView(source, R.id.iv_dd, "field 'ivDd' and method 'onClick'");
     target.ivDd = Utils.castView(view, R.id.iv_dd, "field 'ivDd'", ImageView.class);
-    view2131558614 = view;
+    view2131558616 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -148,7 +148,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvD = Utils.findRequiredViewAsType(source, R.id.tv_d, "field 'tvD'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_d, "field 'rlD' and method 'onClick'");
     target.rlD = Utils.castView(view, R.id.rl_d, "field 'rlD'", RelativeLayout.class);
-    view2131558613 = view;
+    view2131558615 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -157,7 +157,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.iv_ee, "field 'ivEe' and method 'onClick'");
     target.ivEe = Utils.castView(view, R.id.iv_ee, "field 'ivEe'", ImageView.class);
-    view2131558618 = view;
+    view2131558620 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -168,7 +168,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvE = Utils.findRequiredViewAsType(source, R.id.tv_e, "field 'tvE'", TextView.class);
     view = Utils.findRequiredView(source, R.id.rl_e, "field 'rlE' and method 'onClick'");
     target.rlE = Utils.castView(view, R.id.rl_e, "field 'rlE'", RelativeLayout.class);
-    view2131558617 = view;
+    view2131558619 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -177,7 +177,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.tv_up, "field 'tvUp' and method 'onClick'");
     target.tvUp = Utils.castView(view, R.id.tv_up, "field 'tvUp'", TextView.class);
-    view2131558621 = view;
+    view2131558623 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -186,7 +186,7 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     });
     view = Utils.findRequiredView(source, R.id.tv_next, "field 'tvNext' and method 'onClick'");
     target.tvNext = Utils.castView(view, R.id.tv_next, "field 'tvNext'", TextView.class);
-    view2131558554 = view;
+    view2131558555 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -231,34 +231,34 @@ public class SelectPhotoTwoActivity_ViewBinding<T extends SelectPhotoTwoActivity
     target.tvUp = null;
     target.tvNext = null;
 
-    view2131558577.setOnClickListener(null);
-    view2131558577 = null;
-    view2131558578.setOnClickListener(null);
-    view2131558578 = null;
-    view2131558600.setOnClickListener(null);
-    view2131558600 = null;
-    view2131558599.setOnClickListener(null);
-    view2131558599 = null;
-    view2131558604.setOnClickListener(null);
-    view2131558604 = null;
-    view2131558603.setOnClickListener(null);
-    view2131558603 = null;
-    view2131558608.setOnClickListener(null);
-    view2131558608 = null;
-    view2131558607.setOnClickListener(null);
-    view2131558607 = null;
-    view2131558614.setOnClickListener(null);
-    view2131558614 = null;
-    view2131558613.setOnClickListener(null);
-    view2131558613 = null;
-    view2131558618.setOnClickListener(null);
-    view2131558618 = null;
-    view2131558617.setOnClickListener(null);
-    view2131558617 = null;
-    view2131558621.setOnClickListener(null);
-    view2131558621 = null;
-    view2131558554.setOnClickListener(null);
-    view2131558554 = null;
+    view2131558579.setOnClickListener(null);
+    view2131558579 = null;
+    view2131558580.setOnClickListener(null);
+    view2131558580 = null;
+    view2131558602.setOnClickListener(null);
+    view2131558602 = null;
+    view2131558601.setOnClickListener(null);
+    view2131558601 = null;
+    view2131558606.setOnClickListener(null);
+    view2131558606 = null;
+    view2131558605.setOnClickListener(null);
+    view2131558605 = null;
+    view2131558610.setOnClickListener(null);
+    view2131558610 = null;
+    view2131558609.setOnClickListener(null);
+    view2131558609 = null;
+    view2131558616.setOnClickListener(null);
+    view2131558616 = null;
+    view2131558615.setOnClickListener(null);
+    view2131558615 = null;
+    view2131558620.setOnClickListener(null);
+    view2131558620 = null;
+    view2131558619.setOnClickListener(null);
+    view2131558619 = null;
+    view2131558623.setOnClickListener(null);
+    view2131558623 = null;
+    view2131558555.setOnClickListener(null);
+    view2131558555 = null;
 
     this.target = null;
   }

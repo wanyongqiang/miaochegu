@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
@@ -16,11 +17,11 @@ import java.lang.Override;
 public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558534;
+  private View view2131558535;
 
-  private View view2131558575;
+  private View view2131558577;
 
-  private View view2131558576;
+  private View view2131558578;
 
   @UiThread
   public CarListDetailActivity_ViewBinding(final T target, View source) {
@@ -29,7 +30,7 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     View view;
     view = Utils.findRequiredView(source, R.id.iv_back, "field 'ivBack' and method 'onClick'");
     target.ivBack = Utils.castView(view, R.id.iv_back, "field 'ivBack'", ImageView.class);
-    view2131558534 = view;
+    view2131558535 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +49,7 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     target.tvDesc = Utils.findRequiredViewAsType(source, R.id.tv_desc, "field 'tvDesc'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_cancel, "field 'tvCancel' and method 'onClick'");
     target.tvCancel = Utils.castView(view, R.id.tv_cancel, "field 'tvCancel'", TextView.class);
-    view2131558575 = view;
+    view2131558577 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -57,13 +58,14 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     });
     view = Utils.findRequiredView(source, R.id.tv_update, "field 'tvUpdate' and method 'onClick'");
     target.tvUpdate = Utils.castView(view, R.id.tv_update, "field 'tvUpdate'", TextView.class);
-    view2131558576 = view;
+    view2131558578 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
         target.onClick(p0);
       }
     });
+    target.llBottom = Utils.findRequiredViewAsType(source, R.id.ll_bottom, "field 'llBottom'", LinearLayout.class);
   }
 
   @Override
@@ -85,13 +87,14 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     target.tvDesc = null;
     target.tvCancel = null;
     target.tvUpdate = null;
+    target.llBottom = null;
 
-    view2131558534.setOnClickListener(null);
-    view2131558534 = null;
-    view2131558575.setOnClickListener(null);
-    view2131558575 = null;
-    view2131558576.setOnClickListener(null);
-    view2131558576 = null;
+    view2131558535.setOnClickListener(null);
+    view2131558535 = null;
+    view2131558577.setOnClickListener(null);
+    view2131558577 = null;
+    view2131558578.setOnClickListener(null);
+    view2131558578 = null;
 
     this.target = null;
   }

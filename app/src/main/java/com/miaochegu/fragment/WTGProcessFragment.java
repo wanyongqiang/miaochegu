@@ -165,16 +165,16 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onItemeClick(View view, int position, String cID, String tID,String sID) {
         startActivity(new Intent(getActivity(), CarListDetailActivity.class)
-                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 111));
     }
 
     @Override
     public void onRefresh() {
-
+        rlAssess.refreshComplete();
     }
 
     @Override
     public void onLoadMore() {
-
+        rlAssess.loadMoreComplete();
     }
 }

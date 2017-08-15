@@ -17,9 +17,9 @@ import java.lang.Override;
 public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558534;
+  private View view2131558535;
 
-  private View view2131558663;
+  private View view2131558665;
 
   @UiThread
   public UpdatePassWordActivity_ViewBinding(final T target, View source) {
@@ -28,7 +28,7 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
     View view;
     view = Utils.findRequiredView(source, R.id.iv_back, "field 'ivBack' and method 'onClick'");
     target.ivBack = Utils.castView(view, R.id.iv_back, "field 'ivBack'", ImageView.class);
-    view2131558534 = view;
+    view2131558535 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -39,7 +39,7 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
     view = Utils.findRequiredView(source, R.id.username_register_button, "field 'usernameRegisterButton' and method 'onClick'");
     target.usernameRegisterButton = Utils.castView(view, R.id.username_register_button, "field 'usernameRegisterButton'", Button.class);
-    view2131558663 = view;
+    view2131558665 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -59,10 +59,10 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
     target.phone = null;
     target.usernameRegisterButton = null;
 
-    view2131558534.setOnClickListener(null);
-    view2131558534 = null;
-    view2131558663.setOnClickListener(null);
-    view2131558663 = null;
+    view2131558535.setOnClickListener(null);
+    view2131558535 = null;
+    view2131558665.setOnClickListener(null);
+    view2131558665 = null;
 
     this.target = null;
   }

@@ -176,12 +176,12 @@ public class DPSProcessFragment extends BaseFragment implements XRecyclerView.Lo
 
     @Override
     public void onRefresh() {
-
+        rlAssess.refreshComplete();
     }
 
     @Override
     public void onLoadMore() {
-
+        rlAssess.loadMoreComplete();
     }
 
     @Override

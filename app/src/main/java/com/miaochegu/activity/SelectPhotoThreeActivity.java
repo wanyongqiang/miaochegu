@@ -15,6 +15,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -201,7 +202,6 @@ public class SelectPhotoThreeActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_home_three);
         ButterKnife.bind(this);
         context = this;
@@ -713,7 +713,9 @@ public class SelectPhotoThreeActivity extends Activity {
                 }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    if(bitmap!=null){
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    }
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");
@@ -788,40 +790,40 @@ public class SelectPhotoThreeActivity extends Activity {
                                     @Override
                                     public void run() {
                                         // 成功或失败处理...
-                                        if ("pocardregis".equals(keyName)) {
+                                        if ("pfirewall".equals(keyName)) {
                                             A = false;
                                             pbA.setVisibility(View.GONE);
-                                        } else if ("ptcardregis".equals(keyName)) {
+                                        } else if ("plwaterstents".equals(keyName)) {
                                             B = false;
                                             pbB.setVisibility(View.GONE);
-                                        } else if ("drivingcard".equals(keyName)) {
+                                        } else if ("prwaterstents".equals(keyName)) {
                                             C = false;
                                             pbC.setVisibility(View.GONE);
-                                        } else if ("pchit".equals(keyName)) {
+                                        } else if ("plfrontfender".equals(keyName)) {
                                             D = false;
                                             pbD.setVisibility(View.GONE);
-                                        } else if ("pnameplate".equals(keyName)) {
+                                        } else if ("prfrontfender".equals(keyName)) {
                                             E = false;
                                             pbE.setVisibility(View.GONE);
-                                        } else if ("pocardregis".equals(keyName)) {
+                                        } else if ("pldoora".equals(keyName)) {
                                             F = false;
                                             pbF.setVisibility(View.GONE);
-                                        } else if ("ptcardregis".equals(keyName)) {
+                                        } else if ("pldoorbc".equals(keyName)) {
                                             G = false;
                                             pbG.setVisibility(View.GONE);
-                                        } else if ("drivingcard".equals(keyName)) {
+                                        } else if ("prdoora".equals(keyName)) {
                                             H = false;
                                             pbH.setVisibility(View.GONE);
-                                        } else if ("pchit".equals(keyName)) {
+                                        } else if ("prdoorc".equals(keyName)) {
                                             I = false;
                                             pbI.setVisibility(View.GONE);
-                                        } else if ("pnameplate".equals(keyName)) {
+                                        } else if ("ptrunkdandw".equals(keyName)) {
                                             J = false;
                                             pbJ.setVisibility(View.GONE);
-                                        } else if ("pocardregis".equals(keyName)) {
+                                        } else if ("plcoverrear".equals(keyName)) {
                                             K = false;
                                             pbK.setVisibility(View.GONE);
-                                        } else if ("ptcardregis".equals(keyName)) {
+                                        } else if ("prcoverrear".equals(keyName)) {
                                             L = false;
                                             pbL.setVisibility(View.GONE);
                                         }
@@ -836,29 +838,29 @@ public class SelectPhotoThreeActivity extends Activity {
                                 @Override
                                 public void run() {
                                     // 上传进度数据，integer 介于 0 和 100。
-                                    if ("pocardregis".equals(keyName)) {
+                                    if ("pfirewall".equals(keyName)) {
                                         pbA.setProgress(integer);
-                                    } else if ("ptcardregis".equals(keyName)) {
+                                    } else if ("plwaterstents".equals(keyName)) {
                                         pbB.setProgress(integer);
-                                    } else if ("drivingcard".equals(keyName)) {
+                                    } else if ("prwaterstents".equals(keyName)) {
                                         pbC.setProgress(integer);
-                                    } else if ("pchit".equals(keyName)) {
+                                    } else if ("plfrontfender".equals(keyName)) {
                                         pbD.setProgress(integer);
-                                    } else if ("pnameplate".equals(keyName)) {
+                                    } else if ("prfrontfender".equals(keyName)) {
                                         pbE.setProgress(integer);
-                                    } else if ("pocardregis".equals(keyName)) {
+                                    } else if ("pldoora".equals(keyName)) {
                                         pbF.setProgress(integer);
-                                    } else if ("ptcardregis".equals(keyName)) {
+                                    } else if ("pldoorbc".equals(keyName)) {
                                         pbG.setProgress(integer);
-                                    } else if ("drivingcard".equals(keyName)) {
+                                    } else if ("prdoora".equals(keyName)) {
                                         pbH.setProgress(integer);
-                                    } else if ("pchit".equals(keyName)) {
+                                    } else if ("prdoorc".equals(keyName)) {
                                         pbI.setProgress(integer);
-                                    } else if ("pnameplate".equals(keyName)) {
+                                    } else if ("ptrunkdandw".equals(keyName)) {
                                         pbJ.setProgress(integer);
-                                    } else if ("pocardregis".equals(keyName)) {
+                                    } else if ("plcoverrear".equals(keyName)) {
                                         pbK.setProgress(integer);
-                                    } else if ("ptcardregis".equals(keyName)) {
+                                    } else if ("prcoverrear".equals(keyName)) {
                                         pbL.setProgress(integer);
                                     }
                                 }

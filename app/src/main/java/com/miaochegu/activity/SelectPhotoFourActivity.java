@@ -136,7 +136,6 @@ public class SelectPhotoFourActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_home_four);
         ButterKnife.bind(this);
         context = this;
@@ -459,7 +458,9 @@ public class SelectPhotoFourActivity extends Activity {
                 }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    if(bitmap!=null){
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    }
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");
@@ -534,19 +535,19 @@ public class SelectPhotoFourActivity extends Activity {
                                     @Override
                                     public void run() {
                                         // 成功或失败处理...
-                                        if ("pocardregis".equals(keyName)) {
+                                        if ("ptoproof".equals(keyName)) {
                                             A = false;
                                             pbA.setVisibility(View.GONE);
-                                        } else if ("ptcardregis".equals(keyName)) {
+                                        } else if ("pwheelinstrute".equals(keyName)) {
                                             B = false;
                                             pbB.setVisibility(View.GONE);
-                                        } else if ("drivingcard".equals(keyName)) {
+                                        } else if ("pdeskgear".equals(keyName)) {
                                             C = false;
                                             pbC.setVisibility(View.GONE);
-                                        } else if ("pchit".equals(keyName)) {
+                                        } else if ("pldoortrim".equals(keyName)) {
                                             D = false;
                                             pbD.setVisibility(View.GONE);
-                                        } else if ("pnameplate".equals(keyName)) {
+                                        } else if ("preardiffuser".equals(keyName)) {
                                             E = false;
                                             pbE.setVisibility(View.GONE);
                                         }
@@ -561,15 +562,15 @@ public class SelectPhotoFourActivity extends Activity {
                                 @Override
                                 public void run() {
                                     // 上传进度数据，integer 介于 0 和 100。
-                                    if ("pocardregis".equals(keyName)) {
+                                    if ("ptoproof".equals(keyName)) {
                                         pbA.setProgress(integer);
-                                    } else if ("ptcardregis".equals(keyName)) {
+                                    } else if ("pwheelinstrute".equals(keyName)) {
                                         pbB.setProgress(integer);
-                                    } else if ("drivingcard".equals(keyName)) {
+                                    } else if ("pdeskgear".equals(keyName)) {
                                         pbC.setProgress(integer);
-                                    } else if ("pchit".equals(keyName)) {
+                                    } else if ("pldoortrim".equals(keyName)) {
                                         pbD.setProgress(integer);
-                                    } else if ("pnameplate".equals(keyName)) {
+                                    } else if ("preardiffuser".equals(keyName)) {
                                         pbE.setProgress(integer);
                                     }
                                 }

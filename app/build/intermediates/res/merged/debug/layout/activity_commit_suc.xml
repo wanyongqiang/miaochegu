@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="45dp"
         android:background="@color/color_blue"
         android:paddingRight="15dp">
 
@@ -19,11 +19,8 @@
                 android:id="@+id/iv_back"
                 android:layout_width="55dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:paddingBottom="10dp"
                 android:paddingLeft="22dp"
                 android:paddingRight="22dp"
-                android:paddingTop="10dp"
                 android:src="@mipmap/ic_back" />
         </LinearLayout>
 
@@ -32,7 +29,6 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:layout_marginTop="28dp"
             android:text="查勘信息提交"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -44,7 +40,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="28dp"
             android:gravity="center"
             android:text="提交"
             android:textColor="@color/white"

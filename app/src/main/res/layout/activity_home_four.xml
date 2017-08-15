@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@color/white">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:background="@color/color_blue"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingTop="18dp">
+        android:paddingLeft="15dp">
 
         <LinearLayout
             android:id="@+id/ll_back"
@@ -31,8 +31,7 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:gravity="bottom"
-            android:paddingBottom="3dp"
+            android:gravity="center_vertical"
             android:text="查勘车辆"
             android:textColor="#ffffff"
             android:textSize="18sp" />

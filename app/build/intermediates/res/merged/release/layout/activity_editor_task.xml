@@ -3,27 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:background="@color/color_blue"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingTop="18dp">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_back"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
+            android:paddingLeft="@dimen/margin_padding_15dp"
             android:layout_height="match_parent"
             android:gravity="left|center_vertical">
 
             <ImageView
-                android:layout_width="8dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@mipmap/ic_back" />
         </LinearLayout>
 
@@ -32,11 +32,23 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:gravity="bottom"
-            android:paddingBottom="3dp"
+            android:gravity="center_vertical"
             android:text="编辑任务"
             android:textColor="#ffffff"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_ynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <TextView
@@ -408,6 +420,7 @@
         android:hint="请输入备注信息"
         android:padding="10dp"
         android:textColor="@color/tv_333"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/margin_padding_40dp"/>
 
 </LinearLayout>

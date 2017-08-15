@@ -21,11 +21,11 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
+import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
 import com.miaochegu.adapter.WaiteAssessAdapter;
 import com.miaochegu.util.ListItemClickHelp;
-import com.miaochegu.util.StatusbarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,11 +35,14 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-/**
- * Created by toshiba on 2017/7/11.
- */
+/*****************************************
+ * 可编辑任务
+ *
+ * @author wyq
+ *         created at  2017/8/14 15:14
+ ****************************************/
 
-public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.OnItemClickListener, ListItemClickHelp {
+public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.OnItemClickListener, ListItemClickHelp, XRecyclerView.LoadingListener {
 
     Context context;
     @BindView(R.id.iv_back)
@@ -58,7 +61,6 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_waite_assess);
         ButterKnife.bind(this);
         context = this;
@@ -89,6 +91,12 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
         rlAssess.setLayoutManager(layoutManager);
         //设置动画
         rlAssess.setItemAnimator(new DefaultItemAnimator());
+        rlAssess.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
+        rlAssess.setLoadingMoreProgressStyle(ProgressStyle.BallRotate);
+        rlAssess.setArrowImageView(R.drawable.iconfont_downgrey);
+        rlAssess.setLoadingMoreEnabled(true);
+        rlAssess.setLoadingListener(this);
+
         mWaiteAssessAdapter = new WaiteAssessAdapter(context, null, this);
         mWaiteAssessAdapter.setmOnItemeClickListener(this);
         rlAssess.setAdapter(mWaiteAssessAdapter);
@@ -104,7 +112,7 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id,String tID) {
+    public void onClick(View item, int position, int which, String id, String tID) {
         switch (which) {
             case R.id.tv_chakan:
                 break;
@@ -151,4 +159,13 @@ public class WaiteAssessActivity extends Activity implements WaiteAssessAdapter.
         });
     }
 
+    @Override
+    public void onRefresh() {
+        rlAssess.refreshComplete();
+    }
+
+    @Override
+    public void onLoadMore() {
+        rlAssess.loadMoreComplete();
+    }
 }

@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.miaochegu.R;
-import com.miaochegu.util.StatusbarUtils;
 
 
 /**
@@ -24,7 +23,6 @@ public class LookResultActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_commit_suc);
 
         ll_back = (LinearLayout) findViewById(R.id.ll_back);

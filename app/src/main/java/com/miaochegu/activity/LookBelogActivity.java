@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -65,7 +66,6 @@ public class LookBelogActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_look_belog);
         ButterKnife.bind(this);
 

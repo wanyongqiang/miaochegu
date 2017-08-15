@@ -15,7 +15,6 @@ import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
-import com.miaochegu.util.StatusbarUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -74,7 +73,6 @@ public class CarListDetailActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_carlist_detail);
         ButterKnife.bind(this);
 

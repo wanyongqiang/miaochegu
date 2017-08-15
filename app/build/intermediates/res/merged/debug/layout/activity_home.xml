@@ -3,22 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:background="@color/color_blue"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingTop="18dp">
+        android:paddingLeft="15dp">
 
         <LinearLayout
             android:id="@+id/ll_back"
             android:layout_width="40dp"
             android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:gravity="left|center_vertical">
 
             <ImageView
@@ -32,8 +33,7 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:gravity="bottom"
-            android:paddingBottom="3dp"
+            android:gravity="center_vertical"
             android:text="查勘车辆"
             android:textColor="#ffffff"
             android:textSize="18sp" />
@@ -45,6 +45,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
             android:gravity="center"
             android:text="下一步"

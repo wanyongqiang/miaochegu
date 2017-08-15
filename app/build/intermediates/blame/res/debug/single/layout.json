@@ -1,15 +1,15 @@
 [
     {
-        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_car_info.xml",
-        "source": "E:\\Android\\app\\src\\main\\res\\layout\\activity_car_info.xml"
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\roztop\\.android\\build-cache\\d3314478f7675fa6de19649a92a94a33f1c154c5\\output\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
         "source": "C:\\Users\\roztop\\.android\\build-cache\\d3314478f7675fa6de19649a92a94a33f1c154c5\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\roztop\\.android\\build-cache\\d3314478f7675fa6de19649a92a94a33f1c154c5\\output\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_car_info.xml",
+        "source": "E:\\Android\\app\\src\\main\\res\\layout\\activity_car_info.xml"
     },
     {
         "merged": "E:\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_commit_suc.xml",

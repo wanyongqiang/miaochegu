@@ -47,7 +47,6 @@ import com.miaochegu.model.CountryModel;
 import com.miaochegu.util.GsonUtils;
 import com.miaochegu.util.JsonTools;
 import com.miaochegu.util.SharePCach;
-import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
 import org.json.JSONException;
@@ -67,16 +66,18 @@ import static android.content.ContentValues.TAG;
  */
 
 public class CarInfoActivity extends Activity implements View.OnClickListener, OnConfirmeListener,
-        CarNameAdapter.OnItemClickListener, CarTypeAdapter.OnItemClickListener, CarInfoAdapter.OnItemClickListener {
+        CarNameAdapter.OnItemClickListener, CarTypeAdapter.OnItemClickListener, CarInfoAdapter.OnItemClickListener, View.OnLayoutChangeListener {
 
     Context context;
     SwitchView switchView;
     ImageView imageView, iv_car;
     private ProgressBar mProgerss;
+    //Activity最外层的Layout视图
+    private View activityRootView;
     private TextView tv_next, tv_gj, tv_mine, tv_dpg, tv_wtg, tv_ytg, tv_updatepwd, username,
             tv_wwc, tv_psz, tv_title, tv_city, tv_loginout, tv_carinfo, tv_datatime, tv_editor;
     private EditText edt_vincode, edt_km, edt_money, edt_content;
-    LinearLayout llMine, llMineCenter, llMineCenters, llCenMine, llMineBottom, ll_gj_head, ll_gj_center;
+    LinearLayout llMine, llMineCenter, llMineCenters, llCenMine, llMineBottom, ll_gj_head, ll_gj_center, llBottom;
 
     private String type = "";
     private String strOperate = " 营运车辆";
@@ -98,18 +99,24 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
     private Dialog bottomDialoga;
     private Dialog bottomDialogb;
 
+    //屏幕高度
+    private int screenHeight = 0;
+    //软件盘弹起后所占高度阀值
+    private int keyHeight = 0;
+
     private static Handler handler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_car_info);
         context = this;
-
         Intent intent = getIntent();
         type = intent.getStringExtra("type");
-
+        //获取屏幕高度
+        screenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
+        //阀值设置为屏幕高度的1/3
+        keyHeight = screenHeight / 3;
         init();
 
         if ("mine".equals(type)) {
@@ -199,6 +206,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         bottomDialogb.dismiss();
     }
 
+
     private void init() {
         mProgerss = (ProgressBar) findViewById(R.id.mProgess);
         edt_vincode = (EditText) findViewById(R.id.edt_vincode);
@@ -225,11 +233,13 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_psz = (TextView) findViewById(R.id.tv_psz);
         tv_city = (TextView) findViewById(R.id.tv_city);
         llMine = (LinearLayout) findViewById(R.id.ll_mine);
+        activityRootView = findViewById(R.id.root_layout);
         llMineCenter = (LinearLayout) findViewById(R.id.ll_mine_center);
         llCenMine = (LinearLayout) findViewById(R.id.ll_cen_mine);
         llMineCenters = (LinearLayout) findViewById(R.id.ll_mine_centers);
         llMineBottom = (LinearLayout) findViewById(R.id.ll_mine_buttom);
         ll_gj_head = (LinearLayout) findViewById(R.id.ll_gj_head);
+        llBottom = (LinearLayout) findViewById(R.id.ll_bottom);
         ll_gj_center = (LinearLayout) findViewById(R.id.ll_gj_center);
         edt_vincode.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         //拿缓存的资源
@@ -257,17 +267,19 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_datatime.setOnClickListener(this);
         imageView.setOnClickListener(this);
         tv_editor.setOnClickListener(this);
+        //添加layout大小发生改变监听器
+        activityRootView.addOnLayoutChangeListener(this);
         switchView.setOnStateChangedListener(new SwitchView.OnStateChangedListener() {
             @Override
             public void toggleToOn(SwitchView view) {
                 view.toggleSwitch(true); // or false
-                strOperate = "非运营车辆";
+                strOperate = "运营车辆";
             }
 
             @Override
             public void toggleToOff(SwitchView view) {
                 view.toggleSwitch(false); // or true
-                strOperate = "运营车辆";
+                strOperate = "非运营车辆";
             }
         });
     }
@@ -715,6 +727,17 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         return stringList;
     }
 
+    @Override
+    public void onLayoutChange(View v, int left, int top, int right,
+                               int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+
+        //现在认为只要控件将Activity向上推的高度超过了1/3屏幕高，就认为软键盘弹起
+        if (oldBottom != 0 && bottom != 0 && (oldBottom - bottom > keyHeight)) {
+            llBottom.setVisibility(View.GONE);
+        } else if (oldBottom != 0 && bottom != 0 && (bottom - oldBottom > keyHeight)) {
+            llBottom.setVisibility(View.VISIBLE);
+        }
+    }
 
     /*****************************************暂时不用*************************************************/
     //在异步方法中 调用

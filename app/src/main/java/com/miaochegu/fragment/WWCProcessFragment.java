@@ -105,6 +105,7 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         mWWCWaiteAssessAdapter = new WWCWaiteAssessAdapter(context, null, this);
         mWWCWaiteAssessAdapter.setmOnItemeClickListener(this);
         rlAssess.setAdapter(mWWCWaiteAssessAdapter);
+
     }
 
     @Override
@@ -136,9 +137,9 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id,String tID) {
+    public void onClick(View item, int position, int which, String id, String tID) {
         switch (which) {
-            case R.id.tv_fs:
+            case R.id.tv_fs://复审
                 break;
         }
     }
@@ -146,6 +147,6 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onItemeClick(View view, int position, String cID, String tID, String sID) {
         startActivity(new Intent(getActivity(), CarListDetailActivity.class)
-                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
+                .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 111));
     }
 }

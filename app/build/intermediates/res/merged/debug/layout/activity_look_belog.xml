@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="45dp"
         android:background="@color/color_blue"
         android:paddingRight="15dp">
 
@@ -15,18 +16,15 @@
             android:id="@+id/iv_back"
             android:layout_width="55dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="23dp"
-            android:paddingBottom="10dp"
             android:paddingLeft="22dp"
             android:paddingRight="22dp"
-            android:paddingTop="10dp"
             android:src="@mipmap/ic_back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="33dp"
+            android:layout_centerVertical="true"
             android:text="评估报告"
             android:textColor="#ffffff"
             android:textSize="18sp" />
@@ -99,17 +97,17 @@
                     android:id="@+id/tv_fs"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginRight="15dp"
                     android:ellipsize="end"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text="￥0万元"
                     android:textColor="@color/txt_red"
-                    android:textSize="14sp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="15dp" />
+                    android:textSize="14sp" />
             </RelativeLayout>
 
             <LinearLayout

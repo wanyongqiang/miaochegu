@@ -38,7 +38,6 @@ import com.miaochegu.adapter.CarInfoAdapter;
 import com.miaochegu.adapter.CarNameAdapter;
 import com.miaochegu.adapter.CarTypeAdapter;
 import com.miaochegu.model.CountryModel;
-import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
 import java.util.ArrayList;
@@ -120,11 +119,9 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_editor_task);
         ButterKnife.bind(this);
         context = this;
-
         Intent intent = getIntent();
         String a = intent.getStringExtra("A");
         tvName.setText(a != null ? a : "");

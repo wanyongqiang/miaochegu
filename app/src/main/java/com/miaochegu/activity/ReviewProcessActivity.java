@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +21,6 @@ import com.miaochegu.fragment.PSZProcessFragment;
 import com.miaochegu.fragment.WTGProcessFragment;
 import com.miaochegu.fragment.WWCProcessFragment;
 import com.miaochegu.fragment.YTGProcessFragment;
-import com.miaochegu.util.StatusbarUtils;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -53,8 +51,6 @@ public class ReviewProcessActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_serach_result);
         ButterKnife.bind(this);
 

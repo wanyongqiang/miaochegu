@@ -37,7 +37,6 @@ import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -130,7 +129,6 @@ public class SelectPhotoTwoActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_home_two);
         ButterKnife.bind(this);
         context = this;
@@ -255,10 +253,6 @@ public class SelectPhotoTwoActivity extends Activity {
             ToastUtil.show("请上传完整再进行下一步");
             return true;
         }
-        if ("".equals(pathE)) {
-            ToastUtil.show("请上传完整再进行下一步");
-            return true;
-        }
         return false;
     }
 
@@ -281,10 +275,6 @@ public class SelectPhotoTwoActivity extends Activity {
             return true;
         }
         if (D == true) {
-            ToastUtil.show("亲！请等待当前上传完毕再继续");
-            return true;
-        }
-        if (E == true) {
             ToastUtil.show("亲！请等待当前上传完毕再继续");
             return true;
         }
@@ -388,14 +378,13 @@ public class SelectPhotoTwoActivity extends Activity {
                 File f = new File(Environment.getExternalStorageDirectory(), "productPic.jpg");
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    if (bitmap != null) {
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    }
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");
-                } catch (FileNotFoundException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
@@ -459,20 +448,20 @@ public class SelectPhotoTwoActivity extends Activity {
                                         }
                                     }
                                 });
-                               handler.post(new Runnable() {
+                                handler.post(new Runnable() {
                                     @Override
                                     public void run() {
                                         // 成功或失败处理...
-                                        if ("pocardregis".equals(keyName)) {
+                                        if ("plfront45".equals(keyName)) {
                                             A = false;
                                             pbA.setVisibility(View.GONE);
-                                        } else if ("ptcardregis".equals(keyName)) {
+                                        } else if ("prfront45".equals(keyName)) {
                                             B = false;
                                             pbB.setVisibility(View.GONE);
-                                        } else if ("drivingcard".equals(keyName)) {
+                                        } else if ("pfwindscreen".equals(keyName)) {
                                             C = false;
                                             pbC.setVisibility(View.GONE);
-                                        } else if ("pchit".equals(keyName)) {
+                                        } else if ("pdwindscreen".equals(keyName)) {
                                             D = false;
                                             pbD.setVisibility(View.GONE);
                                         } else if ("pnameplate".equals(keyName)) {
@@ -490,13 +479,13 @@ public class SelectPhotoTwoActivity extends Activity {
                                 @Override
                                 public void run() {
                                     // 上传进度数据，integer 介于 0 和 100。
-                                    if ("pocardregis".equals(keyName)) {
+                                    if ("plfront45".equals(keyName)) {
                                         pbA.setProgress(integer);
-                                    } else if ("ptcardregis".equals(keyName)) {
+                                    } else if ("prfront45".equals(keyName)) {
                                         pbB.setProgress(integer);
-                                    } else if ("drivingcard".equals(keyName)) {
+                                    } else if ("pfwindscreen".equals(keyName)) {
                                         pbC.setProgress(integer);
-                                    } else if ("pchit".equals(keyName)) {
+                                    } else if ("pdwindscreen".equals(keyName)) {
                                         pbD.setProgress(integer);
                                     } else if ("pnameplate".equals(keyName)) {
                                         pbE.setProgress(integer);

@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_ueser_login);
         context = this;
+
         GettingStartedApp.getInstance().setLogin(true);
         if (AVUser.getCurrentUser() != null) {
             startActivity(new Intent(LoginActivity.this, CarInfoActivity.class));

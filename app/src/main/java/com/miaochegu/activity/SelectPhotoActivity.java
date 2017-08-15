@@ -1,12 +1,16 @@
 package com.miaochegu.activity;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -57,6 +61,7 @@ import static com.miaochegu.R.id.tv_ynamic;
 public class SelectPhotoActivity extends Activity {
 
     private static final String TAG = "MCG";
+    private static final int NEED_CAMERA = 111;
     int index = 0;
     Context context;
     @BindView(ll_back)
@@ -131,7 +136,6 @@ public class SelectPhotoActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         context = this;
@@ -153,27 +157,27 @@ public class SelectPhotoActivity extends Activity {
             case R.id.rl_a:
                 if (verProgress()) return;
                 index = 0;
-                takePhoto();
+                getPhotoPermission();
                 break;
             case R.id.rl_b:
                 if (verProgress()) return;
                 index = 1;
-                takePhoto();
+                getPhotoPermission();
                 break;
             case R.id.rl_c:
                 if (verProgress()) return;
                 index = 2;
-                takePhoto();
+                getPhotoPermission();
                 break;
             case R.id.rl_d:
                 if (verProgress()) return;
                 index = 3;
-                takePhoto();
+                getPhotoPermission();
                 break;
             case R.id.rl_e:
                 if (verProgress()) return;
                 index = 4;
-                takePhoto();
+                getPhotoPermission();
                 break;
             case R.id.iv_aa:
                 A = false;
@@ -230,6 +234,35 @@ public class SelectPhotoActivity extends Activity {
                 tvE.setBackgroundResource(0);
                 tvE.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
                 break;
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.M)
+    private void getPhotoPermission() {//检测是否有相机和读写文件权限
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, NEED_CAMERA);
+        } else {
+            takePhoto();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                           int[] grantResults) {
+        switch (requestCode) {
+            case NEED_CAMERA:
+                // 如果权限被拒绝，grantResults 为空
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    takePhoto();
+                } else {
+                    Toast.makeText(this, "改功能需要相机和读写文件权限", Toast.LENGTH_SHORT).show();
+                }
+                break;
+
         }
     }
 
@@ -384,8 +417,9 @@ public class SelectPhotoActivity extends Activity {
                 File f = new File(Environment.getExternalStorageDirectory(), "productPic.jpg");
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    String str = f.getPath();
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    if(bitmap!=null){
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
+                    }
                     out.flush();
                     out.close();
                     Log.i(TAG, "已经保存");

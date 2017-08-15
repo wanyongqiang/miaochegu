@@ -18,7 +18,7 @@ import java.lang.Override;
 public class ReviewProcessActivity_ViewBinding<T extends ReviewProcessActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558534;
+  private View view2131558535;
 
   @UiThread
   public ReviewProcessActivity_ViewBinding(final T target, View source) {
@@ -30,7 +30,7 @@ public class ReviewProcessActivity_ViewBinding<T extends ReviewProcessActivity> 
     target.tvTitle = Utils.findRequiredViewAsType(source, R.id.tv_title, "field 'tvTitle'", TextView.class);
     view = Utils.findRequiredView(source, R.id.iv_back, "field 'ivBack' and method 'onClick'");
     target.ivBack = Utils.castView(view, R.id.iv_back, "field 'ivBack'", ImageView.class);
-    view2131558534 = view;
+    view2131558535 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,8 +50,8 @@ public class ReviewProcessActivity_ViewBinding<T extends ReviewProcessActivity> 
     target.tvTitle = null;
     target.ivBack = null;
 
-    view2131558534.setOnClickListener(null);
-    view2131558534 = null;
+    view2131558535.setOnClickListener(null);
+    view2131558535 = null;
 
     this.target = null;
   }

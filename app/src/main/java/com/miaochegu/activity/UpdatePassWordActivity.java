@@ -14,7 +14,6 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.SaveCallback;
 import com.miaochegu.R;
-import com.miaochegu.util.StatusbarUtils;
 import com.miaochegu.util.ToastUtil;
 
 import butterknife.BindView;
@@ -44,7 +43,6 @@ public class UpdatePassWordActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusbarUtils.enableTranslucentStatusbar(this);
         setContentView(R.layout.activity_update_password);
         ButterKnife.bind(this);
 

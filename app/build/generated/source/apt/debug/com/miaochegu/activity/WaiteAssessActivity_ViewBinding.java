@@ -18,7 +18,7 @@ import java.lang.Override;
 public class WaiteAssessActivity_ViewBinding<T extends WaiteAssessActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558534;
+  private View view2131558535;
 
   @UiThread
   public WaiteAssessActivity_ViewBinding(final T target, View source) {
@@ -27,7 +27,7 @@ public class WaiteAssessActivity_ViewBinding<T extends WaiteAssessActivity> impl
     View view;
     view = Utils.findRequiredView(source, R.id.iv_back, "field 'ivBack' and method 'onClick'");
     target.ivBack = Utils.castView(view, R.id.iv_back, "field 'ivBack'", ImageView.class);
-    view2131558534 = view;
+    view2131558535 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -50,8 +50,8 @@ public class WaiteAssessActivity_ViewBinding<T extends WaiteAssessActivity> impl
     target.rlAssess = null;
     target.mProgess = null;
 
-    view2131558534.setOnClickListener(null);
-    view2131558534 = null;
+    view2131558535.setOnClickListener(null);
+    view2131558535 = null;
 
     this.target = null;
   }
