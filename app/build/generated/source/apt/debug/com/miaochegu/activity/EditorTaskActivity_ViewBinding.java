@@ -6,6 +6,7 @@ import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
@@ -83,7 +84,6 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.switchView = Utils.findRequiredViewAsType(source, R.id.switchView, "field 'switchView'", SwitchView.class);
     target.llNature = Utils.findRequiredViewAsType(source, R.id.ll_nature, "field 'llNature'", RelativeLayout.class);
     target.llNote = Utils.findRequiredViewAsType(source, R.id.ll_note, "field 'llNote'", RelativeLayout.class);
-    target.edtContent = Utils.findRequiredViewAsType(source, R.id.edt_content, "field 'edtContent'", EditText.class);
     view = Utils.findRequiredView(source, R.id.tv_ynamic, "field 'tvYnamic' and method 'onClick'");
     target.tvYnamic = Utils.castView(view, R.id.tv_ynamic, "field 'tvYnamic'", TextView.class);
     view2131558580 = view;
@@ -93,6 +93,8 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
         target.onClick(p0);
       }
     });
+    target.edtContent = Utils.findRequiredViewAsType(source, R.id.edt_content, "field 'edtContent'", EditText.class);
+    target.mProgess = Utils.findRequiredViewAsType(source, R.id.mProgess, "field 'mProgess'", ProgressBar.class);
   }
 
   @Override
@@ -118,8 +120,9 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.switchView = null;
     target.llNature = null;
     target.llNote = null;
-    target.edtContent = null;
     target.tvYnamic = null;
+    target.edtContent = null;
+    target.mProgess = null;
 
     view2131558579.setOnClickListener(null);
     view2131558579 = null;

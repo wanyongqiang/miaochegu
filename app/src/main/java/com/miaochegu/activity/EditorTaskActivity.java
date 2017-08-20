@@ -21,6 +21,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -48,8 +49,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ch.ielse.view.SwitchView;
-
-import static com.miaochegu.R.id.edt_content;
 
 /**
  * Created by roztop on 2017/8/5.
@@ -94,10 +93,13 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
     RelativeLayout llNote;
 
     Context context;
-    @BindView(edt_content)
-    EditText edtContent;
     @BindView(R.id.tv_ynamic)
     TextView tvYnamic;
+    @BindView(R.id.edt_content)
+    EditText edtContent;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
+    private String taskID = "";
     private String strOperate = " 营运车辆";
     private final String[] mIndexItems = {"定位", "热门"};//头部额外的索引
     private List<CountryModel> models = new ArrayList<>();
@@ -140,7 +142,7 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
 
         String f = intent.getStringExtra("F");
         tvPrice.setText(f != null ? f : "");
-
+        taskID = intent.getStringExtra("TASK_ID");
         String g = intent.getStringExtra("G");
         if ("运营车辆".equals(g)) {
             switchView.setOpened(false);
@@ -225,83 +227,24 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
                     ToastUtil.show("请输入价格");
                     return;
                 }
-                AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-                avQuery.addAscendingOrder("carid");
+                mProgess.setVisibility(View.VISIBLE);
+                AVQuery<AVObject> avQuery = new AVQuery<>("Task");
+                avQuery.whereEqualTo("tid", taskID);
                 avQuery.findInBackground(new FindCallback<AVObject>() {
-                    private int tID = 0;
 
                     @Override
-                    public void done(List<AVObject> list, AVException e) {
+                    public void done(final List<AVObject> list, AVException e) {
                         handler.post(new Runnable() {
                             @Override
                             public void run() {
-//                                mProgerss.setVisibility(View.GONE);
-                            }
-                        });
-                        final int cID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("carid") + 1;
-//                        Log.e(TAG, list.get(list.size() - 1).get("carid") + "");
-                        AVQuery<AVObject> avQuery = new AVQuery<>("Audit");//TODO 查询审核ID
-                        avQuery.addAscendingOrder("sid");
-                        avQuery.findInBackground(new FindCallback<AVObject>() {
-                            @Override
-                            public void done(List<AVObject> list, AVException e) {
-                                final int sID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("sid") + 1;
-//                                Log.e(TAG, list.get(list.size() - 1).get("sid") + "");
-                                AVObject product = new AVObject("Audit");//TODO 插入审核数据
-                                product.put("cid", cID);
-                                product.put("sid", sID);
-                                product.put("atype", 0);
-                                product.saveInBackground(new SaveCallback() {
+                                mProgess.setVisibility(View.GONE);
+                                final String cID = list.get(0).get("cid").toString();
+                                AVQuery<AVObject> avQuery = new AVQuery<>("Car");
+                                avQuery.whereEqualTo("carid", cID);
+                                avQuery.findInBackground(new FindCallback<AVObject>() {
                                     @Override
-                                    public void done(AVException e) {
-                                        if (e == null) {
-                                            AVQuery<AVObject> avQuery = new AVQuery<>("Task");//TODO 查询任务ID
-                                            avQuery.addAscendingOrder("tid");
-                                            avQuery.findInBackground(new FindCallback<AVObject>() {
-                                                @Override
-                                                public void done(List<AVObject> list, AVException e) {
-                                                    tID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("tid") + 1;
-                                                    AVObject product = new AVObject("Task");//TODO 插入审核数据
-                                                    product.put("tid", tID);
-                                                    product.put("sid", sID);
-                                                    product.put("uid", AVUser.getCurrentUser().get("uid"));
-                                                    product.put("cid", cID);
-                                                    product.put("tcreatetime", new Date());
-                                                    product.saveInBackground(new SaveCallback() {
-                                                        @Override
-                                                        public void done(AVException e) {
-                                                            if (e == null) {
-                                                                AVQuery<AVObject> avQuery = new AVQuery<>("Photo");//TODO 查询任务ID
-                                                                avQuery.addAscendingOrder("pid");
-                                                                avQuery.findInBackground(new FindCallback<AVObject>() {
-                                                                    @Override
-                                                                    public void done(List<AVObject> list, AVException e) {
-                                                                        final int pID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("pid") + 1;
-                                                                        AVObject product = new AVObject("Photo");//TODO
-                                                                        product.put("pid", pID);
-                                                                        product.saveInBackground(new SaveCallback() {
-                                                                            @Override
-                                                                            public void done(AVException e) {
-                                                                                if (e == null) {
-                                                                                    setCar(cID, pID);
-                                                                                } else {
-//                                                                                    Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                                }
-                                                                            }
-                                                                        });
-                                                                    }
-                                                                });
-
-                                                            } else {
-//                                                                Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                            }
-                                                        }
-                                                    });
-                                                }
-                                            });
-                                        } else {
-//                                            Toast.makeText(CarInfoActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
+                                    public void done(List<AVObject> list, AVException e) {
+                                        setCar(list.get(0), cID);
                                     }
                                 });
                             }
@@ -314,24 +257,21 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
 
     /**
      * @param cid 车辆ID
-     * @param pid 照片ID
      */
-    private void setCar(final int cid, final int pid) {
-        AVObject product = new AVObject("Car");
-        product.put("carid", cid);
-        product.put("pid", pid);
-        product.put("cseries", strCarType);
-        product.put("cinfo", AVUser.getCurrentUser().getUsername());
-        product.put("vin", tvVin.getText().toString().trim());
-        product.put("cbrand", strCarName);
-        product.put("caddress", tvName.getText().toString().trim());
-        product.put("cyear", tvFirst.getText().toString().trim());
-        product.put("ckm", Integer.parseInt(tvKm.getText().toString().trim()));
-        product.put("cmodels", strCarModel);
-        product.put("cprice", Integer.parseInt(tvPrice.getText().toString().trim()));
-        product.put("sceneinfo", edtContent.getText().toString().trim());
-        product.put("usenature", strOperate);
-        product.saveInBackground(new SaveCallback() {
+    private void setCar(AVObject avObject, String cid) {
+        avObject.put("carid", cid);
+        avObject.put("cseries", strCarType);
+        avObject.put("cinfo", AVUser.getCurrentUser().getUsername());
+        avObject.put("vin", tvVin.getText().toString().trim());
+        avObject.put("cbrand", strCarName);
+        avObject.put("caddress", tvName.getText().toString().trim());
+        avObject.put("cyear", new Date(tvFirst.getText().toString().trim()));
+        avObject.put("ckm", Integer.parseInt(tvKm.getText().toString().trim()));
+        avObject.put("cmodels", strCarModel);
+        avObject.put("cprice", Integer.parseInt(tvPrice.getText().toString().trim()));
+        avObject.put("sceneinfo", edtContent.getText().toString().trim());
+        avObject.put("usenature", strOperate);
+        avObject.saveInBackground(new SaveCallback() {
             @Override
             public void done(final AVException e) {
                 handler.post(new Runnable() {

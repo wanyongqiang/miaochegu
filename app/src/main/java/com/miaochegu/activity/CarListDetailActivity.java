@@ -194,7 +194,7 @@ public class CarListDetailActivity extends Activity {
                 String value2 = tvCartype.getText().toString();
                 startActivity(new Intent(this, EditorTaskActivity.class).putExtra("A", value).putExtra("B", value1)
                         .putExtra("C", value2).putExtra("D", strNew).putExtra("E", ckm).putExtra("F", cprice).putExtra("G", usenature)
-                        .putExtra("H", tvDesc.getText().toString()));
+                        .putExtra("H", tvDesc.getText().toString()).putExtra("TASK_ID",taskid));
                 break;
         }
     }

@@ -10,7 +10,46 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02160a33-cee5-4cd2-8c1a-69ca927dad03" name="Default" comment="" />
+    <list default="true" id="02160a33-cee5-4cd2-8c1a-69ca927dad03" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2$1$1$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2$1$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/util/SQLdm.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/c7A1MR9P+Hk7gViSPa0zh_GmTKc=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/c7A1MR9P+Hk7gViSPa0zh_GmTKc=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_796d886f97394fbdb698668643aa7f1817c23199.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_796d886f97394fbdb698668643aa7f1817c23199.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_editor_task.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_editor_task.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarListDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarListDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_editor_task.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_editor_task.xml" />
+    </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +84,28 @@
     <favorites_list name="Android" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CarInfoActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+              <folding>
+                <element signature="method#setCar#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#showDialog#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#showDialogType#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#showDialogInfo#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#queryData#1;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#queryDataType#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#queryDataInfo#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="class#ExcelDataLoader#0;class#CarInfoActivity#0" expanded="false" />
+                <element signature="method#getXlsData#0;class#CarInfoActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -3938,57 +3998,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_three.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/AssetsDatabaseManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/GettingStartedApp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/SQLdm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/acrivity_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_carinfo.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_carname.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarNameAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarTypeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarInfoAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_carmodel.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_two.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_update_password.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookResultActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/model/CountryModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_cartype.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_four.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_line_common.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess_two.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_carlist_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/ListItemClickHelp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/WaiteAssessActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/YTGWaiteAssessAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WaiteAssessAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/DPSWaiteAssessAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/PSZWaiteAssessAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WTGWaiteAssessAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/btn_gray_bottm_border.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/AndroidWorkaround.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/DetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_two.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_three.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_four.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_serach_result.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookResultActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_commit_suc.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_update_password.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ueser_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_carlist_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/WaiteAssessActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarListDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_editor_task.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/btn_gray_bottm_border.xml" />
       </list>
     </option>
   </component>
@@ -4023,39 +4083,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="device.picker.selection" value="5ed2e717" />
     <property name="android.project.structure.last.selected" value="xrecyclerview" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java&#10;Upd&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java&#10;Select&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java&#10;YTG&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java&#10;WTG&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java&#10;Car&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java&#10;CAr&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java&#10;Se&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java&#10;Sel&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java&#10;Login&#9;PSI&#9;JAVA://com.miaochegu.activity.LoginActivity&#10;Ca&#9;FILE&#9;file://E:/Android/app/src/main/res/layout/activity_car_info.xml&#10;Sele&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" />
+    <property name="SearchEverywhereHistoryKey" value="carinfo&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java&#10;Upd&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java&#10;Select&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java&#10;YTG&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java&#10;WTG&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java&#10;Car&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java&#10;CAr&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java&#10;Se&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java&#10;Sel&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java&#10;Login&#9;PSI&#9;JAVA://com.miaochegu.activity.LoginActivity&#10;Ca&#9;FILE&#9;file://E:/Android/app/src/main/res/layout/activity_car_info.xml&#10;Sele&#9;FILE&#9;file://E:/Android/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" />
     <property name="ExportApk.ApkPath" value="E:\Android\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
@@ -4070,11 +4113,15 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.miaochegu.activity" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.miaochegu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Android\app\src\main\res\layout" />
+      <recent name="E:\Android\app\src\main\res\mipmap-xxhdpi" />
+      <recent name="E:\Android\app\src\main\res\mipmap-hdpi" />
+      <recent name="E:\Android\app\src\main\res\mipmap-mdpi" />
+      <recent name="E:\Android\app\src\main\res\mipmap-xhdpi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.miaochegu.adapter" />
@@ -4083,12 +4130,8 @@
       <recent name="db" />
       <recent name="com.miaochegu.util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Android\app\src\main\res\layout" />
-      <recent name="E:\Android\app\src\main\res\mipmap-xxhdpi" />
-      <recent name="E:\Android\app\src\main\res\mipmap-hdpi" />
-      <recent name="E:\Android\app\src\main\res\mipmap-mdpi" />
-      <recent name="E:\Android\app\src\main\res\mipmap-xhdpi" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.miaochegu.activity" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -4408,7 +4451,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e3bf1643-0044-43d0-a6f5-c8c0de7ab6b3" name="Default" comment="" />
+      <changelist id="02160a33-cee5-4cd2-8c1a-69ca927dad03" name="Default" comment="" />
       <created>1499513675782</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -4417,31 +4460,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66269165" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6609881" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21100427" sideWeight="0.5072303" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66852057" sideWeight="0.5060698" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69410455" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25417298" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64224875" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26251897" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32703003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41268075" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22534142" sideWeight="0.49276975" order="0" side_tool="false" content_ui="combo" x="751" y="75" width="417" height="899" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26783004" sideWeight="0.49276975" order="0" side_tool="false" content_ui="combo" x="751" y="75" width="417" height="899" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.541713" sideWeight="0.4957265" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21100427" sideWeight="0.5072303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54003406" sideWeight="0.4957265" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21100427" sideWeight="0.5072303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4477,31 +4520,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LoginActivity.java</url>
-          <line>162</line>
+          <line>163</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>300</line>
+          <line>333</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>596</line>
+          <line>608</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>590</line>
+          <line>602</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>493</line>
+          <line>505</line>
           <properties />
           <option name="timeStamp" value="70" />
         </line-breakpoint>
@@ -4513,7 +4556,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java</url>
-          <line>61</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
@@ -4531,291 +4574,58 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>541</line>
+          <line>553</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>409</line>
+          <line>443</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>416</line>
+          <line>450</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>423</line>
+          <line>457</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>436</line>
+          <line>470</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>445</line>
+          <line>479</line>
           <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>309</line>
+          <line>342</line>
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>430</line>
+          <line>464</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java</url>
-          <line>386</line>
-          <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="103" />
+      <option name="time" value="108" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1300">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_serach_result.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="34" column="21" selection-start-line="8" selection-start-column="4" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarInfoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess_two.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/androidstudio/androidstudioSDK/android/sdk/sources/android-23/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="669" column="13" selection-start-line="669" selection-start-column="13" selection-end-line="669" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/StatusbarUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="69" column="48" selection-start-line="69" selection-start-column="48" selection-end-line="69" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/btn_xx.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1405">
-          <caret line="230" column="51" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_line_common.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="59" column="25" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-469">
-          <caret line="116" column="9" selection-start-line="100" selection-start-column="6" selection-end-line="116" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="86" column="70" selection-start-line="86" selection-start-column="70" selection-end-line="86" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_submit_infos.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookResultActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/tranlate_dialog_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="421" column="55" selection-start-line="421" selection-start-column="55" selection-end-line="421" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="262" column="5" selection-start-line="240" selection-start-column="4" selection-end-line="262" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="459" column="61" selection-start-line="459" selection-start-column="31" selection-end-line="459" selection-end-column="61" />
-          <folding>
-            <element signature="e#20045#20046#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/ListItemClickHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="345" column="45" selection-start-line="345" selection-start-column="37" selection-end-line="345" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/acrivity_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarTypeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -4833,120 +4643,73 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_gray_bottm_border.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="129" column="110" selection-start-line="129" selection-start-column="110" selection-end-line="129" selection-end-column="110" />
+        <state relative-caret-position="175">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/DetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="172" column="48" selection-start-line="172" selection-start-column="48" selection-end-line="172" selection-end-column="48" />
+        <state relative-caret-position="275">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="148" column="110" selection-start-line="148" selection-start-column="110" selection-end-line="148" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="169" column="110" selection-start-line="169" selection-start-column="110" selection-end-line="169" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/WaiteAssessActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="129" column="78" selection-start-line="129" selection-start-column="67" selection-end-line="129" selection-end-column="78" />
+        <state relative-caret-position="250">
+          <caret line="116" column="9" selection-start-line="100" selection-start-column="6" selection-end-line="116" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3225#3735#0" expanded="false" />
+            <element signature="e#3734#3735#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/DPSWaiteAssessAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/PSZWaiteAssessAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WTGWaiteAssessAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="167" column="78" selection-start-line="167" selection-start-column="78" selection-end-line="167" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="164" column="78" selection-start-line="164" selection-start-column="78" selection-end-line="164" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WaiteAssessAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1603">
-          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/YTGWaiteAssessAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="165" column="75" selection-start-line="165" selection-start-column="75" selection-end-line="165" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_carlist_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
+        <state relative-caret-position="300">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_two.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_three.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_four.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="50" column="38" selection-start-line="39" selection-start-column="8" selection-end-line="50" selection-end-column="38" />
+        <state relative-caret-position="550">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4955,35 +4718,426 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="139" column="41" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="71" column="47" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="47" />
+        <state relative-caret-position="543">
+          <caret line="559" column="65" selection-start-line="559" selection-start-column="65" selection-end-line="559" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_editor_task.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_commit_suc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="245" column="8" selection-start-line="245" selection-start-column="8" selection-end-line="245" selection-end-column="8" />
+        <state relative-caret-position="525">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_update_password.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_serach_result.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ueser_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/7a16d82461021005f75be89293341fd3cef73bfc/butterknife-annotations-8.4.0-sources.jar!/butterknife/BindView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_carlist_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/YTGWaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/PSZWaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+          <folding>
+            <element signature="e#6182#6183#0" expanded="false" />
+            <element signature="e#6224#6225#0" expanded="false" />
+            <element signature="e#6270#6271#0" expanded="false" />
+            <element signature="e#6313#6314#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1643">
+          <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="101" column="42" selection-start-line="97" selection-start-column="8" selection-end-line="101" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/DPSWaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2084">
+          <caret line="160" column="19" selection-start-line="160" selection-start-column="19" selection-end-line="160" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookResultActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/StatusbarUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="240" column="55" selection-start-line="240" selection-start-column="55" selection-end-line="240" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="149" column="109" selection-start-line="149" selection-start-column="109" selection-end-line="149" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waite_assess_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WTGWaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/AndroidWorkaround.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/SQLdm.java" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WaiteAssessAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/WaiteAssessActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="109" column="46" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/UpdatePassWordActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="703" column="36" selection-start-line="697" selection-start-column="4" selection-end-line="703" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_editor_task.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="439" column="32" selection-start-line="439" selection-start-column="28" selection-end-line="439" selection-end-column="32" />
+          <folding>
+            <element signature="e#1021#1049#0" expanded="true" />
+            <element signature="e#2348#2376#0" expanded="true" />
+            <element signature="e#2455#2483#0" expanded="true" />
+            <element signature="e#2591#2609#0" expanded="true" />
+            <element signature="e#2819#2847#0" expanded="true" />
+            <element signature="e#2925#2952#0" expanded="true" />
+            <element signature="e#2986#3014#0" expanded="true" />
+            <element signature="e#3239#3266#0" expanded="true" />
+            <element signature="e#3385#3403#0" expanded="true" />
+            <element signature="e#3727#3754#0" expanded="true" />
+            <element signature="e#3922#3940#0" expanded="true" />
+            <element signature="e#4505#4533#0" expanded="true" />
+            <element signature="e#4611#4638#0" expanded="true" />
+            <element signature="e#4672#4700#0" expanded="true" />
+            <element signature="e#4925#4952#0" expanded="true" />
+            <element signature="e#5074#5092#0" expanded="true" />
+            <element signature="e#5415#5442#0" expanded="true" />
+            <element signature="e#5627#5645#0" expanded="true" />
+            <element signature="e#6211#6239#0" expanded="true" />
+            <element signature="e#6317#6344#0" expanded="true" />
+            <element signature="e#6378#6406#0" expanded="true" />
+            <element signature="e#6631#6658#0" expanded="true" />
+            <element signature="e#6778#6796#0" expanded="true" />
+            <element signature="e#6905#6934#0" expanded="true" />
+            <element signature="e#7138#7165#0" expanded="true" />
+            <element signature="e#7468#7486#0" expanded="true" />
+            <element signature="e#8053#8081#0" expanded="true" />
+            <element signature="e#8159#8186#0" expanded="true" />
+            <element signature="e#8220#8248#0" expanded="true" />
+            <element signature="e#8473#8500#0" expanded="true" />
+            <element signature="e#8620#8638#0" expanded="true" />
+            <element signature="e#8963#8990#0" expanded="true" />
+            <element signature="e#9166#9184#0" expanded="true" />
+            <element signature="e#9748#9776#0" expanded="true" />
+            <element signature="e#9854#9881#0" expanded="true" />
+            <element signature="e#9915#9943#0" expanded="true" />
+            <element signature="e#10168#10195#0" expanded="true" />
+            <element signature="e#10315#10333#0" expanded="true" />
+            <element signature="e#10655#10682#0" expanded="true" />
+            <element signature="e#10895#10913#0" expanded="true" />
+            <element signature="e#11271#11289#0" expanded="true" />
+            <element signature="e#11567#11595#0" expanded="true" />
+            <element signature="e#11673#11700#0" expanded="true" />
+            <element signature="e#11734#11762#0" expanded="true" />
+            <element signature="e#11987#12014#0" expanded="true" />
+            <element signature="e#12134#12152#0" expanded="true" />
+            <element signature="e#12477#12504#0" expanded="true" />
+            <element signature="e#12717#12735#0" expanded="true" />
+            <element signature="e#13092#13110#0" expanded="true" />
+            <element signature="e#13389#13417#0" expanded="true" />
+            <element signature="e#13495#13522#0" expanded="true" />
+            <element signature="e#13556#13584#0" expanded="true" />
+            <element signature="e#13809#13836#0" expanded="true" />
+            <element signature="e#13956#13974#0" expanded="true" />
+            <element signature="e#14602#14620#0" expanded="true" />
+            <element signature="e#15335#15353#0" expanded="true" />
+            <element signature="e#15944#15972#0" expanded="true" />
+            <element signature="e#16050#16077#0" expanded="true" />
+            <element signature="e#16111#16139#0" expanded="true" />
+            <element signature="e#16364#16391#0" expanded="true" />
+            <element signature="e#16511#16529#0" expanded="true" />
+            <element signature="e#16811#16838#0" expanded="true" />
+            <element signature="e#17006#17024#0" expanded="true" />
+            <element signature="e#17618#17646#0" expanded="true" />
+            <element signature="e#17731#17759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarListDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="196" column="85" selection-start-line="196" selection-start-column="78" selection-end-line="196" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="283" column="51" selection-start-line="283" selection-start-column="51" selection-end-line="283" selection-end-column="51" />
+          <folding>
+            <element signature="e#8225#9273#0" expanded="true" />
+            <element signature="e#8405#9231#0" expanded="true" />
+            <element signature="e#8868#9173#0" expanded="true" />
+            <element signature="e#9172#9173#0" expanded="true" />
+            <element signature="e#9230#9231#0" expanded="true" />
+            <element signature="e#9272#9273#0" expanded="true" />
+            <element signature="method#result#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#showDialog#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#showDialogType#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#showDialogInfo#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#queryData#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#queryDataType#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#queryDataInfo#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#onItemeClickType#0;class#EditorTaskActivity#0" expanded="false" />
+            <element signature="method#onItemeClickInfo#0;class#EditorTaskActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-365">
-          <caret line="97" column="33" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+        <state relative-caret-position="181">
+          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
           <folding>
+            <element signature="method#setCar#0;class#CarInfoActivity#0" expanded="false" />
             <element signature="method#showDialog#0;class#CarInfoActivity#0" expanded="false" />
+            <element signature="method#showDialogType#0;class#CarInfoActivity#0" expanded="false" />
             <element signature="method#showDialogInfo#0;class#CarInfoActivity#0" expanded="false" />
             <element signature="method#queryData#1;class#CarInfoActivity#0" expanded="false" />
             <element signature="method#queryDataType#0;class#CarInfoActivity#0" expanded="false" />
@@ -4991,30 +5145,6 @@
             <element signature="class#ExcelDataLoader#0;class#CarInfoActivity#0" expanded="false" />
             <element signature="method#getXlsData#0;class#CarInfoActivity#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarListDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_gray_bottm_border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
