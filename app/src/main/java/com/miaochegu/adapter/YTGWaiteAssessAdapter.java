@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
+import com.miaochegu.model.CarInfoModel;
 import com.miaochegu.util.ListItemClickHelp;
 
 import java.text.SimpleDateFormat;
@@ -30,19 +27,19 @@ import java.util.List;
 public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAdapter.MyViewHolder> {
     private final LayoutInflater mInflater;
     Context context;
-    List<AVObject> entity;
+    List<CarInfoModel> entity;
     private ListItemClickHelp callback;
     private OnItemClickListener mOnItemeClickLstener;
     private View inflate;
 
-    public YTGWaiteAssessAdapter(Context context, List<AVObject> entity, ListItemClickHelp callback) {
+    public YTGWaiteAssessAdapter(Context context, List<CarInfoModel> entity, ListItemClickHelp callback) {
         this.context = context;
         this.callback = callback;
         this.entity = new ArrayList<>();
         mInflater = LayoutInflater.from(context);
     }
 
-    public void upRes(List<AVObject> list) {
+    public void upRes(List<CarInfoModel> list) {
         this.entity.clear();
         if (list != null) {
             this.entity.addAll(list);
@@ -50,7 +47,7 @@ public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAd
         notifyDataSetChanged();
     }
 
-    public void addRes(List<AVObject> list) {
+    public void addRes(List<CarInfoModel> list) {
         int size = this.entity.size();
         if (list != null) {
             this.entity.addAll(list);
@@ -67,46 +64,13 @@ public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAd
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final AVObject rowsEntity = entity.get(position);
+        final CarInfoModel rowsEntity = entity.get(position);
         holder.tv_chakan.setVisibility(View.VISIBLE);
-        final String tid = entity.get(position).get("tid") + "";
-        holder.tv_name.setText("任务单号：" + tid);
-        final String tcreatetime = entity.get(position).get("tcreatetime").toString();
-        holder.tv_time.setText(getDateString(tcreatetime));
-        final String cid = entity.get(position).get("cid").toString();
-        final String sid = entity.get(position).get("sid").toString();
-        AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-        avQuery.orderByDescending("createdAt");
-        avQuery.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                if (e == null && list != null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        if (cid.equals(list.get(i).get("carid").toString())) {
-                            holder.tv_content.setText(list.get(i).get("cmodels").toString());
-                            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
-                            avQuery.orderByDescending("createdAt");
-                            avQuery.findInBackground(new FindCallback<AVObject>() {
-                                @Override
-                                public void done(List<AVObject> list, AVException e) {
-                                    if (e == null && list != null) {
-                                        for (int i = 0; i < list.size(); i++) {
-                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 4) {
-                                                holder.tvfs.setText("复审已过");
-                                            }
-                                        }
-                                    } else {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
-                        }
-                    }
-                } else {
-                    e.printStackTrace();
-                }
-            }
-        });
+        holder.tvfs.setText("审核已过");
+        holder.tv_name.setText("任务单号：" + rowsEntity.getTask_id());
+        String tcreatetime = rowsEntity.getTime();
+        holder.tv_time.setText(tcreatetime);
+        holder.tv_content.setText(rowsEntity.getCarType());
 
         if (mOnItemeClickLstener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +78,8 @@ public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAd
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
                     holder.itemView.setTag(rowsEntity);
-                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition, cid, tid,sid);
+                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition,
+                            rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "", rowsEntity.getAudit_id() + "");
                 }
             });
         }
@@ -125,7 +90,7 @@ public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAd
         holder.tv_chakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.onClick(inflate, p, viewId, cid,tid);
+                callback.onClick(inflate, p, viewId, rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "");
             }
         });
     }
@@ -140,7 +105,7 @@ public class YTGWaiteAssessAdapter extends RecyclerView.Adapter<YTGWaiteAssessAd
     }
 
     public interface OnItemClickListener {
-        void onItemeClick(View view, int position, String cID, String tID,String sID);
+        void onItemeClick(View view, int position, String cID, String tID, String sID);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

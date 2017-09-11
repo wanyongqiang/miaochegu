@@ -30,6 +30,7 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.DeleteCallback;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
@@ -189,6 +190,7 @@ public class SelectPhotoActivity extends Activity {
                 ivA.setBackgroundResource(R.mipmap.icon_photo);
                 tvA.setBackgroundResource(0);
                 tvA.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pocardregis");
                 break;
             case R.id.iv_bb:
                 B = false;
@@ -200,6 +202,7 @@ public class SelectPhotoActivity extends Activity {
                 ivB.setBackgroundResource(R.mipmap.icon_photo);
                 tvB.setBackgroundResource(0);
                 tvB.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("ptcardregis");
                 break;
             case R.id.iv_cc:
                 C = false;
@@ -211,6 +214,7 @@ public class SelectPhotoActivity extends Activity {
                 ivC.setBackgroundResource(R.mipmap.icon_photo);
                 tvC.setBackgroundResource(0);
                 tvC.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("drivingcard");
                 break;
             case R.id.iv_dd:
                 D = false;
@@ -222,6 +226,7 @@ public class SelectPhotoActivity extends Activity {
                 ivD.setBackgroundResource(R.mipmap.icon_photo);
                 tvD.setBackgroundResource(0);
                 tvD.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pchit");
                 break;
             case R.id.iv_ee:
                 E = false;
@@ -233,8 +238,32 @@ public class SelectPhotoActivity extends Activity {
                 ivE.setBackgroundResource(R.mipmap.icon_photo);
                 tvE.setBackgroundResource(0);
                 tvE.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pnameplate");
                 break;
         }
+    }
+
+    private void deletePhoto(final String type) {
+        file.deleteInBackground(new DeleteCallback() {
+            @Override
+            public void done(AVException e) {
+                AVQuery<AVObject> avQuery = new AVQuery<>("Photo");
+                avQuery.whereEqualTo("pid", mPid);
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        AVObject avObject = list.get(0);
+                        avObject.put(type, null);
+                        avObject.saveInBackground(new SaveCallback() {
+                            @Override
+                            public void done(AVException e) {
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -417,7 +446,7 @@ public class SelectPhotoActivity extends Activity {
                 File f = new File(Environment.getExternalStorageDirectory(), "productPic.jpg");
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    if(bitmap!=null){
+                    if (bitmap != null) {
                         bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
                     }
                     out.flush();

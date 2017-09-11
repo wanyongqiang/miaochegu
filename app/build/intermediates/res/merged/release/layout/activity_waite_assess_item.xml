@@ -117,7 +117,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_no_corner"
                 android:gravity="center"
-                android:text="车辆未查到"
                 android:textColor="@color/tv_999"
                 android:textSize="14sp" />
         </LinearLayout>

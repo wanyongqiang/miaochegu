@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.androidkun.xtablayout.XTabLayout;
@@ -23,6 +24,8 @@ import com.miaochegu.fragment.WWCProcessFragment;
 import com.miaochegu.fragment.YTGProcessFragment;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +45,8 @@ public class ReviewProcessActivity extends AppCompatActivity {
     TextView tvTitle;
     @BindView(R.id.iv_back)
     ImageView ivBack;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
 
     private String[] mTabTitles = new String[]{"未完成", "待审核", "评审中", "未通过", "已通过"};
     private BaseFragment[] fragments = {new WWCProcessFragment(), new DPSProcessFragment(), new PSZProcessFragment()
@@ -54,6 +59,9 @@ public class ReviewProcessActivity extends AppCompatActivity {
         setContentView(R.layout.activity_serach_result);
         ButterKnife.bind(this);
 
+        //注册EventBus
+        EventBus.getDefault().register(this);
+//        mProgess.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
         type = intent.getStringExtra("type");
 
@@ -93,7 +101,7 @@ public class ReviewProcessActivity extends AppCompatActivity {
                 // 方案二：页面选中时才去加载数据
                 BaseFragment fragment = fragments[position];
                 fragment.initData(type);
-                EventBus.getDefault().post(new String(type));
+//                EventBus.getDefault().post(new String(type));
                 if (position == 1) {
                     tvTitle.setText("待评审");
                     GettingStartedApp.getInstance().setTempStr("DPG");
@@ -117,6 +125,11 @@ public class ReviewProcessActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventMainThread(String event) {
+        mProgess.setVisibility(View.GONE);
     }
 
     @OnClick({R.id.iv_back})
@@ -151,5 +164,11 @@ public class ReviewProcessActivity extends AppCompatActivity {
             }
             return super.getPageTitle(position);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);//反注册EventBus
     }
 }

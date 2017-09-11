@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
+import com.miaochegu.model.CarInfoModel;
 import com.miaochegu.util.ListItemClickHelp;
 
 import java.text.SimpleDateFormat;
@@ -22,27 +19,27 @@ import java.util.List;
 
 
 /*****************************************
- * 企业下的建筑详情
  *
- * @author liuteng
+ *
+ * @author wyq
  *         created at  2016/5/12 15:31
  ****************************************/
 public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAdapter.MyViewHolder> {
     private final LayoutInflater mInflater;
     Context context;
-    List<AVObject> entity;
+    List<CarInfoModel> entity;
     private ListItemClickHelp callback;
     private OnItemClickListener mOnItemeClickLstener;
     private View inflate;
 
-    public WWCWaiteAssessAdapter(Context context, List<AVObject> entity, ListItemClickHelp callback) {
+    public WWCWaiteAssessAdapter(Context context, List<CarInfoModel> entity, ListItemClickHelp callback) {
         this.context = context;
         this.callback = callback;
         this.entity = new ArrayList<>();
         mInflater = LayoutInflater.from(context);
     }
 
-    public void upRes(List<AVObject> list) {
+    public void upRes(List<CarInfoModel> list) {
         this.entity.clear();
         if (list != null) {
             this.entity.addAll(list);
@@ -50,7 +47,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
         notifyDataSetChanged();
     }
 
-    public void addRes(List<AVObject> list) {
+    public void addRes(List<CarInfoModel> list) {
         int size = this.entity.size();
         if (list != null) {
             this.entity.addAll(list);
@@ -67,45 +64,12 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final AVObject rowsEntity = entity.get(position);
-        final String tid = entity.get(position).get("tid") + "";
-        holder.tv_name.setText("任务单号：" + tid);
-        String tcreatetime = entity.get(position).get("tcreatetime").toString();
-        holder.tv_time.setText(getDateString(tcreatetime));
-        final String cid = entity.get(position).get("cid").toString();
-        final String sid = entity.get(position).get("sid").toString();
-        AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-        avQuery.orderByDescending("createdAt");
-        avQuery.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                if (e == null && list != null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        if (cid.equals(list.get(i).get("carid").toString())) {
-                            holder.tv_content.setText(list.get(i).get("cmodels").toString());
-                            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
-                            avQuery.orderByDescending("createdAt");
-                            avQuery.findInBackground(new FindCallback<AVObject>() {
-                                @Override
-                                public void done(List<AVObject> list, AVException e) {
-                                    if (e == null && list != null) {
-                                        for (int i = 0; i < list.size(); i++) {
-                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 0) {
-                                                holder.tvfs.setText(list.get(i).get("appraiser") == null ? "" : list.get(i).get("appraiser") + "正在处理");
-                                            }
-                                        }
-                                    } else {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
-                        }
-                    }
-                } else {
-                    e.printStackTrace();
-                }
-            }
-        });
+        final CarInfoModel rowsEntity = entity.get(position);
+        holder.tv_name.setText("任务单号：" + rowsEntity.getTask_id());
+        String tcreatetime = rowsEntity.getTime();
+        holder.tv_time.setText(tcreatetime);
+        holder.tv_content.setText(rowsEntity.getCarType());
+        holder.tvfs.setText("提交");
 
         if (mOnItemeClickLstener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +77,8 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
                     holder.itemView.setTag(rowsEntity);
-                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition, cid, tid,sid);
+                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition,
+                            rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "", rowsEntity.getAudit_id() + "");
                 }
             });
         }
@@ -124,7 +89,8 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
         holder.tvfs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.onClick(inflate, p, viewId, cid,tid);
+                callback.onClick(inflate, p, viewId, rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "");
+
             }
         });
     }
@@ -139,7 +105,7 @@ public class WWCWaiteAssessAdapter extends RecyclerView.Adapter<WWCWaiteAssessAd
     }
 
     public interface OnItemClickListener {
-        void onItemeClick(View view, int position, String cID, String tID,String sID);
+        void onItemeClick(View view, int position, String cID, String tID, String sID);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

@@ -1,6 +1,5 @@
 package com.miaochegu.activity;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +10,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,9 +32,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.androidkun.xtablayout.XTabLayout;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
@@ -43,18 +51,29 @@ import com.miaochegu.R;
 import com.miaochegu.adapter.CarInfoAdapter;
 import com.miaochegu.adapter.CarNameAdapter;
 import com.miaochegu.adapter.CarTypeAdapter;
+import com.miaochegu.fragment.BaseFragment;
+import com.miaochegu.fragment.DPSProcessFragment;
+import com.miaochegu.fragment.PSZProcessFragment;
+import com.miaochegu.fragment.WTGProcessFragment;
+import com.miaochegu.fragment.WWCProcessFragment;
+import com.miaochegu.fragment.YTGProcessFragment;
 import com.miaochegu.model.CountryModel;
 import com.miaochegu.util.GsonUtils;
 import com.miaochegu.util.JsonTools;
 import com.miaochegu.util.SharePCach;
 import com.miaochegu.util.ToastUtil;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import ch.ielse.view.SwitchView;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -65,19 +84,26 @@ import static android.content.ContentValues.TAG;
  * Created by toshiba on 2017/7/11.
  */
 
-public class CarInfoActivity extends Activity implements View.OnClickListener, OnConfirmeListener,
+public class CarInfoActivity extends AppCompatActivity implements View.OnClickListener, OnConfirmeListener,
         CarNameAdapter.OnItemClickListener, CarTypeAdapter.OnItemClickListener, CarInfoAdapter.OnItemClickListener, View.OnLayoutChangeListener {
 
     Context context;
     SwitchView switchView;
     ImageView imageView, iv_car;
-    private ProgressBar mProgerss;
+    @BindView(R.id.tab_FindFragment_title)
+    XTabLayout tabFindFragmentTitle;
+    @BindView(R.id.vp_FindFragment_pager)
+    ViewPager vpFindFragmentPager;
+    @BindView(R.id.sv_view)
+    ScrollView svView;
+    @BindView(R.id.mProgess)
+    ProgressBar mProgess;
     //Activity最外层的Layout视图
     private View activityRootView;
-    private TextView tv_next, tv_gj, tv_mine, tv_dpg, tv_wtg, tv_ytg, tv_updatepwd, username,
-            tv_wwc, tv_psz, tv_title, tv_city, tv_loginout, tv_carinfo, tv_datatime, tv_editor;
+    private TextView tv_next, tv_gj, tv_mine, tv_updatepwd, username, tv_title, tv_city, tv_loginout,
+            tv_carinfo, tv_datatime, tv_editor, tv_order;
     private EditText edt_vincode, edt_km, edt_money, edt_content;
-    LinearLayout llMine, llMineCenter, llMineCenters, llCenMine, llMineBottom, ll_gj_head, ll_gj_center, llBottom;
+    LinearLayout llMine, llMineBottom, ll_gj_head, ll_gj_center, llBottom;
 
     private String type = "";
     private String strOperate = " 营运车辆";
@@ -106,11 +132,16 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
 
     private static Handler handler = new Handler();
 
+    private String[] mTabTitles = new String[]{"未完成", "待审核", "评审中", "未通过", "已通过"};
+    private BaseFragment[] fragments = {new WWCProcessFragment(), new DPSProcessFragment(), new PSZProcessFragment()
+            , new WTGProcessFragment(), new YTGProcessFragment()};
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_info);
         context = this;
+        ButterKnife.bind(this);
         Intent intent = getIntent();
         type = intent.getStringExtra("type");
         //获取屏幕高度
@@ -121,32 +152,40 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
 
         if ("mine".equals(type)) {
             tv_title.setText("我的账户");
+            tv_mine.setTextColor(ContextCompat.getColor(context, R.color.color_blue));
+            tv_gj.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+            tv_order.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
             tv_gj.setBackgroundResource(R.color.white);
+            tv_order.setBackgroundResource(R.color.white);
             tv_mine.setBackgroundResource(R.color.colorcccccc);
             ll_gj_head.setVisibility(View.GONE);
+            tabFindFragmentTitle.setVisibility(View.GONE);
+            vpFindFragmentPager.setVisibility(View.GONE);
             tv_next.setVisibility(View.GONE);
             ll_gj_center.setVisibility(View.GONE);
             llMine.setVisibility(View.VISIBLE);
-            llCenMine.setVisibility(View.VISIBLE);
+            svView.setVisibility(View.VISIBLE);
             tv_loginout.setVisibility(View.VISIBLE);
-            llMineCenters.setVisibility(View.VISIBLE);
-            llMineCenter.setVisibility(View.VISIBLE);
             llMineBottom.setVisibility(View.GONE);
         } else {
             tv_title.setText("妙车估");
             tv_gj.setBackgroundResource(R.color.colorcccccc);
             tv_mine.setBackgroundResource(R.color.white);
+            tv_order.setBackgroundResource(R.color.white);
             ll_gj_head.setVisibility(View.GONE);
+            tabFindFragmentTitle.setVisibility(View.GONE);
+            vpFindFragmentPager.setVisibility(View.GONE);
             ll_gj_center.setVisibility(View.VISIBLE);
             tv_next.setVisibility(View.VISIBLE);
+            tv_mine.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+            tv_gj.setTextColor(ContextCompat.getColor(context, R.color.color_blue));
+            tv_order.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+            svView.setVisibility(View.VISIBLE);
             llMine.setVisibility(View.GONE);
             username.setText(AVUser.getCurrentUser().getUsername());
             username.setClickable(false);
             username.setFocusable(false);
-            llCenMine.setVisibility(View.GONE);
             tv_loginout.setVisibility(View.GONE);
-            llMineCenter.setVisibility(View.GONE);
-            llMineCenters.setVisibility(View.GONE);
             llMineBottom.setVisibility(View.GONE);
         }
 
@@ -164,6 +203,75 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
                 e.printStackTrace();
             }
         }
+
+        vpFindFragmentPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
+        vpFindFragmentPager.setOffscreenPageLimit(0);
+        //设置TabLayout的模式
+        tabFindFragmentTitle.setTabMode(TabLayout.MODE_FIXED);
+        tabFindFragmentTitle.setupWithViewPager(vpFindFragmentPager);
+
+        BaseFragment fragment = fragments[0];
+        fragment.initData("");
+        vpFindFragmentPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                // 方案二：页面选中时才去加载数据
+                BaseFragment fragment = fragments[position];
+                fragment.initData(type);
+                if (position == 1) {
+                    GettingStartedApp.getInstance().setTempStr("DPG");
+                } else if (position == 3) {
+                    GettingStartedApp.getInstance().setTempStr("WTG");
+                } else if (position == 4) {
+                    GettingStartedApp.getInstance().setTempStr("YTG");
+                } else if (position == 0) {
+                    GettingStartedApp.getInstance().setTempStr("WWC");
+                } else if (position == 2) {
+                    GettingStartedApp.getInstance().setTempStr("PSZ");
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+    }
+
+    private class FragmentAdapter extends FragmentPagerAdapter {
+        // FragmentPagerAdapter与FragmentStatePagerAdapter区别
+        public FragmentAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragments[position];
+        }
+
+        @Override
+        public int getCount() {
+            return mTabTitles.length;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            if (mTabTitles != null) {
+                return mTabTitles[position];
+            }
+            return super.getPageTitle(position);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);//反注册EventBus
     }
 
     // 查询数据库，将每一行的数据封装成一个person 对象，然后将对象添加到List中
@@ -208,7 +316,6 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
 
 
     private void init() {
-        mProgerss = (ProgressBar) findViewById(R.id.mProgess);
         edt_vincode = (EditText) findViewById(R.id.edt_vincode);
         username = (TextView) findViewById(R.id.username);
         edt_km = (EditText) findViewById(R.id.edt_km);
@@ -226,17 +333,10 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_editor = (TextView) findViewById(R.id.tv_editor);
         tv_gj = (TextView) findViewById(R.id.tv_gj);
         tv_mine = (TextView) findViewById(R.id.tv_mine);
-        tv_dpg = (TextView) findViewById(R.id.tv_dps);
-        tv_wtg = (TextView) findViewById(R.id.tv_wtg);
-        tv_ytg = (TextView) findViewById(R.id.tv_ytg);
-        tv_wwc = (TextView) findViewById(R.id.tv_wwc);
-        tv_psz = (TextView) findViewById(R.id.tv_psz);
+        tv_order = (TextView) findViewById(R.id.tv_order);
         tv_city = (TextView) findViewById(R.id.tv_city);
         llMine = (LinearLayout) findViewById(R.id.ll_mine);
         activityRootView = findViewById(R.id.root_layout);
-        llMineCenter = (LinearLayout) findViewById(R.id.ll_mine_center);
-        llCenMine = (LinearLayout) findViewById(R.id.ll_cen_mine);
-        llMineCenters = (LinearLayout) findViewById(R.id.ll_mine_centers);
         llMineBottom = (LinearLayout) findViewById(R.id.ll_mine_buttom);
         ll_gj_head = (LinearLayout) findViewById(R.id.ll_gj_head);
         llBottom = (LinearLayout) findViewById(R.id.ll_bottom);
@@ -256,12 +356,8 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         tv_next.setOnClickListener(this);
         tv_gj.setOnClickListener(this);
         tv_mine.setOnClickListener(this);
-        tv_dpg.setOnClickListener(this);
         iv_car.setOnClickListener(this);
-        tv_wtg.setOnClickListener(this);
-        tv_ytg.setOnClickListener(this);
-        tv_wwc.setOnClickListener(this);
-        tv_psz.setOnClickListener(this);
+        tv_order.setOnClickListener(this);
         tv_loginout.setOnClickListener(this);
         tv_updatepwd.setOnClickListener(this);
         tv_datatime.setOnClickListener(this);
@@ -322,7 +418,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
                     ToastUtil.show("请输入价格");
                     return;
                 }
-                mProgerss.setVisibility(View.VISIBLE);
+                mProgess.setVisibility(View.VISIBLE);
                 AVQuery<AVObject> avQuery = new AVQuery<>("Car");
                 avQuery.addAscendingOrder("carid");
                 avQuery.findInBackground(new FindCallback<AVObject>() {
@@ -333,7 +429,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
                         handler.post(new Runnable() {
                             @Override
                             public void run() {
-                                mProgerss.setVisibility(View.GONE);
+                                mProgess.setVisibility(View.GONE);
                             }
                         });
                         final int cID = list == null || list.size() == 0 ? 1 : (Integer) list.get(list.size() - 1).get("carid") + 1;
@@ -412,47 +508,60 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
                 tv_title.setText("妙车估");
                 tv_gj.setBackgroundResource(R.color.colorcccccc);
                 tv_mine.setBackgroundResource(R.color.white);
+                tv_order.setBackgroundResource(R.color.white);
+                tv_mine.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+                tv_gj.setTextColor(ContextCompat.getColor(context, R.color.color_blue));
+                tv_order.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
                 ll_gj_head.setVisibility(View.GONE);
                 ll_gj_center.setVisibility(View.VISIBLE);
+                tabFindFragmentTitle.setVisibility(View.GONE);
+                vpFindFragmentPager.setVisibility(View.GONE);
                 tv_next.setVisibility(View.VISIBLE);
+                svView.setVisibility(View.VISIBLE);
                 llMine.setVisibility(View.GONE);
-                llCenMine.setVisibility(View.GONE);
                 tv_loginout.setVisibility(View.GONE);
-                llMineCenter.setVisibility(View.GONE);
-                llMineCenters.setVisibility(View.GONE);
                 llMineBottom.setVisibility(View.GONE);
                 break;
             case R.id.tv_mine:
                 tv_title.setText("我的账户");
                 tv_gj.setBackgroundResource(R.color.white);
+                tv_order.setBackgroundResource(R.color.white);
                 tv_mine.setBackgroundResource(R.color.colorcccccc);
                 ll_gj_head.setVisibility(View.GONE);
                 tv_next.setVisibility(View.GONE);
+                tv_mine.setTextColor(ContextCompat.getColor(context, R.color.color_blue));
+                tv_gj.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+                tv_order.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+                tabFindFragmentTitle.setVisibility(View.GONE);
+                vpFindFragmentPager.setVisibility(View.GONE);
                 ll_gj_center.setVisibility(View.GONE);
                 username.setText(AVUser.getCurrentUser().getUsername());
                 username.setClickable(false);
+                svView.setVisibility(View.VISIBLE);
                 username.setFocusable(false);
                 llMine.setVisibility(View.VISIBLE);
-                llCenMine.setVisibility(View.VISIBLE);
                 tv_loginout.setVisibility(View.VISIBLE);
-                llMineCenters.setVisibility(View.VISIBLE);
-                llMineCenter.setVisibility(View.VISIBLE);
                 llMineBottom.setVisibility(View.GONE);
                 break;
-            case R.id.tv_dps://待评审
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "DPG").putExtra("NUM", 1));
-                break;
-            case R.id.tv_wtg://未通过
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WTG").putExtra("NUM", 3));//TODO  跳转可编辑
-                break;
-            case R.id.tv_ytg://已通过
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "YTG").putExtra("NUM", 4));
-                break;
-            case R.id.tv_wwc://未完成
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "WWC").putExtra("NUM", 0));//TODO  跳转可编辑
-                break;
-            case R.id.tv_psz://评审中
-                startActivity(new Intent(CarInfoActivity.this, ReviewProcessActivity.class).putExtra("type", "PSZ").putExtra("NUM", 2));
+            case R.id.tv_order:
+                tv_title.setText("订单状态");
+                tv_order.setBackgroundResource(R.color.colorcccccc);
+                tv_gj.setBackgroundResource(R.color.white);
+                tv_mine.setBackgroundResource(R.color.white);
+                tv_mine.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+                tv_gj.setTextColor(ContextCompat.getColor(context, R.color.tv_666));
+                tv_order.setTextColor(ContextCompat.getColor(context, R.color.color_blue));
+                tabFindFragmentTitle.setVisibility(View.VISIBLE);
+                vpFindFragmentPager.setVisibility(View.VISIBLE);
+                ll_gj_head.setVisibility(View.GONE);
+                ll_gj_head.setVisibility(View.GONE);
+                svView.setVisibility(View.GONE);
+                tv_next.setVisibility(View.GONE);
+                ll_gj_center.setVisibility(View.GONE);
+                tv_next.setVisibility(View.GONE);
+                llMine.setVisibility(View.GONE);
+                tv_loginout.setVisibility(View.GONE);
+                llMineBottom.setVisibility(View.GONE);
                 break;
             case R.id.tv_loginout://退出登录
                 if (GettingStartedApp.getInstance().isLogin == true) {
@@ -502,6 +611,13 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
      * @param pid 照片ID
      */
     private void setCar(final int cid, final int tid, final int pid) {
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            date = dateFormat.parse(tv_datatime.getText().toString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         AVObject product = new AVObject("Car");
         product.put("carid", cid);
         product.put("pid", pid);
@@ -510,7 +626,7 @@ public class CarInfoActivity extends Activity implements View.OnClickListener, O
         product.put("vin", edt_vincode.getText().toString().trim());
         product.put("cbrand", strCarName);
         product.put("caddress", tv_city.getText().toString().trim());
-        product.put("cyear", new Date());
+        product.put("cyear", date);
         product.put("ckm", Integer.parseInt(edt_km.getText().toString().trim()));
         product.put("cmodels", strCarModel);
         product.put("cprice", Integer.parseInt(edt_money.getText().toString().trim()));

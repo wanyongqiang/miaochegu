@@ -15,7 +15,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -27,6 +26,7 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.DeleteCallback;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
@@ -189,6 +189,7 @@ public class SelectPhotoThreeActivity extends Activity {
     int index = 0;
     private int tid;
     private AVFile file;
+    private int mPid = -1;
     private String imageFileStr = "";
     private static final String TAG = "MCG";
     private static final int CHOICE_FROM_CAMERA = 0;
@@ -292,6 +293,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivA.setBackgroundResource(R.mipmap.icon_photo);
                 tvA.setBackgroundResource(0);
                 tvA.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pfirewall");
                 break;
             case R.id.iv_bb:
                 B = false;
@@ -303,6 +305,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivB.setBackgroundResource(R.mipmap.icon_photo);
                 tvB.setBackgroundResource(0);
                 tvB.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("plwaterstents");
                 break;
             case R.id.iv_cc:
                 C = false;
@@ -314,6 +317,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivC.setBackgroundResource(R.mipmap.icon_photo);
                 tvC.setBackgroundResource(0);
                 tvC.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("prwaterstents");
                 break;
             case R.id.iv_dd:
                 D = false;
@@ -325,6 +329,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivD.setBackgroundResource(R.mipmap.icon_photo);
                 tvD.setBackgroundResource(0);
                 tvD.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("plfrontfender");
                 break;
             case R.id.iv_ee:
                 E = false;
@@ -336,6 +341,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivE.setBackgroundResource(R.mipmap.icon_photo);
                 tvE.setBackgroundResource(0);
                 tvE.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("prfrontfender");
                 break;
             case R.id.iv_ff:
                 F = false;
@@ -347,6 +353,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivF.setBackgroundResource(R.mipmap.icon_photo);
                 tvF.setBackgroundResource(0);
                 tvF.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pldoora");
                 break;
             case R.id.iv_gg:
                 G = false;
@@ -358,6 +365,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivG.setBackgroundResource(R.mipmap.icon_photo);
                 tvG.setBackgroundResource(0);
                 tvG.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pldoorbc");
                 break;
             case R.id.iv_hh:
                 H = false;
@@ -369,6 +377,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivH.setBackgroundResource(R.mipmap.icon_photo);
                 tvH.setBackgroundResource(0);
                 tvH.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("prdoora");
                 break;
             case R.id.iv_ii:
                 I = false;
@@ -380,6 +389,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivI.setBackgroundResource(R.mipmap.icon_photo);
                 tvI.setBackgroundResource(0);
                 tvI.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("prdoorc");
                 break;
             case R.id.iv_jj:
                 J = false;
@@ -391,6 +401,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivJ.setBackgroundResource(R.mipmap.icon_photo);
                 tvJ.setBackgroundResource(0);
                 tvJ.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("ptrunkdandw");
                 break;
             case R.id.iv_kk:
                 K = false;
@@ -402,6 +413,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivK.setBackgroundResource(R.mipmap.icon_photo);
                 tvK.setBackgroundResource(0);
                 tvK.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("plcoverrear");
                 break;
             case R.id.iv_ll:
                 L = false;
@@ -413,6 +425,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 ivL.setBackgroundResource(R.mipmap.icon_photo);
                 tvL.setBackgroundResource(0);
                 tvL.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("prcoverrear");
                 break;
             case R.id.tv_up:
                 finish();
@@ -713,7 +726,7 @@ public class SelectPhotoThreeActivity extends Activity {
                 }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    if(bitmap!=null){
+                    if (bitmap != null) {
                         bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
                     }
                     out.flush();
@@ -752,6 +765,7 @@ public class SelectPhotoThreeActivity extends Activity {
                                                 public void done(List<AVObject> list, AVException e) {
                                                     int pID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("pid");
                                                     if (pID != -1) {
+                                                        mPid = pID;
                                                         AVQuery<AVObject> avQuery1 = new AVQuery<>("Photo");
                                                         avQuery1.whereEqualTo("pid", pID);
                                                         avQuery1.findInBackground(new FindCallback<AVObject>() {
@@ -872,5 +886,28 @@ public class SelectPhotoThreeActivity extends Activity {
                 }
             }
         }.execute();
+    }
+
+    private void deletePhoto(final String type) {
+        file.deleteInBackground(new DeleteCallback() {
+            @Override
+            public void done(AVException e) {
+                AVQuery<AVObject> avQuery = new AVQuery<>("Photo");
+                avQuery.whereEqualTo("pid", mPid);
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        AVObject avObject = list.get(0);
+                        avObject.put(type, null);
+                        avObject.saveInBackground(new SaveCallback() {
+                            @Override
+                            public void done(AVException e) {
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }

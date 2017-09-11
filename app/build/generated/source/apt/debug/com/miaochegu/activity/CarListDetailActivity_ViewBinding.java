@@ -19,9 +19,9 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
 
   private View view2131558535;
 
-  private View view2131558577;
+  private View view2131558573;
 
-  private View view2131558578;
+  private View view2131558574;
 
   @UiThread
   public CarListDetailActivity_ViewBinding(final T target, View source) {
@@ -49,7 +49,7 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     target.tvDesc = Utils.findRequiredViewAsType(source, R.id.tv_desc, "field 'tvDesc'", TextView.class);
     view = Utils.findRequiredView(source, R.id.tv_cancel, "field 'tvCancel' and method 'onClick'");
     target.tvCancel = Utils.castView(view, R.id.tv_cancel, "field 'tvCancel'", TextView.class);
-    view2131558577 = view;
+    view2131558573 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -58,7 +58,7 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
     });
     view = Utils.findRequiredView(source, R.id.tv_update, "field 'tvUpdate' and method 'onClick'");
     target.tvUpdate = Utils.castView(view, R.id.tv_update, "field 'tvUpdate'", TextView.class);
-    view2131558578 = view;
+    view2131558574 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -91,10 +91,10 @@ public class CarListDetailActivity_ViewBinding<T extends CarListDetailActivity> 
 
     view2131558535.setOnClickListener(null);
     view2131558535 = null;
-    view2131558577.setOnClickListener(null);
-    view2131558577 = null;
-    view2131558578.setOnClickListener(null);
-    view2131558578 = null;
+    view2131558573.setOnClickListener(null);
+    view2131558573 = null;
+    view2131558574.setOnClickListener(null);
+    view2131558574 = null;
 
     this.target = null;
   }

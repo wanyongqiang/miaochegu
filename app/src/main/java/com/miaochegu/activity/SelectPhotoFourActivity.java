@@ -31,6 +31,7 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.DeleteCallback;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
@@ -125,6 +126,7 @@ public class SelectPhotoFourActivity extends Activity {
     int index = 0;
     private int tid;
     private AVFile file;
+    private int mPid = -1;
     private String imageFileStr = "";
     private static final String TAG = "MCG";
     private static final int CHOICE_FROM_CAMERA = 0;
@@ -193,6 +195,7 @@ public class SelectPhotoFourActivity extends Activity {
                 ivA.setBackgroundResource(R.mipmap.icon_photo);
                 tvA.setBackgroundResource(0);
                 tvA.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("ptoproof");
                 break;
             case R.id.iv_bb:
                 B = false;
@@ -204,6 +207,7 @@ public class SelectPhotoFourActivity extends Activity {
                 ivB.setBackgroundResource(R.mipmap.icon_photo);
                 tvB.setBackgroundResource(0);
                 tvB.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pwheelinstrute");
                 break;
             case R.id.iv_cc:
                 C = false;
@@ -215,6 +219,7 @@ public class SelectPhotoFourActivity extends Activity {
                 ivC.setBackgroundResource(R.mipmap.icon_photo);
                 tvC.setBackgroundResource(0);
                 tvC.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pdeskgear");
                 break;
             case R.id.iv_dd:
                 D = false;
@@ -226,6 +231,7 @@ public class SelectPhotoFourActivity extends Activity {
                 ivD.setBackgroundResource(R.mipmap.icon_photo);
                 tvD.setBackgroundResource(0);
                 tvD.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("pldoortrim");
                 break;
             case R.id.iv_ee:
                 E = false;
@@ -237,6 +243,7 @@ public class SelectPhotoFourActivity extends Activity {
                 ivE.setBackgroundResource(R.mipmap.icon_photo);
                 tvE.setBackgroundResource(0);
                 tvE.setTextColor(ContextCompat.getColor(context, R.color.tv_b2b2b2));
+                deletePhoto("preardiffuser");
                 break;
             case R.id.tv_up:
                 finish();
@@ -458,7 +465,7 @@ public class SelectPhotoFourActivity extends Activity {
                 }
                 try {
                     FileOutputStream out = new FileOutputStream(f);
-                    if(bitmap!=null){
+                    if (bitmap != null) {
                         bitmap.compress(Bitmap.CompressFormat.PNG, 50, out);
                     }
                     out.flush();
@@ -497,6 +504,7 @@ public class SelectPhotoFourActivity extends Activity {
                                                 public void done(List<AVObject> list, AVException e) {
                                                     int pID = list == null || list.size() == 0 ? -1 : (int) list.get(0).get("pid");
                                                     if (pID != -1) {
+                                                        mPid = pID;
                                                         AVQuery<AVObject> avQuery1 = new AVQuery<>("Photo");
                                                         avQuery1.whereEqualTo("pid", pID);
                                                         avQuery1.findInBackground(new FindCallback<AVObject>() {
@@ -582,5 +590,28 @@ public class SelectPhotoFourActivity extends Activity {
                 }
             }
         }.execute();
+    }
+
+    private void deletePhoto(final String type) {
+        file.deleteInBackground(new DeleteCallback() {
+            @Override
+            public void done(AVException e) {
+                AVQuery<AVObject> avQuery = new AVQuery<>("Photo");
+                avQuery.whereEqualTo("pid", mPid);
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        AVObject avObject = list.get(0);
+                        avObject.put(type, null);
+                        avObject.saveInBackground(new SaveCallback() {
+                            @Override
+                            public void done(AVException e) {
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +14,6 @@ import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
-import com.miaochegu.util.StatusbarUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,6 +56,8 @@ public class LookBelogActivity extends Activity {
     TextView tvPrice;
     @BindView(R.id.tv_a)
     TextView tvA;
+    @BindView(R.id.tv_accident)
+    TextView tvAccident;
     private String cid;
 
     private static Handler handler = new Handler();
@@ -115,6 +115,14 @@ public class LookBelogActivity extends Activity {
                                     tvAddress.setText(list.get(p).get("caddress") + "");
                                     tvKm.setText(list.get(p).get("ckm") + "");
                                     tvPrice.setText(list.get(p).get("clinchprice") + "");
+                                    AVQuery<AVObject> avQuery1 = new AVQuery<AVObject>("Audit");
+                                    avQuery1.whereEqualTo("cid", cid);
+                                    avQuery1.findInBackground(new FindCallback<AVObject>() {
+                                        @Override
+                                        public void done(List<AVObject> list, AVException e) {
+                                            tvAccident.setText(list != null && list.size() > 0 ? list.get(0).get("accident").toString() : "暂无信息");
+                                        }
+                                    });
                                 }
                             });
                         }

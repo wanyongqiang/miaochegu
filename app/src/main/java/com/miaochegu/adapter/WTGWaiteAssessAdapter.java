@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.FindCallback;
 import com.miaochegu.R;
+import com.miaochegu.model.CarInfoModel;
 import com.miaochegu.util.ListItemClickHelp;
 
 import java.text.SimpleDateFormat;
@@ -30,18 +27,19 @@ import java.util.List;
 public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAdapter.MyViewHolder> {
     private final LayoutInflater mInflater;
     Context context;
-    List<AVObject> entity;
+    List<CarInfoModel> entity;
     private ListItemClickHelp callback;
     private OnItemClickListener mOnItemeClickLstener;
     private View inflate;
 
-    public WTGWaiteAssessAdapter(Context context, List<AVObject> entity) {
+    public WTGWaiteAssessAdapter(Context context, List<CarInfoModel> entity, ListItemClickHelp callback) {
         this.context = context;
         this.entity = new ArrayList<>();
+        this.callback = callback;
         mInflater = LayoutInflater.from(context);
     }
 
-    public void upRes(List<AVObject> list) {
+    public void upRes(List<CarInfoModel> list) {
         this.entity.clear();
         if (list != null) {
             this.entity.addAll(list);
@@ -49,7 +47,7 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
         notifyDataSetChanged();
     }
 
-    public void addRes(List<AVObject> list) {
+    public void addRes(List<CarInfoModel> list) {
         int size = this.entity.size();
         if (list != null) {
             this.entity.addAll(list);
@@ -66,48 +64,15 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final AVObject rowsEntity = entity.get(position);
-        holder.v_line.setVisibility(View.VISIBLE);
+        final CarInfoModel rowsEntity = entity.get(position);
         holder.ll_ll_wtg.setVisibility(View.VISIBLE);
-        final String tid = entity.get(position).get("tid") + "";
-        holder.tv_name.setText("任务单号：" + tid);
-        String tcreatetime = entity.get(position).get("tcreatetime").toString();
-        holder.tv_time.setText(getDateString(tcreatetime));
-        final String cid = entity.get(position).get("cid").toString();
-        final String sid = entity.get(position).get("sid").toString();
-        AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-        avQuery.orderByDescending("createdAt");
-        avQuery.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                if (e == null && list != null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        if (cid.equals(list.get(i).get("carid").toString())) {
-                            holder.tv_content.setText(list.get(i).get("cmodels").toString());
-                            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
-                            avQuery.orderByDescending("createdAt");
-                            avQuery.findInBackground(new FindCallback<AVObject>() {
-                                @Override
-                                public void done(List<AVObject> list, AVException e) {
-                                    if (e == null && list != null) {
-                                        for (int i = 0; i < list.size(); i++) {
-                                            if (sid.equals(list.get(i).get("sid").toString()) && (int) list.get(i).get("atype") == 3) {
-                                                holder.tvfs.setText("审核");
-                                                holder.tv_why.setText(list.get(i).get("aidea").toString());
-                                            }
-                                        }
-                                    } else {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
-                        }
-                    }
-                } else {
-                    e.printStackTrace();
-                }
-            }
-        });
+        holder.v_line.setVisibility(View.VISIBLE);
+        holder.tv_name.setText("任务单号：" + rowsEntity.getTask_id());
+        String tcreatetime = rowsEntity.getTime();
+        holder.tv_time.setText(tcreatetime);
+        holder.tv_content.setText(rowsEntity.getCarType());
+        holder.tvfs.setText("提交复审");
+        holder.tv_why.setText(rowsEntity.getReason() != null ? rowsEntity.getReason() : "");
 
         if (mOnItemeClickLstener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -115,18 +80,19 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
                 public void onClick(View v) {
                     int layoutPosition = holder.getLayoutPosition();
                     holder.itemView.setTag(rowsEntity);
-                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition, cid, tid,sid);
+                    mOnItemeClickLstener.onItemeClick(holder.itemView, layoutPosition,
+                            rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "", rowsEntity.getAudit_id() + "");
                 }
             });
         }
 
         final int p = position;
-        final int viewId = holder.tv_chakan.getId();
+        final int viewId = holder.tvfs.getId();
 
-        holder.tv_chakan.setOnClickListener(new View.OnClickListener() {
+        holder.tvfs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callback.onClick(inflate, p, viewId,cid,tid);
+                callback.onClick(inflate, p, viewId, rowsEntity.getCar_id() + "", rowsEntity.getTask_id() + "");
             }
         });
     }
@@ -141,11 +107,11 @@ public class WTGWaiteAssessAdapter extends RecyclerView.Adapter<WTGWaiteAssessAd
     }
 
     public interface OnItemClickListener {
-        void onItemeClick(View view, int position, String cID, String tID,String sID);
+        void onItemeClick(View view, int position, String cID, String tID, String sID);
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_content, tv_chakan, tvfs, tv_name, tv_time,tv_why;
+        TextView tv_content, tv_chakan, tvfs, tv_name, tv_time, tv_why;
         View v_line;
         LinearLayout ll_ll_wtg;
 

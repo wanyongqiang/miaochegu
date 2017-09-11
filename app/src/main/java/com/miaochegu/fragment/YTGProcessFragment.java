@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -24,13 +25,12 @@ import com.miaochegu.R;
 import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.YTGWaiteAssessAdapter;
+import com.miaochegu.model.CarInfoModel;
 import com.miaochegu.util.ListItemClickHelp;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -48,7 +48,9 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @BindView(R.id.mProgess)
     ProgressBar mProgess;
     private YTGWaiteAssessAdapter mYTGWaiteAssessAdapter;
-    List<AVObject> mList = new ArrayList<>();
+    int pos = 0;
+    List<CarInfoModel> mList = new ArrayList<>();
+
 
     @Override
     public View initView() {
@@ -56,35 +58,33 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
         context = getActivity();
         ButterKnife.bind(this, view);
         mProgess.setVisibility(View.VISIBLE);
-        //注册EventBus
-        EventBus.getDefault().register(this);
         setRecyclerView();
         return view;
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEventMainThread(String event) {
+    private long pretimr = 0;
 
-        Log.d("harvic", event);
-        getData(event);
-    }
-
-    private void getData(String str) {
-        mList.clear();
-        AVQuery<AVObject> avQuery = new AVQuery<>("Task");
-        avQuery.orderByDescending("createdAt");
-        avQuery.include("cid");
-        avQuery.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                if (e == null) {
-                    mYTGWaiteAssessAdapter.upRes(list);
-                    mProgess.setVisibility(View.GONE);
-                } else {
-                    e.printStackTrace();
+    private synchronized void getData(String str) {
+        if (System.currentTimeMillis() - pretimr >= 3000) {
+            Log.e("aaa", "hello");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+            avQuery.whereEqualTo("atype", 3);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgess.setVisibility(View.GONE);
+                        }
+                    });
+                    mList.clear();
+                    pos = 0;
+                    setData(list);
                 }
-            }
-        });
+            });
+
+        }
     }
 
     public static YTGProcessFragment getMembers(String str) {
@@ -116,7 +116,7 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     /**
      * 网络断开弹窗
      */
-    private void showDialog(final String cid,final String tid) {
+    private void showDialog(final String cid, final String tid) {
         final Dialog bottomDialog = new Dialog(context, R.style.BottomDialog);
         View contentView = LayoutInflater.from(context).inflate(R.layout.dialog_submit_infos, null);
         bottomDialog.setContentView(contentView);
@@ -161,11 +161,10 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        EventBus.getDefault().unregister(this);//反注册EventBus
     }
 
     @Override
-    public void onItemeClick(View view, int position, String cID, String tID,String sID) {
+    public void onItemeClick(View view, int position, String cID, String tID, String sID) {
         startActivity(new Intent(getActivity(), CarListDetailActivity.class)
                 .putExtra("CARID", cID).putExtra("TASKID", tID).putExtra("AUDITID", sID).putExtra("TYPE", 0));
     }
@@ -181,11 +180,61 @@ public class YTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     }
 
     @Override
-    public void onClick(View item, int position, int which, String id,String tID) {
+    public void onClick(View item, int position, int which, String id, String tID) {
         switch (which) {
             case R.id.tv_chakan:
-                showDialog(id,tID);
+                showDialog(id, tID);
                 break;
         }
+    }
+
+    public synchronized void setData(final List<AVObject> data) {
+        final CarInfoModel carInfoModel = new CarInfoModel();
+        if (data != null && data.size() > 0 && data.size() > pos) {
+
+
+            final int sid = (int) data.get(pos).get("sid");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Task");
+            avQuery.whereEqualTo("sid", sid);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    if (list != null && list.size() > 0) {
+                        int tid = (int) list.get(0).get("tid");
+                        carInfoModel.setTask_id(tid);
+                        carInfoModel.setAudit_id(sid);
+                        carInfoModel.setTime(getDateString((Date) list.get(0).get("tcreatetime")));
+                        final int carid = (int) list.get(0).get("cid");
+                        AVQuery<AVObject> avQuery = new AVQuery<>("Car");
+                        avQuery.whereEqualTo("carid", carid);
+                        avQuery.findInBackground(new FindCallback<AVObject>() {
+                            @Override
+                            public void done(List<AVObject> list, AVException e) {
+                                if (list != null && list.size() > 0) {
+                                    String cmodels = (String) list.get(0).get("cmodels");
+                                    carInfoModel.setCarType(cmodels);
+                                    carInfoModel.setCar_id(carid);
+                                    pos++;
+                                    mList.add(carInfoModel);
+                                    Log.e("aaa", (pos == data.size()) + "," + pos);
+                                    if (pos == data.size()) {
+                                        mYTGWaiteAssessAdapter.upRes(mList);
+                                        pretimr = System.currentTimeMillis();
+                                    } else {
+                                        setData(data);
+                                    }
+                                }
+                            }
+                        });
+
+                    }
+                }
+            });
+        }
+    }
+
+    private String getDateString(Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(date);
     }
 }

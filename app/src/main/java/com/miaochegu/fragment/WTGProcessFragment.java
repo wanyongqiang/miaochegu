@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -18,18 +19,20 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
+import com.avos.avoscloud.SaveCallback;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.miaochegu.R;
 import com.miaochegu.activity.CarListDetailActivity;
 import com.miaochegu.activity.LookBelogActivity;
 import com.miaochegu.adapter.WTGWaiteAssessAdapter;
+import com.miaochegu.model.CarInfoModel;
+import com.miaochegu.util.ListItemClickHelp;
+import com.miaochegu.util.ToastUtil;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -39,7 +42,7 @@ import butterknife.ButterKnife;
  * Created by roztop on 2017/7/29.
  */
 
-public class WTGProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, WTGWaiteAssessAdapter.OnItemClickListener {
+public class WTGProcessFragment extends BaseFragment implements XRecyclerView.LoadingListener, WTGWaiteAssessAdapter.OnItemClickListener,ListItemClickHelp {
 
     Context context;
     @BindView(R.id.rl_assess)
@@ -47,7 +50,9 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @BindView(R.id.mProgess)
     ProgressBar mProgess;
     private WTGWaiteAssessAdapter mWTGWaiteAssessAdapter;
-    List<AVObject> mList = new ArrayList<>();
+    int pos = 0;
+    List<CarInfoModel> mList = new ArrayList<>();
+
 
     @Override
     public View initView() {
@@ -55,35 +60,33 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
         context = getActivity();
         ButterKnife.bind(this, view);
         mProgess.setVisibility(View.VISIBLE);
-        //注册EventBus
-        EventBus.getDefault().register(this);
         setRecyclerView();
         return view;
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEventMainThread(String event) {
+    private long pretimr = 0;
 
-        Log.d("harvic", event);
-        getData(event);
-    }
-
-    private void getData(String str) {
-        mList.clear();
-        AVQuery<AVObject> avQuery = new AVQuery<>("Task");
-        avQuery.orderByDescending("createdAt");
-        avQuery.include("cid");
-        avQuery.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                if (e == null) {
-                    mWTGWaiteAssessAdapter.upRes(list);
-                    mProgess.setVisibility(View.GONE);
-                } else {
-                    e.printStackTrace();
+    private synchronized void getData(String str) {
+        if (System.currentTimeMillis() - pretimr >= 3000) {
+            Log.e("aaa", "hello");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+            avQuery.whereEqualTo("atype", 4);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgess.setVisibility(View.GONE);
+                        }
+                    });
+                    mList.clear();
+                    pos = 0;
+                    setData(list);
                 }
-            }
-        });
+            });
+
+        }
     }
 
     public static WTGProcessFragment getMembers(String str) {
@@ -106,7 +109,7 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
         rlAssess.setLoadingMoreEnabled(true);
         rlAssess.setLoadingListener(this);
 
-        mWTGWaiteAssessAdapter = new WTGWaiteAssessAdapter(context, null);
+        mWTGWaiteAssessAdapter = new WTGWaiteAssessAdapter(context, null,this);
         mWTGWaiteAssessAdapter.setmOnItemeClickListener(this);
         rlAssess.setAdapter(mWTGWaiteAssessAdapter);
     }
@@ -159,7 +162,6 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        EventBus.getDefault().unregister(this);//反注册EventBus
     }
 
     @Override
@@ -176,5 +178,86 @@ public class WTGProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onLoadMore() {
         rlAssess.loadMoreComplete();
+    }
+
+    public synchronized void setData(final List<AVObject> data) {
+        final CarInfoModel carInfoModel = new CarInfoModel();
+        if (data != null && data.size() > 0 && data.size() > pos) {
+            final int sid = (int) data.get(pos).get("sid");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Task");
+            avQuery.whereEqualTo("sid", sid);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    if (list != null && list.size() > 0) {
+                        int tid = (int) list.get(0).get("tid");
+                        carInfoModel.setTask_id(tid);
+                        carInfoModel.setAudit_id(sid);
+                        carInfoModel.setTime(getDateString((Date) list.get(0).get("tcreatetime")));
+                        carInfoModel.setReason(data.get(pos).get("aidea").toString());
+                        final int carid = (int) list.get(0).get("cid");
+                        AVQuery<AVObject> avQuery = new AVQuery<>("Car");
+                        avQuery.whereEqualTo("carid", carid);
+                        avQuery.findInBackground(new FindCallback<AVObject>() {
+                            @Override
+                            public void done(List<AVObject> list, AVException e) {
+                                if (list != null && list.size() > 0) {
+                                    String cmodels = (String) list.get(0).get("cmodels");
+                                    carInfoModel.setCarType(cmodels);
+                                    carInfoModel.setCar_id(carid);
+                                    pos++;
+                                    mList.add(carInfoModel);
+                                    Log.e("aaa", (pos == data.size()) + "," + pos);
+                                    if (pos == data.size()) {
+                                        mWTGWaiteAssessAdapter.upRes(mList);
+                                        pretimr = System.currentTimeMillis();
+                                    } else {
+                                        setData(data);
+                                    }
+                                }
+                            }
+                        });
+
+                    }
+                }
+            });
+        }
+    }
+
+    private String getDateString(Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(date);
+    }
+
+    @Override
+    public void onClick(View item, int position, int which, String id, String tID) {
+        switch (which) {
+            case R.id.tv_fs://提交
+                AVQuery<AVObject> avQuery = new AVQuery<>("Task");
+                avQuery.whereEqualTo("tid", Integer.parseInt(tID));
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        int sid = (int) list.get(0).get("sid");
+                        AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+                        avQuery.whereEqualTo("sid", sid);
+                        avQuery.findInBackground(new FindCallback<AVObject>() {
+                            @Override
+                            public void done(List<AVObject> list, AVException e) {
+                                AVObject avObject = list.get(0);
+                                avObject.put("atype", 1);
+                                avObject.saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(AVException e) {
+                                        ToastUtil.show("提交成功");
+                                        rlAssess.refresh();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+                break;
+        }
     }
 }

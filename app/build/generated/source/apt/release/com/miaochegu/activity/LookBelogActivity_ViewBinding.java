@@ -32,6 +32,7 @@ public class LookBelogActivity_ViewBinding<T extends LookBelogActivity> implemen
     target.tvB = Utils.findRequiredViewAsType(source, R.id.tv_b, "field 'tvB'", TextView.class);
     target.tvPrice = Utils.findRequiredViewAsType(source, R.id.tv_price, "field 'tvPrice'", TextView.class);
     target.tvA = Utils.findRequiredViewAsType(source, R.id.tv_a, "field 'tvA'", TextView.class);
+    target.tvAccident = Utils.findRequiredViewAsType(source, R.id.tv_accident, "field 'tvAccident'", TextView.class);
   }
 
   @Override
@@ -53,6 +54,7 @@ public class LookBelogActivity_ViewBinding<T extends LookBelogActivity> implemen
     target.tvB = null;
     target.tvPrice = null;
     target.tvA = null;
+    target.tvAccident = null;
 
     this.target = null;
   }

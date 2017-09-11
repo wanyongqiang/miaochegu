@@ -30,18 +30,18 @@ public final class R {
         public static final int shape_city = 0x7f020076;
     }
     public static final class id {
-        public static final int country_lvcountry = 0x7f0d0122;
-        public static final int gv_hot_city = 0x7f0d0141;
+        public static final int country_lvcountry = 0x7f0d0123;
+        public static final int gv_hot_city = 0x7f0d0142;
         public static final int iv_back = 0x7f0d0087;
-        public static final int mGobackImg = 0x7f0d0121;
-        public static final int mGoback_Lin = 0x7f0d0120;
-        public static final int sidebar = 0x7f0d0123;
-        public static final int tv_catagory = 0x7f0d014d;
+        public static final int mGobackImg = 0x7f0d0122;
+        public static final int mGoback_Lin = 0x7f0d0121;
+        public static final int sidebar = 0x7f0d0124;
+        public static final int tv_catagory = 0x7f0d014e;
         public static final int tv_city = 0x7f0d0094;
-        public static final int tv_city_name = 0x7f0d014e;
-        public static final int tv_label_hot = 0x7f0d0140;
-        public static final int tv_label_location = 0x7f0d0142;
-        public static final int tv_location_city = 0x7f0d0143;
+        public static final int tv_city_name = 0x7f0d014f;
+        public static final int tv_label_hot = 0x7f0d0141;
+        public static final int tv_label_location = 0x7f0d0143;
+        public static final int tv_location_city = 0x7f0d0144;
         public static final int tv_title = 0x7f0d0088;
     }
     public static final class layout {

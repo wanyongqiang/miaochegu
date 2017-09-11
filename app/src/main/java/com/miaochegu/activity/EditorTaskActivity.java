@@ -41,6 +41,8 @@ import com.miaochegu.adapter.CarTypeAdapter;
 import com.miaochegu.model.CountryModel;
 import com.miaochegu.util.ToastUtil;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -142,7 +144,6 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
 
         String f = intent.getStringExtra("F");
         tvPrice.setText(f != null ? f : "");
-        taskID = intent.getStringExtra("TASK_ID");
         String g = intent.getStringExtra("G");
         if ("运营车辆".equals(g)) {
             switchView.setOpened(false);
@@ -153,6 +154,7 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
         String h = intent.getStringExtra("H");
         edtContent.setText(h != null ? h : "");
 
+        taskID = intent.getStringExtra("TASK_ID");
         initData();
     }
 
@@ -229,7 +231,7 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
                 }
                 mProgess.setVisibility(View.VISIBLE);
                 AVQuery<AVObject> avQuery = new AVQuery<>("Task");
-                avQuery.whereEqualTo("tid", taskID);
+                avQuery.whereEqualTo("tid", Integer.parseInt(taskID));
                 avQuery.findInBackground(new FindCallback<AVObject>() {
 
                     @Override
@@ -238,9 +240,10 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
                             @Override
                             public void run() {
                                 mProgess.setVisibility(View.GONE);
+                                Log.e("www", ">>" + list.size() + "<>" + taskID);
                                 final String cID = list.get(0).get("cid").toString();
                                 AVQuery<AVObject> avQuery = new AVQuery<>("Car");
-                                avQuery.whereEqualTo("carid", cID);
+                                avQuery.whereEqualTo("carid", Integer.parseInt(cID));
                                 avQuery.findInBackground(new FindCallback<AVObject>() {
                                     @Override
                                     public void done(List<AVObject> list, AVException e) {
@@ -259,13 +262,20 @@ public class EditorTaskActivity extends Activity implements OnConfirmeListener
      * @param cid 车辆ID
      */
     private void setCar(AVObject avObject, String cid) {
-        avObject.put("carid", cid);
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            date = dateFormat.parse(tvFirst.getText().toString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        avObject.put("carid", Integer.parseInt(cid));
         avObject.put("cseries", strCarType);
         avObject.put("cinfo", AVUser.getCurrentUser().getUsername());
         avObject.put("vin", tvVin.getText().toString().trim());
         avObject.put("cbrand", strCarName);
         avObject.put("caddress", tvName.getText().toString().trim());
-        avObject.put("cyear", new Date(tvFirst.getText().toString().trim()));
+        avObject.put("cyear", date);
         avObject.put("ckm", Integer.parseInt(tvKm.getText().toString().trim()));
         avObject.put("cmodels", strCarModel);
         avObject.put("cprice", Integer.parseInt(tvPrice.getText().toString().trim()));

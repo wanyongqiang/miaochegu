@@ -6,6 +6,7 @@ import android.support.annotation.UiThread;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
@@ -37,6 +38,7 @@ public class ReviewProcessActivity_ViewBinding<T extends ReviewProcessActivity> 
         target.onClick(p0);
       }
     });
+    target.mProgess = Utils.findRequiredViewAsType(source, R.id.mProgess, "field 'mProgess'", ProgressBar.class);
   }
 
   @Override
@@ -49,6 +51,7 @@ public class ReviewProcessActivity_ViewBinding<T extends ReviewProcessActivity> 
     target.vpFindFragmentPager = null;
     target.tvTitle = null;
     target.ivBack = null;
+    target.mProgess = null;
 
     view2131558535.setOnClickListener(null);
     view2131558535 = null;
