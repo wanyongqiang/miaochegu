@@ -66,24 +66,24 @@ public final class R {
         public static final int selector_pickerview_btn = 0x7f020074;
     }
     public static final class id {
-        public static final int alertButtonListView = 0x7f0d0152;
-        public static final int btnCancel = 0x7f0d0129;
-        public static final int btnSubmit = 0x7f0d012b;
-        public static final int content_container = 0x7f0d0151;
-        public static final int day = 0x7f0d012f;
-        public static final int loAlertButtons = 0x7f0d0156;
-        public static final int loAlertHeader = 0x7f0d0145;
-        public static final int month = 0x7f0d012e;
-        public static final int outmost_container = 0x7f0d0150;
-        public static final int timepicker = 0x7f0d012c;
-        public static final int tvAlert = 0x7f0d0148;
-        public static final int tvAlertCancel = 0x7f0d0153;
-        public static final int tvAlertMsg = 0x7f0d0147;
-        public static final int tvAlertTitle = 0x7f0d0146;
-        public static final int tvTitle = 0x7f0d012a;
-        public static final int viewStubHorizontal = 0x7f0d0154;
-        public static final int viewStubVertical = 0x7f0d0155;
-        public static final int year = 0x7f0d012d;
+        public static final int alertButtonListView = 0x7f0d014c;
+        public static final int btnCancel = 0x7f0d0123;
+        public static final int btnSubmit = 0x7f0d0125;
+        public static final int content_container = 0x7f0d014b;
+        public static final int day = 0x7f0d0129;
+        public static final int loAlertButtons = 0x7f0d0150;
+        public static final int loAlertHeader = 0x7f0d013f;
+        public static final int month = 0x7f0d0128;
+        public static final int outmost_container = 0x7f0d014a;
+        public static final int timepicker = 0x7f0d0126;
+        public static final int tvAlert = 0x7f0d0142;
+        public static final int tvAlertCancel = 0x7f0d014d;
+        public static final int tvAlertMsg = 0x7f0d0141;
+        public static final int tvAlertTitle = 0x7f0d0140;
+        public static final int tvTitle = 0x7f0d0124;
+        public static final int viewStubHorizontal = 0x7f0d014e;
+        public static final int viewStubVertical = 0x7f0d014f;
+        public static final int year = 0x7f0d0127;
     }
     public static final class integer {
         public static final int animation_default_duration = 0x7f0a0004;

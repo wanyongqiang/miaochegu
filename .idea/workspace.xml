@@ -11,67 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02160a33-cee5-4cd2-8c1a-69ca927dad03" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/model/CarInfoModel.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/util/SQLdm.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/ValidatorUtil.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidkun/xtablayoutlibrary/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidkun/xtablayoutlibrary/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/esaysidebar/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/esaysidebar/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/jcodecraeer/xrecyclerview/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/jcodecraeer/xrecyclerview/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/limxing/library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/limxing/library/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$3$1.class" />
@@ -79,127 +30,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$ExcelDataLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity$ExcelDataLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarInfoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/CarListDetailActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/DetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/DetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LoginActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LoginActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookBelogActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookResultActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/LookResultActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/PublishActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/PublishActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/RegisterActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/RegisterActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/RegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity$FragmentAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity$FragmentAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/UpdatePassWordActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/UpdatePassWordActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/WaiteAssessActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/WaiteAssessActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/WaiteAssessActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/activity/WaiteAssessActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/DPSWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/MainRecyclerAdapter$MainViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/MainRecyclerAdapter$MainViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/PSZWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WTGWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WWCWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/WaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/adapter/YTGWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/DPSProcessFragment_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/PSZProcessFragment_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WTGProcessFragment_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/WWCProcessFragment_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/miaochegu/fragment/YTGProcessFragment_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/design/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/androidkun/xtablayoutlibrary/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/androidkun/xtablayoutlibrary/R$id.class" />
@@ -215,13 +47,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$3$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$3.class" />
@@ -229,82 +54,40 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$ExcelDataLoader.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity$ExcelDataLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarInfoActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarListDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarListDetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarListDetailActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/CarListDetailActivity_ViewBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/DetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/DetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LoginActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LoginActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LoginActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookBelogActivity_ViewBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookResultActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/LookResultActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/PublishActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/PublishActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/RegisterActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/RegisterActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/RegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity$FragmentAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity$FragmentAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$2$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/UpdatePassWordActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/UpdatePassWordActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/WaiteAssessActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/WaiteAssessActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/WaiteAssessActivity_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/activity/WaiteAssessActivity_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/DPSWaiteAssessAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/MainRecyclerAdapter$MainViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/MainRecyclerAdapter$MainViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/PSZWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WTGWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WWCWaiteAssessAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/WaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$MyViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter$MyViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/adapter/YTGWaiteAssessAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/DPSProcessFragment_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/PSZProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/PSZProcessFragment$1.class" />
@@ -318,16 +101,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/WWCProcessFragment_ViewBinding.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment_ViewBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/miaochegu/fragment/YTGProcessFragment_ViewBinding.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/c7A1MR9P+Hk7gViSPa0zh_GmTKc=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/c7A1MR9P+Hk7gViSPa0zh_GmTKc=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/zip-cache/tqTz6L3+jRZVs6lf1ycX_1sir1E=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/zip-cache/tqTz6L3+jRZVs6lf1ycX_1sir1E=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes_25b9450476a0c91b94fc01bb7b3d6ccb4b38cc33.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes_25b9450476a0c91b94fc01bb7b3d6ccb4b38cc33.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes_eec6ef1e630cc007c06818fbd77823fa01461359.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes_eec6ef1e630cc007c06818fbd77823fa01461359.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_796d886f97394fbdb698668643aa7f1817c23199.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_796d886f97394fbdb698668643aa7f1817c23199.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jxl_0cd0cb983e7fb6836d92cd7a1dfe2b2512e10620.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jxl_0cd0cb983e7fb6836d92cd7a1dfe2b2512e10620.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0_25d38c64c0826a4303c98a1c6a0dea8fcb63839d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0_25d38c64c0826a4303c98a1c6a0dea8fcb63839d.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/release_c9ed945f01ee5c005fad923af28fac95906cae91.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/release_c9ed945f01ee5c005fad923af28fac95906cae91.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" />
@@ -335,25 +113,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/CarListDetailActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/CarListDetailActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/LookBelogActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/LookBelogActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/CarListDetailActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/CarListDetailActivity_ViewBinding.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/EditorTaskActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/LookBelogActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/LookBelogActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/ReviewProcessActivity_ViewBinding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/androidkun/xtablayoutlibrary/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/androidkun/xtablayoutlibrary/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/esaysidebar/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/esaysidebar/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jcodecraeer/xrecyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/jcodecraeer/xrecyclerview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/limxing/library/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/limxing/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/miaochegu/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/miaochegu/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoFourActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoThreeActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/SelectPhotoTwoActivity_ViewBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/release/com/miaochegu/activity/UpdatePassWordActivity_ViewBinding.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/design/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/androidkun/xtablayoutlibrary/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/androidkun/xtablayoutlibrary/R.java" />
@@ -361,42 +127,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/jcodecraeer/xrecyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/jcodecraeer/xrecyclerview/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/limxing/library/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/limxing/library/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/release/com/miaochegu/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/release/com/miaochegu/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_car_info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_car_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_look_belog.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_look_belog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_serach_result.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_serach_result.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_editor_task.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_editor_task.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_look_belog.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_look_belog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_serach_result.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_serach_result.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_waite_assess_item.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_waite_assess_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_car_info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_car_info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/release/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/reports/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/app/build/reports/lint-results-release-fatal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/EditorTaskActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/LookBelogActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoFourActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoThreeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/SelectPhotoTwoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/DPSWaiteAssessAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/DPSWaiteAssessAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/PSZWaiteAssessAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/PSZWaiteAssessAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WTGWaiteAssessAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WTGWaiteAssessAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/YTGWaiteAssessAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/YTGWaiteAssessAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WTGProcessFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/YTGProcessFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_look_belog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_serach_result.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_serach_result.xml" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -432,54 +174,7 @@
     <favorites_list name="Android" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CarInfoActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="319" column="56" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_car_info.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
-              <folding>
-                <element signature="e#3463#3490#0" expanded="true" />
-                <element signature="e#3753#3781#0" expanded="true" />
-                <element signature="e#5271#5298#0" expanded="true" />
-                <element signature="e#6876#6904#0" expanded="true" />
-                <element signature="e#7666#7693#0" expanded="true" />
-                <element signature="e#8975#9003#0" expanded="true" />
-                <element signature="e#9481#9508#0" expanded="true" />
-                <element signature="e#9773#9801#0" expanded="true" />
-                <element signature="e#9910#9938#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WWCProcessFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1641">
-              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-              <folding>
-                <element signature="e#3380#3381#0" expanded="true" />
-                <element signature="e#3408#3409#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4372,7 +4067,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/CarInfoAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_carmodel.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/model/CountryModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_list_cartype.xml" />
@@ -4420,17 +4114,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/ReviewProcessActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/adapter/WWCWaiteAssessAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/PSZProcessFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/ValidatorUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -4457,114 +4152,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="miaochegu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4576,7 +4170,7 @@
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/StorageStarted-master/Android" />
-    <property name="DEBUGGABLE_DEVICE" value="xiaomi-mi_2-305e2d2c" />
+    <property name="DEBUGGABLE_DEVICE" value="360-1711_a01-29e038bd" />
     <property name="DEBUGGABLE_PROCESS" value="com.miaochegu" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
@@ -4586,15 +4180,11 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.miaochegu.activity" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.miaochegu" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Android\app\src\main\java\com\miaochegu\util" />
-      <recent name="E:\Android\app\src\main\res\layout" />
-      <recent name="E:\Android\app\src\main\res\mipmap-xxhdpi" />
-      <recent name="E:\Android\app\src\main\res\mipmap-hdpi" />
-      <recent name="E:\Android\app\src\main\res\mipmap-mdpi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.miaochegu.model" />
@@ -4603,8 +4193,12 @@
       <recent name="com.miaochegu.activity" />
       <recent name="db" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.miaochegu.activity" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Android\app\src\main\java\com\miaochegu\util" />
+      <recent name="E:\Android\app\src\main\res\layout" />
+      <recent name="E:\Android\app\src\main\res\mipmap-xxhdpi" />
+      <recent name="E:\Android\app\src\main\res\mipmap-hdpi" />
+      <recent name="E:\Android\app\src\main\res\mipmap-mdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -4933,30 +4527,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6607342" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6607342" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21100427" sideWeight="0.5072303" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66852057" sideWeight="0.5060698" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7708565" sideWeight="0.4939302" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2986111" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.770017" sideWeight="0.4939302" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29817906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32703003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41268075" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16826923" sideWeight="0.49276975" order="0" side_tool="false" content_ui="combo" x="751" y="75" width="417" height="899" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30500758" sideWeight="0.49276975" order="0" side_tool="false" content_ui="combo" x="751" y="75" width="417" height="899" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3759733" sideWeight="0.4957265" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37478706" sideWeight="0.4957265" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21100427" sideWeight="0.5072303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -5034,19 +4628,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>724</line>
+          <line>727</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>718</line>
+          <line>721</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>621</line>
+          <line>624</line>
           <properties />
           <option name="timeStamp" value="70" />
         </line-breakpoint>
@@ -5058,7 +4652,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>669</line>
+          <line>672</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
@@ -5172,9 +4766,81 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
-          <line>223</line>
+          <line>481</line>
           <properties />
-          <option name="timeStamp" value="145" />
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
+          <line>422</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
+          <line>433</line>
+          <properties />
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java</url>
+          <line>443</line>
+          <properties />
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>216</line>
+          <properties />
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>224</line>
+          <properties />
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>238</line>
+          <properties />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>243</line>
+          <properties />
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>250</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java</url>
+          <line>155</line>
+          <properties />
+          <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java</url>
@@ -5183,7 +4849,7 @@
           <option name="timeStamp" value="129" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="146" />
+      <option name="time" value="164" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -5192,7 +4858,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#18325#22855#0" expanded="true" />
+            <element signature="e#22854#22855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_car_info.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6375">
+          <caret line="255" column="25" selection-start-line="255" selection-start-column="25" selection-end-line="255" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/progressbar_vote.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edt_bg_small.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/progressbar_vote.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edt_bg_small.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#18325#22855#0" expanded="true" />
+            <element signature="e#22854#22855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5217,7 +4940,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18325#22855#0" expanded="true" />
+            <element signature="e#22854#22855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5324,14 +5050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/androidstudio/androidstudioSDK/android/sdk/platforms/android-23/data/res/values/attrs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -5343,15 +5061,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="48" column="24" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_bottom_corner_no_top_line.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/progress_bar_ct.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edt_bg_small.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/progressbar_vote.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/util/ValidatorUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#3407#3408#0" expanded="true" />
+            <element signature="e#3465#3466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/DPSProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="150" column="47" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
+          <folding>
+            <element signature="e#4783#4784#0" expanded="true" />
+            <element signature="e#4811#4812#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/activity/CarInfoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="319" column="56" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="274">
+          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+          <folding>
+            <element signature="e#18325#22855#0" expanded="true" />
+            <element signature="e#22854#22855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5360,30 +5142,9 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
-          <folding>
-            <element signature="e#3463#3490#0" expanded="true" />
-            <element signature="e#3753#3781#0" expanded="true" />
-            <element signature="e#5271#5298#0" expanded="true" />
-            <element signature="e#6876#6904#0" expanded="true" />
-            <element signature="e#7666#7693#0" expanded="true" />
-            <element signature="e#8975#9003#0" expanded="true" />
-            <element signature="e#9481#9508#0" expanded="true" />
-            <element signature="e#9773#9801#0" expanded="true" />
-            <element signature="e#9910#9938#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/miaochegu/fragment/WWCProcessFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1641">
-          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-          <folding>
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3408#3409#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="213">
+          <caret line="566" column="29" selection-start-line="566" selection-start-column="29" selection-end-line="566" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -21,6 +21,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -62,6 +63,7 @@ import com.miaochegu.util.GsonUtils;
 import com.miaochegu.util.JsonTools;
 import com.miaochegu.util.SharePCach;
 import com.miaochegu.util.ToastUtil;
+import com.miaochegu.util.ValidatorUtil;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
@@ -106,7 +108,7 @@ public class CarInfoActivity extends AppCompatActivity implements View.OnClickLi
     LinearLayout llMine, llMineBottom, ll_gj_head, ll_gj_center, llBottom;
 
     private String type = "";
-    private String strOperate = " 营运车辆";
+    private String strOperate = "非营运车辆";
     private final String[] mIndexItems = {"定位", "热门"};//头部额外的索引
     private List<CountryModel> models = new ArrayList<>();
     private String strCarName = "";
@@ -390,12 +392,12 @@ public class CarInfoActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, WaiteAssessActivity.class));
                 break;
             case R.id.tv_next:
-                if ("".equals(edt_vincode.getText().toString().trim())) {
+                if (TextUtils.isEmpty(edt_vincode.getText().toString().trim())) {
                     ToastUtil.show("请输入17位VIN码");
                     return;
                 }
-                if ("".equals(edt_vincode.getText().toString().trim()) && edt_vincode.getText().toString().trim().length() != 17) {
-                    ToastUtil.show("请输入正确的VIN码");
+                if (!ValidatorUtil.isVinCode(edt_vincode.getText().toString().trim())) {
+                    ToastUtil.show("请输入17位VIN码");
                     return;
                 }
                 if ("".equals(tv_carinfo.getText().toString().trim())) {
@@ -562,6 +564,7 @@ public class CarInfoActivity extends AppCompatActivity implements View.OnClickLi
                 llMine.setVisibility(View.GONE);
                 tv_loginout.setVisibility(View.GONE);
                 llMineBottom.setVisibility(View.GONE);
+                EventBus.getDefault().post(new String("freshData"));
                 break;
             case R.id.tv_loginout://退出登录
                 if (GettingStartedApp.getInstance().isLogin == true) {

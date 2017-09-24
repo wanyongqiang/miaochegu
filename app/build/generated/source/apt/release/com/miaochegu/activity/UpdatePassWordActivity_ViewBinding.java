@@ -19,7 +19,7 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
 
   private View view2131558535;
 
-  private View view2131558665;
+  private View view2131558661;
 
   @UiThread
   public UpdatePassWordActivity_ViewBinding(final T target, View source) {
@@ -39,7 +39,7 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
     target.phone = Utils.findRequiredViewAsType(source, R.id.phone, "field 'phone'", EditText.class);
     view = Utils.findRequiredView(source, R.id.username_register_button, "field 'usernameRegisterButton' and method 'onClick'");
     target.usernameRegisterButton = Utils.castView(view, R.id.username_register_button, "field 'usernameRegisterButton'", Button.class);
-    view2131558665 = view;
+    view2131558661 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -61,8 +61,8 @@ public class UpdatePassWordActivity_ViewBinding<T extends UpdatePassWordActivity
 
     view2131558535.setOnClickListener(null);
     view2131558535 = null;
-    view2131558665.setOnClickListener(null);
-    view2131558665 = null;
+    view2131558661.setOnClickListener(null);
+    view2131558661 = null;
 
     this.target = null;
   }

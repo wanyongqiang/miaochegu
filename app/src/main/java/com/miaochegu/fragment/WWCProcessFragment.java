@@ -26,6 +26,10 @@ import com.miaochegu.model.CarInfoModel;
 import com.miaochegu.util.ListItemClickHelp;
 import com.miaochegu.util.ToastUtil;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -55,9 +59,29 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.activity_waite_assess_two, null);
         context = getActivity();
         ButterKnife.bind(this, view);
+        EventBus.getDefault().register(this);
         mProgess.setVisibility(View.VISIBLE);
         setRecyclerView();
         return view;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventMainThread(String event) {
+        if ("freshData".equals(event)) {
+            if (System.currentTimeMillis() - pretimr >= 3000) {
+                Log.e("aaa", "hello");
+                AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+                avQuery.whereEqualTo("atype", 0);
+                avQuery.findInBackground(new FindCallback<AVObject>() {
+                    @Override
+                    public void done(List<AVObject> list, AVException e) {
+                        mList.clear();
+                        pos = 0;
+                        setData(list);
+                    }
+                });
+            }
+        }
     }
 
     private long pretimr = 0;
@@ -75,7 +99,6 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
                     setData(list);
                 }
             });
-
         }
     }
 
@@ -95,6 +118,19 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
         mWWCWaiteAssessAdapter.setmOnItemeClickListener(this);
         rlAssess.setAdapter(mWWCWaiteAssessAdapter);
 
+        if (System.currentTimeMillis() - pretimr >= 3000) {
+            Log.e("aaa", "hello");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+            avQuery.whereEqualTo("atype", 0);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    mList.clear();
+                    pos = 0;
+                    setData(list);
+                }
+            });
+        }
     }
 
     @Override
@@ -112,10 +148,25 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
     public void onRefresh() {
+        if (System.currentTimeMillis() - pretimr >= 3000) {
+            Log.e("aaa", "hello");
+            AVQuery<AVObject> avQuery = new AVQuery<>("Audit");
+            avQuery.whereEqualTo("atype", 0);
+            avQuery.findInBackground(new FindCallback<AVObject>() {
+                @Override
+                public void done(List<AVObject> list, AVException e) {
+                    mList.clear();
+                    mWWCWaiteAssessAdapter.addRes(mList);
+                    pos = 0;
+                    setData(list);
+                }
+            });
+        }
         rlAssess.refreshComplete();
     }
 
@@ -212,6 +263,11 @@ public class WWCProcessFragment extends BaseFragment implements XRecyclerView.Lo
                     }
                 }
             });
+        } else {
+            if (mProgess != null) {
+                mProgess.setVisibility(View.GONE);
+                mWWCWaiteAssessAdapter.upRes(mList);
+            }
         }
     }
 

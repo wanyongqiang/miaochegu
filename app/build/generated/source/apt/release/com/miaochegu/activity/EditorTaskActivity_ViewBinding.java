@@ -20,15 +20,15 @@ import java.lang.Override;
 public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implements Unbinder {
   protected T target;
 
-  private View view2131558579;
+  private View view2131558575;
 
-  private View view2131558587;
+  private View view2131558583;
 
-  private View view2131558589;
+  private View view2131558585;
 
-  private View view2131558590;
+  private View view2131558586;
 
-  private View view2131558580;
+  private View view2131558576;
 
   @UiThread
   public EditorTaskActivity_ViewBinding(final T target, View source) {
@@ -37,7 +37,7 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     View view;
     view = Utils.findRequiredView(source, R.id.ll_back, "field 'llBack' and method 'onClick'");
     target.llBack = Utils.castView(view, R.id.ll_back, "field 'llBack'", LinearLayout.class);
-    view2131558579 = view;
+    view2131558575 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -48,7 +48,7 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.tvName = Utils.findRequiredViewAsType(source, R.id.tv_name, "field 'tvName'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_nickanme, "field 'llNickanme' and method 'onClick'");
     target.llNickanme = Utils.castView(view, R.id.ll_nickanme, "field 'llNickanme'", RelativeLayout.class);
-    view2131558587 = view;
+    view2131558583 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -60,7 +60,7 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.tvCartype = Utils.findRequiredViewAsType(source, R.id.tv_cartype, "field 'tvCartype'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_cartype, "field 'llCartype' and method 'onClick'");
     target.llCartype = Utils.castView(view, R.id.ll_cartype, "field 'llCartype'", RelativeLayout.class);
-    view2131558589 = view;
+    view2131558585 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -70,7 +70,7 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.tvFirst = Utils.findRequiredViewAsType(source, R.id.tv_first, "field 'tvFirst'", TextView.class);
     view = Utils.findRequiredView(source, R.id.ll_first, "field 'llFirst' and method 'onClick'");
     target.llFirst = Utils.castView(view, R.id.ll_first, "field 'llFirst'", RelativeLayout.class);
-    view2131558590 = view;
+    view2131558586 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -86,7 +86,7 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.llNote = Utils.findRequiredViewAsType(source, R.id.ll_note, "field 'llNote'", RelativeLayout.class);
     view = Utils.findRequiredView(source, R.id.tv_ynamic, "field 'tvYnamic' and method 'onClick'");
     target.tvYnamic = Utils.castView(view, R.id.tv_ynamic, "field 'tvYnamic'", TextView.class);
-    view2131558580 = view;
+    view2131558576 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -124,16 +124,16 @@ public class EditorTaskActivity_ViewBinding<T extends EditorTaskActivity> implem
     target.edtContent = null;
     target.mProgess = null;
 
-    view2131558579.setOnClickListener(null);
-    view2131558579 = null;
-    view2131558587.setOnClickListener(null);
-    view2131558587 = null;
-    view2131558589.setOnClickListener(null);
-    view2131558589 = null;
-    view2131558590.setOnClickListener(null);
-    view2131558590 = null;
-    view2131558580.setOnClickListener(null);
-    view2131558580 = null;
+    view2131558575.setOnClickListener(null);
+    view2131558575 = null;
+    view2131558583.setOnClickListener(null);
+    view2131558583 = null;
+    view2131558585.setOnClickListener(null);
+    view2131558585 = null;
+    view2131558586.setOnClickListener(null);
+    view2131558586 = null;
+    view2131558576.setOnClickListener(null);
+    view2131558576 = null;
 
     this.target = null;
   }
